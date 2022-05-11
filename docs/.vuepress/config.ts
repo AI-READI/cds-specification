@@ -28,6 +28,8 @@ export default defineUserConfig({
       },
     ],
 
+    // sidebar: sidebar,
+
     sidebar: [
       {
         text: "GitHub",
@@ -40,7 +42,16 @@ export default defineUserConfig({
           {
             text: "Commits",
             link: "/github/commits",
-            children: [],
+            children: [
+              {
+                text: "Type",
+                link: "#type",
+              },
+              {
+                text: "Type values allowed",
+                link: "#type-values-allowed",
+              },
+            ],
           },
         ],
       },

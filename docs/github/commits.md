@@ -8,9 +8,11 @@ description: How to commit to a FAIR Data Innovations Hub repository
 
 All repositories on the FAIR Data Innovations Hub use a consistent commit workflow to ensure that all changes are reflected in the repository accurately.
 
-Starting from spring 2022, we have adopted to using conventional commits for all changes to the repository. This will make the commit workflow more consistent and easier to follow and allow us to better follow the standards for code development.
+Starting from Spring 2022, we have adopted to using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) for all changes to our projects. This will make the commit workflow more consistent and easier to follow and allow us to better follow the standards for code development.
 
 ## Conventional Commits
+
+### Summary
 
 > A specification for adding human and machine readable meaning to commit messages
 
@@ -20,10 +22,39 @@ The commit message should be structured as follows:
 
 ```
 <type>[optional scope]: <description>
+```
 
-[optional body]
+The commit contains the following structural elements, to communicate intent to all developers:
 
-[optional footer(s)]
+1. **fix**: a commit of the _type_ `fix` patches a bug in your codebase (this correlates with [PATCH](https://semver.org/#spec-item-6) in Semantic Versioning).
+2. **feat**: a commit of the _type_ `feat` adds a new feature to your codebase (this correlates with [MINOR](https://semver.org/#spec-item-7) in Semantic Versioning).
+3. **BREAKING CHANGE**: a commit that appends a `!` after the type/scope, introduces a breaking change (correlating with [MAJOR](https://semver.org/#spec-item-8) in Semantic Versioning). A BREAKING CHANGE can be part of commits of any _type_.
+4. _types_ other than `fix:` and `feat:` are allowed., Refer to the [Type values allowed](#type-values-allowed) for more information.
+
+#### Examples
+
+Simple commit message:
+
+```bash
+git commit -m "docs: correct spelling of CHANGELOG"
+```
+
+Commit message with scope
+
+```bash
+git commit -m "feat(lang): add Polish language"
+```
+
+Commit message with `!` to draw attention to breaking change
+
+```bash
+git commit -m "feat!: send an email to the customer when a product is shipped"
+```
+
+Commit message with `scope` and `!` to draw attention to breaking change
+
+```bash
+git commit -m "feat(api)!: send an email to the customer when a product is shipped"
 ```
 
 ### Type
@@ -68,6 +99,10 @@ The standard defines use of an optional scope, which is used in additional to th
 > e.g. ‘fix(parser):’ This would be specific to a particular project, so you cannot know the generalize scopes for all projects. The standard says you should agree in your team what the scopes would be. Perhaps based on features, projects or directories.
 
 All dependency changes can have scope of `deps`.
+
+#### Scope values allowed
+
+- `deps`: Dependency changes
 
 Some possible examples:
 
