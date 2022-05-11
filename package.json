@@ -12,15 +12,15 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.4",
-    "@commitlint/config-conventional": "^16.2.4",
-    "devmoji": "^2.3.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^12.4.1",
-    "prettier": "^2.6.2",
-    "vuepress": "^2.0.0-beta.43",
-    "vuepress-bar": "^0.4.4",
-    "vuepress-plugin-auto-sidebar": "^2.4.0-alpha.5"
+    "@commitlint/cli": "16.2.4",
+    "@commitlint/config-conventional": "16.2.4",
+    "devmoji": "2.3.0",
+    "husky": "8.0.1",
+    "lint-staged": "12.4.1",
+    "prettier": "2.6.2",
+    "vuepress": "2.0.0-beta.43",
+    "vuepress-bar": "0.4.4",
+    "vuepress-plugin-auto-sidebar": "2.4.0-alpha.5"
   },
   "lint-staged": {
     "./**/*.{ts,js,jsx,tsx|md}": [
