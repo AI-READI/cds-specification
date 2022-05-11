@@ -1,9 +1,29 @@
 import { defineUserConfig, defaultTheme } from "vuepress";
 
+const { backToTopPlugin } = require("@vuepress/plugin-back-to-top");
+const { nprogressPlugin } = require("@vuepress/plugin-nprogress");
+const { searchPlugin } = require("@vuepress/plugin-search");
+
 export default defineUserConfig({
   lang: "en-US",
   title: "Hello VuePress",
   description: "Just playing around",
+
+  plugins: [
+    backToTopPlugin(),
+    nprogressPlugin(),
+    searchPlugin({
+      hotKeys: ["/"],
+      // exclude the homepage
+      isSearchable: (page) => page.path !== "/",
+    }),
+  ],
+
+  markdown: {
+    code: {
+      lineNumbers: 2,
+    },
+  },
 
   theme: defaultTheme({
     editLink: true,
@@ -42,16 +62,6 @@ export default defineUserConfig({
           {
             text: "Commits",
             link: "/github/commits",
-            children: [
-              {
-                text: "Type",
-                link: "#type",
-              },
-              {
-                text: "Type values allowed",
-                link: "#type-values-allowed",
-              },
-            ],
           },
         ],
       },

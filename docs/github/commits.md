@@ -108,7 +108,13 @@ Some possible examples:
 
 ```bash
 git commit -m "build(deps): upgrade packages"
+```
+
+```bash
 git commit -m "style(deps): remove whitespace in requirements.txt"
+```
+
+```bash
 git commit -m "fix(deps): correct typo in package.json package name"
 ```
 
