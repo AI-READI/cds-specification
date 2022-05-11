@@ -1,13 +1,13 @@
 ---
 home: true
 heroImage: https://v1.vuepress.vuejs.org/hero.png
-tagline: 🌟 A simple dynamic marquee component made for your Vue 3 applications
+tagline: 🌟 All the docs in one place. Built for the FAIR Data Innovations Hub.
 actions:
   - text: Get Started
-    link: /guide/getting-started.html
+    link: /github/commits.html
     type: primary
   - text: Introduction
-    link: /guide/
+    link: /github/
     type: secondary
 features:
   - title: ⚡ Zero Dependencies
@@ -16,5 +16,5 @@ features:
     details: Native TS support has been provided with this library.
   - title: 🙌 Easy to use
     details: Only a single component with all the props you need.
-footer: Made by Sanjay Soundarajan with ❤️
+footer: FAIR Data Innovations Hub | Documentation
 ---

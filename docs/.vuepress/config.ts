@@ -4,34 +4,46 @@ export default defineUserConfig({
   lang: "en-US",
   title: "Hello VuePress",
   description: "Just playing around",
+
   theme: defaultTheme({
-    // default theme config
+    editLink: true,
+    docsRepo: "https://github.com/fairdataihub/fairdataihub-docs",
+    docsBranch: "main",
+    docsDir: "docs",
+
+    smoothScroll: true,
+
     navbar: [
       {
-        text: "Home",
+        text: "General",
+        link: "/",
+      },
+      {
+        text: "SODA for SPARC",
+        link: "/",
+      },
+      {
+        text: "FAIRshare",
         link: "/",
       },
     ],
-    // sidebar array
-    // all pages will use the same sidebar
+
     sidebar: [
-      // SidebarItem
       {
-        text: "Foo",
-        link: "/foo/",
+        text: "GitHub",
+        link: "/github/",
         children: [
-          // SidebarItem
           {
-            text: "github",
-            link: "https://github.com",
+            text: "@fairdataihub",
+            link: "https://github.com/fairdataihub",
+          },
+          {
+            text: "Commits",
+            link: "/github/commits",
             children: [],
           },
-          // string - page file path
-          "/foo/bar.md",
         ],
       },
-      // string - page file path
-      "/bar/README.md",
     ],
   }),
 });

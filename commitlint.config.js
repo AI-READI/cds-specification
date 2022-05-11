@@ -6,7 +6,6 @@
 const types = [
   "build",
   "chore",
-  "ci",
   "docs",
   "feat",
   "fix",
