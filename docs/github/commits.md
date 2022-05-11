@@ -71,12 +71,14 @@ All dependency changes can have scope of `deps`.
 
 Some possible examples:
 
-```
-build(deps): upgrade packages
-style(deps): remove whitespace in requirements.txt
-fix(deps): correct typo in package.json package name
+```bash
+git commit -m "build(deps): upgrade packages"
+git commit -m "style(deps): remove whitespace in requirements.txt"
+git commit -m "fix(deps): correct typo in package.json package name"
 ```
 
 ### Emoji
 
 Most of the repositories in this organization have been setup to automatically add emoji to the commit message. You don't need to do this manually. Just write out your commit as usual.
+
+For example the following commit message: `docs: update commits documentation` will be automatically converted to: `docs: 📚️ update commits documentation`
