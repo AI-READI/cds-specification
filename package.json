@@ -8,7 +8,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|jsx|tsx|md)\" --write",
+    "format": "prettier --ignore-path .gitignore \"./**/*.+(ts|js|jsx|tsx|md)\" --write",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -21,7 +21,7 @@
     "vuepress": "^2.0.0-beta.43"
   },
   "lint-staged": {
-    "./src/**/*.{ts,js,jsx,tsx|md}": [
+    "./**/*.{ts,js,jsx,tsx|md}": [
       "yarn format"
     ]
   }
