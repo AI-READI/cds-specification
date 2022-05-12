@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "docs:dev": "vuepress dev docs",
+    "dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "format": "prettier --ignore-path .gitignore \"./**/*.+(ts|js|jsx|tsx|md)\" --write",
     "prepare": "husky install"
@@ -16,6 +17,7 @@
     "@commitlint/config-conventional": "16.2.4",
     "@vuepress/plugin-back-to-top": "2.0.0-beta.43",
     "@vuepress/plugin-nprogress": "2.0.0-beta.43",
+    "@vuepress/plugin-pwa": "^2.0.0-beta.43",
     "@vuepress/plugin-search": "2.0.0-beta.43",
     "devmoji": "2.3.0",
     "husky": "8.0.1",

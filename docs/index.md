@@ -1,20 +1,17 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
-tagline: 🌟 All the docs in one place. Built for the FAIR Data Innovations Hub.
+heroImage: https://fairdataihub.org/logo.svg
+tagline: 🌟 Everything to get you started.
 actions:
-  - text: Get Started
-    link: /github/commits.html
+  - text: Get Started 🚀
+    link: /git/commits.html
     type: primary
-  - text: Introduction
-    link: /github/
-    type: secondary
 features:
-  - title: ⚡ Zero Dependencies
-    details: This is a simple Vue 3 component with no external dependencies. All the styling is done with pure CSS.
-  - title: 🌠 Typescript Support
-    details: Native TS support has been provided with this library.
-  - title: 🙌 Easy to use
-    details: Only a single component with all the props you need.
-footer: FAIR Data Innovations Hub | Documentation
+  - title: ⚡ Get a clear view
+    details: No more hunting around for documents in your inbox or shared folders.
+  - title: 🌠 Stay up to date
+    details: Get notified when new documents are available.
+  - title: 🙌 Work together
+    details: Complete your projects without interruptions and shoulder tapping.
+footer: Developer documentation for FAIR Data Innovations Hub
 ---

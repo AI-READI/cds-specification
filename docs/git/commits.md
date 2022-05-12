@@ -4,15 +4,13 @@ title: Commits on GitHub
 description: How to commit to a FAIR Data Innovations Hub repository
 ---
 
-# Background
+# Conventional Commits
 
 All repositories on the FAIR Data Innovations Hub use a consistent commit workflow to ensure that all changes are reflected in the repository accurately.
 
 Starting from Spring 2022, we have adopted to using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) for all changes to our projects. This will make the commit workflow more consistent and easier to follow and allow us to better follow the standards for code development.
 
-## Conventional Commits
-
-### Summary
+## Summary
 
 > A specification for adding human and machine readable meaning to commit messages
 
@@ -57,11 +55,11 @@ Commit message with `scope` and `!` to draw attention to breaking change
 git commit -m "feat(api)!: send an email to the customer when a product is shipped"
 ```
 
-### Type
+## Type
 
 A prefix for the commit message describing the type of the change.
 
-#### Type values allowed
+### Type values allowed
 
 - `feat`: Changes which introduce a new feature
 - `fix`: Changes which patch a bug
@@ -88,7 +86,7 @@ git commit -m "docs: update documentation" -m "some description about this chang
 
 > Commits MUST be prefixed with a type, which consists of a noun, feat, fix, etc., followed by a colon and a space.
 
-### Scope
+## Scope
 
 The standard defines use of an optional scope, which is used in additional to the required type.
 
@@ -96,11 +94,11 @@ The standard defines use of an optional scope, which is used in additional to th
 >
 > A scope is a phrase describing a section of the codebase enclosed in parenthesis.
 >
-> e.g. ‘fix(parser):’ This would be specific to a particular project, so you cannot know the generalize scopes for all projects. The standard says you should agree in your team what the scopes would be. Perhaps based on features, projects or directories.
+> e.g. ‘fix(parser):’ This would be specific to a particular part of the project.
 
 All dependency changes can have scope of `deps`.
 
-#### Scope values allowed
+### Scope values allowed
 
 - `deps`: Dependency changes
 
@@ -118,7 +116,7 @@ git commit -m "style(deps): remove whitespace in requirements.txt"
 git commit -m "fix(deps): correct typo in package.json package name"
 ```
 
-### Emoji
+## Emoji
 
 Most of the repositories in this organization have been setup to automatically add emoji to the commit message. You don't need to do this manually. Just write out your commit as usual.
 

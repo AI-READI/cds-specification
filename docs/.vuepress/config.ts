@@ -3,10 +3,11 @@ import { defineUserConfig, defaultTheme } from "vuepress";
 const { backToTopPlugin } = require("@vuepress/plugin-back-to-top");
 const { nprogressPlugin } = require("@vuepress/plugin-nprogress");
 const { searchPlugin } = require("@vuepress/plugin-search");
+// const { pwaPlugin } = require("@vuepress/plugin-pwa");
 
 export default defineUserConfig({
   lang: "en-US",
-  title: "Hello VuePress",
+  title: "Developer Documentation",
   description: "Just playing around",
 
   plugins: [
@@ -17,6 +18,9 @@ export default defineUserConfig({
       // exclude the homepage
       isSearchable: (page) => page.path !== "/",
     }),
+    // pwaPlugin({
+    //   // options
+    // }),
   ],
 
   markdown: {
@@ -35,33 +39,46 @@ export default defineUserConfig({
 
     navbar: [
       {
-        text: "General",
+        text: "Home",
         link: "/",
       },
-      {
-        text: "SODA for SPARC",
-        link: "/",
-      },
-      {
-        text: "FAIRshare",
-        link: "/",
-      },
+      // {
+      //   text: "SODA for SPARC",
+      //   link: "/",
+      // },
+      // {
+      //   text: "FAIRshare",
+      //   link: "/",
+      // },
     ],
 
     // sidebar: sidebar,
 
     sidebar: [
       {
-        text: "GitHub",
-        link: "/github/",
+        text: "Git",
         children: [
+          {
+            text: "Commits",
+            link: "/git/commits",
+          },
+          {
+            text: "Workflows",
+            link: "/git/workflows",
+          },
           {
             text: "@fairdataihub",
             link: "https://github.com/fairdataihub",
           },
+        ],
+      },
+      {
+        text: "General",
+        link: "/general/",
+        children: [
           {
-            text: "Commits",
-            link: "/github/commits",
+            text: "Comments",
+            link: "/general/comments",
           },
         ],
       },
