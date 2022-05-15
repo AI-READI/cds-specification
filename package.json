@@ -13,7 +13,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@commitlint/cli": "16.2.4",
+    "@commitlint/cli": "16.3.0",
     "@commitlint/config-conventional": "16.2.4",
     "@vuepress/plugin-back-to-top": "2.0.0-beta.43",
     "@vuepress/plugin-nprogress": "2.0.0-beta.43",
