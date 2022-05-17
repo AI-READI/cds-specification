@@ -44,17 +44,11 @@ export default defineUserConfig({
         text: "Home",
         link: "/",
       },
-      // {
-      //   text: "SODA for SPARC",
-      //   link: "/",
-      // },
-      // {
-      //   text: "FAIRshare",
-      //   link: "/",
-      // },
+      {
+        text: "@fairdataihub",
+        link: "https://github.com/fairdataihub",
+      },
     ],
-
-    // sidebar: sidebar,
 
     sidebar: [
       {
@@ -116,19 +110,36 @@ export default defineUserConfig({
               },
             ],
           },
-          {
-            text: "@fairdataihub",
-            link: "https://github.com/fairdataihub",
-          },
         ],
       },
       {
         text: "General",
-        link: "/general/",
         children: [
           {
             text: "Comments",
             link: "/general/comments",
+            children: [
+              {
+                text: "VS Code extensions",
+                link: "#editor-support-vs-code",
+              },
+              {
+                text: "Single-line comments",
+                link: "#single-line",
+              },
+              {
+                text: "Inline comments",
+                link: "#inline",
+              },
+              {
+                text: "Multi-line comments",
+                link: "#multi-line-or-block",
+              },
+              {
+                text: "Dos and don'ts",
+                link: "#dos-don-ts",
+              },
+            ],
           },
         ],
       },

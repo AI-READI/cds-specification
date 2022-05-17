@@ -119,8 +119,8 @@ jobs:
       - uses: peter-evans/create-pull-request@main
         with:
           token: ${{ secrets.BOT_ACTIONS }}
-          commit-message: "fix(typo): 🐛 typo fix by misspell-fixer"
-          title: "fix(typo): 🐛 typo fix by misspell-fixer"
+          commit-message: "fix(typo): 🐛 typo fixes by misspell-fixer"
+          title: "fix(typo): 🐛 typo fixes by misspell-fixer"
 ```
 
 ## Greetings
