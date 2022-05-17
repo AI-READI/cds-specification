@@ -50,99 +50,17 @@ export default defineUserConfig({
       },
     ],
 
-    sidebar: [
-      {
-        text: "Git",
-        children: [
-          {
-            text: "Commits",
-            link: "/git/commits",
-            children: [
-              {
-                text: "Git Hooks",
-                link: "#git-hooks",
-              },
-              {
-                text: "Summary",
-                link: "#summary",
-              },
-              {
-                text: "Types allowed",
-                link: "#type",
-              },
-              {
-                text: "Scope",
-                link: "#scope",
-              },
-              {
-                text: "Emoji",
-                link: "#emoji",
-              },
-            ],
-          },
-          {
-            text: "Workflows",
-            link: "/git/workflows",
-            children: [
-              {
-                text: "Lint and format",
-                link: "#lint-and-format",
-              },
-              {
-                text: "Mispellings",
-                link: "#mispellings",
-              },
-              {
-                text: "Greetings",
-                link: "#greetings",
-              },
-              {
-                text: "Stale issues and PRs",
-                link: "#stale-issues-and-prs",
-              },
-              {
-                text: "Conventional commits",
-                link: "#conventional-commits",
-              },
-              {
-                text: "Code quality checks",
-                link: "#code-quality-checks",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        text: "General",
-        children: [
-          {
-            text: "Comments",
-            link: "/general/comments",
-            children: [
-              {
-                text: "VS Code extensions",
-                link: "#editor-support-vs-code",
-              },
-              {
-                text: "Single-line comments",
-                link: "#single-line",
-              },
-              {
-                text: "Inline comments",
-                link: "#inline",
-              },
-              {
-                text: "Multi-line comments",
-                link: "#multi-line-or-block",
-              },
-              {
-                text: "Dos and don'ts",
-                link: "#dos-don-ts",
-              },
-            ],
-          },
-        ],
-      },
-    ],
+    sidebar: {
+      "/": [
+        {
+          text: "Git",
+          children: ["/git/commits.md", "/git/workflows.md"],
+        },
+        {
+          text: "General",
+          children: ["/general/comments.md"],
+        },
+      ],
+    },
   }),
 });
