@@ -10,6 +10,12 @@ All repositories on the FAIR Data Innovations Hub use a consistent commit workfl
 
 Starting from Spring 2022, we have adopted to using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) for all changes to our projects. This will make the commit workflow more consistent and easier to follow and allow us to better follow the standards for code development.
 
+## Git hooks
+
+All repositories on the FAIR Data Innovations Hub use git hooks to ensure that certain actions are handled on the developer side before being pushed into the repository.
+
+We currently use [lint-staged](https://github.com/okonet/lint-staged) and [husky](https://github.com/typicode/husky) to handle this portion of the workflow. Please verify that these are installed and configured correctly.
+
 ## Summary
 
 > A specification for adding human and machine readable meaning to commit messages
@@ -121,3 +127,5 @@ git commit -m "fix(deps): correct typo in package.json package name"
 Most of the repositories in this organization have been setup to automatically add emoji to the commit message. You don't need to do this manually. Just write out your commit as usual.
 
 For example the following commit message: `docs: update commits documentation` will be automatically converted to: `docs: 📚️ update commits documentation`
+
+All emoji based commits are created through git hooks using the [devmoji](https://github.com/folke/devmoji) library.
