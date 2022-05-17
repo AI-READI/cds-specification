@@ -15,15 +15,15 @@
   "devDependencies": {
     "@commitlint/cli": "17.0.0",
     "@commitlint/config-conventional": "17.0.0",
-    "@vuepress/plugin-back-to-top": "2.0.0-beta.45",
-    "@vuepress/plugin-nprogress": "2.0.0-beta.45",
+    "@vuepress/plugin-prismjs": "^2.0.0-beta.45",
     "@vuepress/plugin-pwa": "2.0.0-beta.45",
     "@vuepress/plugin-search": "2.0.0-beta.45",
     "devmoji": "2.3.0",
     "husky": "8.0.1",
     "lint-staged": "12.4.1",
     "prettier": "2.6.2",
-    "vuepress": "2.0.0-beta.45"
+    "vuepress": "2.0.0-beta.45",
+    "vuepress-plugin-copy-code2": "^2.0.0-beta.61"
   },
   "lint-staged": {
     "./**/*.{ts,js,jsx,tsx|md}": [

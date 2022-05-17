@@ -1,9 +1,9 @@
 import { defineUserConfig, defaultTheme } from "vuepress";
 
-const { backToTopPlugin } = require("@vuepress/plugin-back-to-top");
-const { nprogressPlugin } = require("@vuepress/plugin-nprogress");
 const { searchPlugin } = require("@vuepress/plugin-search");
+const { prismjsPlugin } = require("@vuepress/plugin-prismjs");
 // const { pwaPlugin } = require("@vuepress/plugin-pwa");
+import { copyCodePlugin } from "vuepress-plugin-copy-code2";
 
 export default defineUserConfig({
   lang: "en-US",
@@ -11,8 +11,10 @@ export default defineUserConfig({
   description: "Just playing around",
 
   plugins: [
-    backToTopPlugin(),
-    nprogressPlugin(),
+    prismjsPlugin({}),
+    copyCodePlugin({
+      pure: true,
+    }),
     searchPlugin({
       hotKeys: ["/"],
       // exclude the homepage
