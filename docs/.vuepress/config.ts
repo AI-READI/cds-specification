@@ -61,10 +61,58 @@ export default defineUserConfig({
           {
             text: "Commits",
             link: "/git/commits",
+            children: [
+              {
+                text: "Git Hooks",
+                link: "#git-hooks",
+              },
+              {
+                text: "Summary",
+                link: "#summary",
+              },
+              {
+                text: "Types allowed",
+                link: "#type",
+              },
+              {
+                text: "Scope",
+                link: "#scope",
+              },
+              {
+                text: "Emoji",
+                link: "#emoji",
+              },
+            ],
           },
           {
             text: "Workflows",
             link: "/git/workflows",
+            children: [
+              {
+                text: "Lint and format",
+                link: "#lint-and-format",
+              },
+              {
+                text: "Mispellings",
+                link: "#mispellings",
+              },
+              {
+                text: "Greetings",
+                link: "#greetings",
+              },
+              {
+                text: "Stale issues and PRs",
+                link: "#stale-issues-and-prs",
+              },
+              {
+                text: "Conventional commits",
+                link: "#conventional-commits",
+              },
+              {
+                text: "Code quality checks",
+                link: "#code-quality-checks",
+              },
+            ],
           },
           {
             text: "@fairdataihub",

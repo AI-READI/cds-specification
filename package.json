@@ -6,8 +6,8 @@
   "author": "Sanjay Soundarajan <sanjay.16@live.com>",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
     "dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "format": "prettier --ignore-path .gitignore \"./**/*.+(ts|js|jsx|tsx|md)\" --write",
     "prepare": "husky install"
