@@ -1525,7 +1525,7 @@
     "@vuepress/utils" "2.0.0-beta.45"
     chokidar "^3.5.3"
 
-"@vuepress/plugin-prismjs@2.0.0-beta.45", "@vuepress/plugin-prismjs@^2.0.0-beta.45":
+"@vuepress/plugin-prismjs@2.0.0-beta.45":
   version "2.0.0-beta.45"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-prismjs/-/plugin-prismjs-2.0.0-beta.45.tgz#3eaacda156d6be4d88b8455aebc1613304d92405"
   integrity sha512-xDNEtIxZPlKp2fs9vh+jOcjYPNdftnjOQpvFsYRa4cfuWTFDzq7lKeNPq2flkG0UwJxYBoVgggGO0Zm1bD37OQ==
