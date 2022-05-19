@@ -45,12 +45,20 @@ export default defineUserConfig({
         link: "/",
       },
       {
-        text: "@fairdataihub",
-        link: "https://github.com/fairdataihub",
+        text: "Overview",
+        link: "/docs/overview.md",
       },
       {
-        text: "docs",
-        link: "/docs/overview.md",
+        text: "SODA for SPARC",
+        link: "/soda-for-sparc/build-soda.md",
+      },
+      {
+        text: "FAIRshare",
+        link: "/fairshare/build-fairshare.md",
+      },
+      {
+        text: "@fairdataihub",
+        link: "https://github.com/fairdataihub",
       },
     ],
 
@@ -81,7 +89,7 @@ export default defineUserConfig({
           ],
         },
         {
-          text: "Readme",
+          text: "README",
           children: ["/docs/README.md"],
         },
       ],

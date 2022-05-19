@@ -1,37 +1,29 @@
 ---
 lang: en-US
-title: Fairdataihub Developer Documentation
+title: Fairdataihub developer documentation
 description: How to use the documentation site
 ---
-
-<div align="center">
-
-  <h1>Fairdataihub Developer Documentation</h1>
-  
-  <p>
-    A comprehensive documentation of the FAIRdataihub Developer ecosystem.
-  </p>
-</div>
 
 ## About the Documentation
 
 ### Tech Stack
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://v1.vuepress.vuejs.org/guide/#introduction">Vuepress</a></li>
-  </ul>
-</details>
+[Vuepress](https://v2.vuepress.vuejs.org/guide/#introduction)
 
-## :toolbox: Getting Started
+## Getting Started
 
-### :bangbang: Prerequisites
+### ⚠️ Prerequisites
 
-This project uses Yarn as package manager
+This project uses `Yarn` as package manager.
 
 ```bash
 npm install --global yarn
+```
+
+If you already have a conda environment on your machine, you can install the dependencies with:
+
+```bash
+conda install -c conda-forge yarn nodejs
 ```
 
 ### Run Locally
@@ -39,13 +31,13 @@ npm install --global yarn
 Clone the project
 
 ```bash
-git clone https://github.com/fairdataihub/SODA-for-SPARC-Docs.git
+https://github.com/fairdataihub/fairdataihub-docs.git
 ```
 
 Go to the project directory
 
 ```bash
-cd FAIRDATAIHUB-DOCS
+cd fairdataihub-docs
 ```
 
 Install dependencies

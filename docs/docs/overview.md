@@ -1,12 +1,12 @@
 ---
 lang: en-US
 title: Overview
-description: Overview of how to use Dairdataihub documentation
+description: Overview of how to use fairdataihub documentation
 ---
 
 # Overview
 
-This documentation is a central repository for storing Fair Data Innovations Hub project documentation. It is intended to be used by the Fair Data Innovations Hub team for getting instructions on running, building, and releasing our projects. It also provides the conventions the team should be using while working on Fair Data Innovations Hub projects.
+This documentation is a central repository for storing Fair Data Innovations Hub project documentation. It is intended to be used by the developer team for getting instructions on running, building, and releasing our projects. It also provides the conventions the team should be using while working on our projects.
 
 ## Using the documentation
 
