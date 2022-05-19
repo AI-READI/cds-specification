@@ -48,6 +48,10 @@ export default defineUserConfig({
         text: "@fairdataihub",
         link: "https://github.com/fairdataihub",
       },
+      {
+        text: "docs",
+        link: "/docs/",
+      }
     ],
 
     sidebar: {
@@ -60,6 +64,18 @@ export default defineUserConfig({
           text: "General",
           children: ["/general/comments.md"],
         },
+        {
+          text: "Build Instructions",
+          children: ["/build-instructions/build-soda.md"],
+        },
+        {
+          text: "Release Instructions",
+          children: ["/release-instructions/soda-release.md", "/release-instructions/documentation-release.md"],
+        },
+        {
+          text: "Readme",
+          children: ["/docs/README.md"],
+        }
       ],
     },
   }),
