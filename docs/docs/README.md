@@ -67,6 +67,7 @@ Use this step to build a local production version of the site. Use `serve` to pr
 ```bash
 yarn docs:build
 ```
+
 ## Acknowledgements
 
 A special thank you to Vercel for hosting our application documentation.
