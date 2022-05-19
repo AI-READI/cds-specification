@@ -51,7 +51,7 @@ export default defineUserConfig({
       {
         text: "docs",
         link: "/docs/",
-      }
+      },
     ],
 
     sidebar: {
@@ -70,12 +70,15 @@ export default defineUserConfig({
         },
         {
           text: "Release Instructions",
-          children: ["/release-instructions/soda-release.md", "/release-instructions/documentation-release.md"],
+          children: [
+            "/release-instructions/soda-release.md",
+            "/release-instructions/documentation-release.md",
+          ],
         },
         {
           text: "Readme",
           children: ["/docs/README.md"],
-        }
+        },
       ],
     },
   }),
