@@ -50,12 +50,16 @@ export default defineUserConfig({
       },
       {
         text: "docs",
-        link: "/docs/",
+        link: "/docs/overview.md",
       }
     ],
 
     sidebar: {
       "/": [
+        {
+          text: "Docs",
+          children: ["/docs/overview.md", "/docs/releasing-documentation.md", "/docs/semantic-versioning.md"],
+        },
         {
           text: "Git",
           children: ["/git/commits.md", "/git/workflows.md"],
@@ -64,18 +68,16 @@ export default defineUserConfig({
           text: "General",
           children: ["/general/comments.md"],
         },
+        
         {
-          text: "Build Instructions",
-          children: ["/build-instructions/build-soda.md"],
-        },
-        {
-          text: "Release Instructions",
-          children: ["/release-instructions/soda-release.md", "/release-instructions/documentation-release.md"],
+          text: "SODA for SPARC",
+          children: ["/soda-for-sparc/build-soda.md", "/soda-for-sparc/soda-release.md"],
         },
         {
           text: "Readme",
           children: ["/docs/README.md"],
         }
+        
       ],
     },
   }),

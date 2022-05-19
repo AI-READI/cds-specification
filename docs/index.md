@@ -4,7 +4,7 @@ heroImage: https://fairdataihub.org/logo.svg
 tagline: 🌟 Everything to get you started.
 actions:
   - text: Get Started 🚀
-    link: /git/commits.html
+    link: /docs/overview.md
     type: primary
 features:
   - title: ⚡ Get a clear view

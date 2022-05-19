@@ -16,7 +16,7 @@ You can get a deeper understanding of Semantic Versioning at the [Semantic Versi
 ## Procedure for Changing Docs
 1. Create a feature branch based off the main branch.
 2. Update the docs with whatever content changes/bug fixes you want to make.
-   - (conditional) If the docs are ready to be versioned (there will be a new release of `FAIRshare` or `SODA for SPARC` and you updated the Changelog accordingly) run this command: `yarn run docusaurus docs:version 5.3.0` [ change the version number to the new version number ]
+   - (conditional) If the docs are ready to be versioned (there will be a new release of `FAIRshare` or `SODA for SPARC` and you updated the Changelog accordingly) run this command: ~~~yarn run docusaurus docs:version 5.3.0~~~ [ change the version number to the new version number ]
       - This will freeze the current version of the documentation. The files under the current `docs` directory will be considered to be `Upcoming 🚧` version.
 
 3. Update the package.json version number according to the Semantic Versioning principles outlined above in these circumstances:
