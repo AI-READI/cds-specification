@@ -11,7 +11,7 @@ This documentation is a central repository for storing Fair Data Innovations Hub
 ## Using the documentation
 
 All documentation that applies to all fairdataihub projects will be in the docs section.
-For project specific instructions use the sidebar to navigate to the desired project for its build and release instructions. 
+For project specific instructions use the sidebar to navigate to the desired project for its build and release instructions.
 
 ## Updating the documentation
 
