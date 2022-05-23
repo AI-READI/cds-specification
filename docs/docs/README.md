@@ -4,13 +4,13 @@ title: Fairdataihub developer documentation
 description: How to use the documentation site
 ---
 
-## About the Documentation
+## About the documentation
 
 ### Tech Stack
 
 [Vuepress](https://v2.vuepress.vuejs.org/guide/#introduction)
 
-## Getting Started
+## Getting started
 
 ### ⚠️ Prerequisites
 
@@ -26,7 +26,7 @@ If you already have a conda environment on your machine, you can install the dep
 conda install -c conda-forge yarn nodejs
 ```
 
-### Run Locally
+### Run locally
 
 Clone the project
 

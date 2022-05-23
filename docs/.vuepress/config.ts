@@ -9,6 +9,7 @@ export default defineUserConfig({
   lang: "en-US",
   title: "Developer Documentation",
   description: "Just playing around",
+  port: 3000,
 
   plugins: [
     prismjsPlugin({}),
@@ -80,9 +81,9 @@ export default defineUserConfig({
           text: "General",
           children: ["/general/comments.md"],
         },
-
         {
           text: "SODA for SPARC",
+          link: "/soda-for-sparc",
           children: [
             "/soda-for-sparc/build-soda.md",
             "/soda-for-sparc/soda-release.md",

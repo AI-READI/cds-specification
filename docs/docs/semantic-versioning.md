@@ -1,6 +1,6 @@
 ---
 lang: en-US
-title: Semantic Versioning
+title: Semantic versioning
 description: How to use semantic versioning in fairdataihub projects
 ---
 
