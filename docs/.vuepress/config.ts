@@ -51,7 +51,7 @@ export default defineUserConfig({
       },
       {
         text: "SODA for SPARC",
-        link: "/soda-for-sparc/build-soda.md",
+        link: "/soda-for-sparc",
       },
       {
         text: "FAIRshare",
