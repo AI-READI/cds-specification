@@ -51,11 +51,11 @@ export default defineUserConfig({
       },
       {
         text: "SODA for SPARC",
-        link: "/soda-for-sparc",
+        link: "/soda-for-sparc/general.md",
       },
       {
         text: "FAIRshare",
-        link: "/fairshare",
+        link: "/fairshare/general.md",
       },
       {
         text: "@fairdataihub",
@@ -83,16 +83,19 @@ export default defineUserConfig({
         },
         {
           text: "SODA for SPARC",
-          link: "/soda-for-sparc",
           children: [
+            "/soda-for-sparc/general.md",
             "/soda-for-sparc/build-soda.md",
             "/soda-for-sparc/soda-release.md",
           ],
         },
         {
           text: "FAIRshare",
-          link: "/fairshare",
-          children: ["/fairshare/build-fairshare.md"],
+          children: [
+            "/fairshare/general.md",
+            "/fairshare/build-fairshare.md",
+            "/fairshare/fairshare-release.md",
+          ],
         },
         {
           text: "README",
