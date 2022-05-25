@@ -1,10 +1,10 @@
 ---
 lang: en-US
-title: General
+title: Icons
 description: How to use the documentation site
 ---
 
-## Icons
+## App icons
 
 ### Windows
 
@@ -61,6 +61,22 @@ Always check the generated PNG files for transparency in their backgrounds.
 
 We will be using PNGs instead of ICNS files for better color depth on macOS.
 
-## To do
+## In app icons
 
-Some general information about SODA for SPARC.
+Within FAIRshare, we use the same icon library for all platforms. All icons used within FAIRshare can be found on the [iconify](https://iconify.design/) platform.
+
+To use the icon within the application you need to import the library into your component.
+
+```js
+import { Icon } from "@iconify/vue";
+```
+
+```html
+<Icon icon="ic:round-navigate-next" />
+```
+
+:::tip
+To use Tailwind's heroicon library, filter the library to `heroicon` directly in iconify.design.
+:::
+
+Also consider using [Element Plus icons](https://element-plus.org/en-US/component/icon.html#icon-collection) for better compatibility with the rest of the UI.
