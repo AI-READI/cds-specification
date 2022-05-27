@@ -207,6 +207,36 @@ jobs:
       - uses: webiny/action-conventional-commits@v1.0.3
 ```
 
+## GitLab sync
+
+As a secondary backup, we have setup a GitLab organization to sync all of our code with. This action should automatically mirror all pushes, commits, and PRs to the GitLab organization repository. You will need access to the repository secrets to use this action. Talk to [@megasanjay](https://github.com/megasanjay) to setup this value. The account that will be used to send this message will be [@fairdataihub-bot](https://gitlab.com/fairdataihub-bot).
+
+```yaml
+name: GitlabSync
+
+on:
+  push:
+    branches:
+      - "**"
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: Git Repo Sync
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: wangchucheng/git-repo-sync@v0.1.0
+        with:
+          target-url: https://gitlab.com/fairdataihub/SODA-for-SPARC.git
+          target-username: fairdataihub-bot
+          target-token: ${{ secrets.GITLAB_BOT }}
+```
+
+Replace `target-url` with the URL of the GitLab repository you want to sync.
+
 ## Code quality checks
 
 This action will run code quality checks on the codebase. Currently this is a good tool to ensure that the codebase is clean and well-formatted. Provided and recommended by GitHub.
