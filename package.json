@@ -1,33 +1,31 @@
 {
   "name": "fairdataihub-docs",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "Technical documentation for FAIR Data Innovations Hub",
   "main": "index.js",
   "author": "Sanjay Soundarajan <sanjay.16@live.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "dev": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
     "format": "prettier --ignore-path .gitignore \"./**/*.+(ts|js|jsx|tsx|md)\" --write",
     "prepare": "husky install"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "17.0.2",
-    "@commitlint/config-conventional": "17.0.2",
-    "@vuepress/plugin-prismjs": "2.0.0-beta.48",
-    "@vuepress/plugin-pwa": "2.0.0-beta.46",
-    "@vuepress/plugin-search": "2.0.0-beta.46",
-    "devmoji": "2.3.0",
-    "husky": "8.0.1",
-    "lint-staged": "13.0.1",
-    "prettier": "2.6.2",
-    "vuepress": "2.0.0-beta.46",
-    "vuepress-plugin-copy-code2": "2.0.0-beta.83"
   },
   "lint-staged": {
     "./**/*.{ts,js,jsx,tsx|md}": [
       "yarn format"
     ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "devmoji": "^2.3.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.2",
+    "prettier": "^2.7.1",
+    "vitepress": "^1.0.0-alpha.2",
+    "vue": "^3.2.37"
   }
 }

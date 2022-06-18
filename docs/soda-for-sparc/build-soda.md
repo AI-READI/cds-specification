@@ -4,7 +4,9 @@ title: Build instructions
 description: How to build SODA for SPARC
 ---
 
-## Conda environment
+# Build instructions
+
+## Setup Conda environment
 
 Create a new anaconda environment that is used ONLY for release. This will make sure that any python package testing or jupyter notebooks you perform on the dev environment will not carry over to the release version.
 

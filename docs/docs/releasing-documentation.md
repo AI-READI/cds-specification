@@ -37,14 +37,9 @@ You can get a deeper understanding of [Semantic Versioning](https://semver.org/)
    - You versioned the docs with the docusarus command.
 4. Update the table on the `blah` page so that the new version of the documentation (the one updated in package.json in the previous step) is matched to its corresponding version of SODA for SPARC/FAIRshare.
 5. Push the changes to the feature branch.
-6. Create a PR into the `main` branch.
+6. Create a pull request into the `main` branch.
 7. Wait for review and once approved merge.
 
-::: warning ⚠️
-If you are releasing a new version of `SODA for SPARC` or `FAIRshare` use `FAIRshare` to create a new release on `Zenodo` for the documentation.
-
-Important: Allow `Zenodo` to make the release through Github.
-
+::: tip
+GitHub actions to automatically release the documentation to both GitHub and Zenodo has been setup. Just be sure to follow conventional commits and our bots will handle the rest.
 :::
-
-Both `FAIRshare` and `SODA for SPARC Docs` are automatically deployed to their respective websites through `Vercel`.

@@ -4,9 +4,9 @@ title: Icons
 description: How to use the documentation site
 ---
 
-## App icons
+# App icons
 
-### Windows
+## Windows
 
 To generate the .ico files needed for windows applications, we will need to use Linux to generate these files. The `inkscape` and `imagemagick` packages are required to do this.
 
@@ -46,7 +46,7 @@ Verify that all the files are generated and included correctly.
 identify icon.ico
 ```
 
-### macOS/Linux
+## macOS/Linux
 
 Generate the PNG files directly from the SVG files. Use Adobe Illustrator/Inkscape if possible.
 
@@ -68,7 +68,7 @@ Within FAIRshare, we use the same icon library for all platforms. All icons used
 To use the icon within the application you need to import the library into your component.
 
 ```js
-import { Icon } from "@iconify/vue";
+import { Icon } from '@iconify/vue';
 ```
 
 ```html

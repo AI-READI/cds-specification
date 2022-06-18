@@ -4,11 +4,11 @@ title: Fairdataihub developer documentation
 description: How to use the documentation site
 ---
 
-## About the documentation
+# About the documentation
 
-### Tech Stack
+## Tech Stack
 
-[Vuepress](https://v2.vuepress.vuejs.org/guide/#introduction)
+- [Vitepress](https://vitepress.vuejs.org/)
 
 ## Getting started
 
@@ -16,13 +16,13 @@ description: How to use the documentation site
 
 This project uses `Yarn` as package manager.
 
-```bash
+```sh
 npm install --global yarn
 ```
 
 If you already have a conda environment on your machine, you can install the dependencies with:
 
-```bash
+```sh
 conda install -c conda-forge yarn nodejs
 ```
 
@@ -30,25 +30,25 @@ conda install -c conda-forge yarn nodejs
 
 Clone the project
 
-```bash
+```sh
 https://github.com/fairdataihub/fairdataihub-docs.git
 ```
 
 Go to the project directory
 
-```bash
+```sh
 cd fairdataihub-docs
 ```
 
 Install dependencies
 
-```bash
+```sh
 yarn install
 ```
 
 Start the server
 
-```bash
+```sh
 yarn dev
 ```
 
@@ -56,7 +56,7 @@ yarn dev
 
 Use this step to build a local production version of the site. Use `serve` to preview the local build.
 
-```bash
+```sh
 yarn docs:build
 ```
 

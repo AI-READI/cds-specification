@@ -4,6 +4,8 @@ title: Icons
 description: How to use the documentation site
 ---
 
+# App Icons
+
 ## Windows
 
 To generate the .ico files needed for windows applications, we will need to use Linux to generate these files. The `inkscape` and `imagemagick` packages are required to do this.

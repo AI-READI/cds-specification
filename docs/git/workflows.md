@@ -30,10 +30,10 @@ on:
   # but only on pull request for the main branch
   push:
     branches:
-      - "**"
+      - '**'
   pull_request:
     branches:
-      - "main"
+      - 'main'
 
 jobs:
   run-linters:
@@ -62,12 +62,12 @@ jobs:
         uses: wearerequired/lint-action@v2
         with:
           prettier: true
-          prettier_extensions: "css,html,js,json,jsx,md,sass,scss,ts,tsx,vue"
-          commit_message: "style: 🎨 code style issues with ${linter}"
+          prettier_extensions: 'css,html,js,json,jsx,md,sass,scss,ts,tsx,vue'
+          commit_message: 'style: 🎨 code style issues with ${linter}'
           auto_fix: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          git_email: "fairdataihub@gmail.com"
-          git_name: "fairdataihub-bot"
+          git_email: 'fairdataihub@gmail.com'
+          git_name: 'fairdataihub-bot'
 
       - name: Set up Python
         uses: actions/setup-python@v3
@@ -82,17 +82,17 @@ jobs:
         with:
           black: true
           auto_fix: true
-          commit_message: "style: 🎨 fix code style issues with ${linter}"
+          commit_message: 'style: 🎨 fix code style issues with ${linter}'
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          git_email: "fairdataihub@gmail.com"
-          git_name: "fairdataihub-bot"
+          git_email: 'fairdataihub@gmail.com'
+          git_name: 'fairdataihub-bot'
 
       - name: Run Flake8
         uses: wearerequired/lint-action@v2
         with:
           flake8: true
-          flake8_dir: "./src/pyflask"
-          flake8_args: "--max-line-length=88"
+          flake8_dir: './src/pyflask'
+          flake8_args: '--max-line-length=88'
 ```
 
 ## Mispellings
@@ -106,7 +106,7 @@ name: misspell-fixer-action
 
 on:
   push:
-    branches: "**"
+    branches: '**'
   workflow_dispatch:
 
 jobs:
@@ -119,8 +119,8 @@ jobs:
       - uses: peter-evans/create-pull-request@main
         with:
           token: ${{ secrets.BOT_ACTIONS }}
-          commit-message: "fix(typo): 🐛 typo fixes by misspell-fixer"
-          title: "fix(typo): 🐛 typo fixes by misspell-fixer"
+          commit-message: 'fix(typo): 🐛 typo fixes by misspell-fixer'
+          title: 'fix(typo): 🐛 typo fixes by misspell-fixer'
 ```
 
 ## Greetings
@@ -144,8 +144,8 @@ jobs:
       - uses: actions/first-interaction@v1
         with:
           repo-token: ${{ secrets.BOT_ACTIONS }}
-          issue-message: "Hey! Thank you for using FAIRshare and submitting an issue. Your feedback is extremely valuable to us! A maintainer will submit a response to your inquiry soon."
-          pr-message: "Thank you for taking your time and effort for your contribution, we truly value it. :tada: A maintainer will soon be on this PR to provide some comments or merge your changes. In the meantime please ensure that your changes follow our [`Contrubuting Guidelines`](https://github.com/fairdataihub/FAIRshare/blob/main/CONTRIBUTING.md)."
+          issue-message: 'Hey! Thank you for using FAIRshare and submitting an issue. Your feedback is extremely valuable to us! A maintainer will submit a response to your inquiry soon.'
+          pr-message: 'Thank you for taking your time and effort for your contribution, we truly value it. :tada: A maintainer will soon be on this PR to provide some comments or merge your changes. In the meantime please ensure that your changes follow our [`Contrubuting Guidelines`](https://github.com/fairdataihub/FAIRshare/blob/main/CONTRIBUTING.md).'
 ```
 
 ## Stale issues and PRs
@@ -158,7 +158,7 @@ name: Mark stale issues and pull requests
 
 on:
   schedule:
-    - cron: "32 19 * * *"
+    - cron: '32 19 * * *'
 
 jobs:
   stale:
@@ -173,11 +173,11 @@ jobs:
           repo-token: ${{ secrets.BOT_ACTIONS }}
           days-before-issue-stale: 30
           days-before-issue-close: 14
-          stale-pr-message: "Stale pull request"
-          stale-issue-label: "no-issue-activity"
-          stale-pr-label: "no-pr-activity"
-          stale-issue-message: "This issue is stale because it has been open for 30 days with no activity."
-          close-issue-message: "This issue was closed because it has been inactive for 14 days since being marked as stale."
+          stale-pr-message: 'Stale pull request'
+          stale-issue-label: 'no-issue-activity'
+          stale-pr-label: 'no-pr-activity'
+          stale-issue-message: 'This issue is stale because it has been open for 30 days with no activity.'
+          close-issue-message: 'This issue was closed because it has been inactive for 14 days since being marked as stale.'
           days-before-pr-stale: -1
           days-before-pr-close: -1
 ```
@@ -192,10 +192,10 @@ name: Conventional Commits
 on:
   push:
     branches:
-      - "**"
+      - '**'
   pull_request:
     branches:
-      - "**"
+      - '**'
 
 jobs:
   build:
@@ -217,7 +217,7 @@ name: GitlabSync
 on:
   push:
     branches:
-      - "**"
+      - '**'
   workflow_dispatch:
 
 jobs:
@@ -253,16 +253,16 @@ This action will run code quality checks on the codebase. Currently this is a go
 # correct set of supported CodeQL languages.
 #
 
-name: "CodeQL"
+name: 'CodeQL'
 
 on:
   push:
-    branches: "**"
+    branches: '**'
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: "**"
+    branches: '**'
   schedule:
-    - cron: "21 1 * * 2"
+    - cron: '21 1 * * 2'
 
 jobs:
   analyze:
@@ -276,7 +276,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["javascript", "python"]
+        language: ['javascript', 'python']
         # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python' ]
         # Learn more:
         # https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/configuring-code-scanning#changing-the-languages-that-are-analyzed
