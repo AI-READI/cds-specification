@@ -1,8 +1,8 @@
 ---
 layout: home
 
-title: VitePress
-titleTemplate: Vite & Vue Powered Static Site Generator
+title: FAIR Data Innovations Hub
+titleTemplate: Making FAIR data practices more accessible
 
 hero:
   name: FAIR Data Innovations Hub
