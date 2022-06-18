@@ -6,7 +6,7 @@ description: How to use the documentation site
 
 # Overview
 
-FAIR Data Innovations Hub uses Storybook to keep an index of all the components used within our applications. At the moment we have two seperate design systems for our applications. In the future this might be changed to a single design system.
+FAIR Data Innovations Hub uses Storybook to keep an index of all the components used within our applications. At the moment we have two separate design systems for our applications. In the future this might be changed to a single design system.
 
 ## Design system
 
