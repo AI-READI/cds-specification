@@ -221,7 +221,7 @@ For this action to work a number of prerequisites must be met.
 The following packages must be added to your repository:
 
 ```sh
-yarn add -D @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/github @semantic-release/release-notes-generator semantic-release
+yarn add -D @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/github @semantic-release/release-notes-generator semantic-release @semantic-release/npm
 ```
 
 Add a `.releaserc.json` file to the root of your project. You can adjust these items as needed.
@@ -248,6 +248,12 @@ Add a `.releaserc.json` file to the root of your project. You can adjust these i
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ],
     "@semantic-release/github",
     "@semantic-release/git"
   ]
