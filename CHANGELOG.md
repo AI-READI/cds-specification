@@ -1,3 +1,12 @@
+## [2.1.1](https://github.com/fairdataihub/fairdataihub-docs/compare/v2.1.0...v2.1.1) (2022-06-18)
+
+
+### Bug Fixes
+
+* 🐛 update semantic release action ([f808375](https://github.com/fairdataihub/fairdataihub-docs/commit/f808375bcf19e0862ac083690ba3b2ca79e0e279))
+* 🐛 update semantic release action ([5c446a2](https://github.com/fairdataihub/fairdataihub-docs/commit/5c446a274ef80971e990c23f31bfadf8613e020a))
+* 🐛 update semantic release action ([70685f3](https://github.com/fairdataihub/fairdataihub-docs/commit/70685f3f5462c9b2edb88649d9a319d4116e4a8b))
+
 # [2.1.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.0.0...v2.1.0) (2022-06-18)
 
 ### Bug Fixes
