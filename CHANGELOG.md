@@ -1,3 +1,11 @@
+## [2.2.3](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.2.2...v2.2.3) (2022-06-18)
+
+
+### Bug Fixes
+
+* 🐛 update collapsible header ([019e7a7](https://github.com/fairdataihub/dev.fairdataihub.org/commit/019e7a78397920f841570496f12bcb919c2085db))
+* 🐛 update collapsible header ([8563adb](https://github.com/fairdataihub/dev.fairdataihub.org/commit/8563adb747179d3fb1c3951ba7bc2ae9dfc9947d))
+
 ## [2.2.2](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.2.1...v2.2.2) (2022-06-18)
 
 ### Bug Fixes
