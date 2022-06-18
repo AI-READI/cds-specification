@@ -16,6 +16,6 @@ jobs:
           fetch-depth: 0
       - uses: wangchucheng/git-repo-sync@v0.1.0
         with:
-          target-url: https://gitlab.com/fairdataihub/fairdataihub-docs.git
+          target-url: https://gitlab.com/fairdataihub/dev.fairdataihub.org.git
           target-username: fairdataihub-bot
           target-token: ${{ secrets.GITLAB_BOT }}

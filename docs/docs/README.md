@@ -31,13 +31,13 @@ conda install -c conda-forge yarn nodejs
 Clone the project
 
 ```sh
-https://github.com/fairdataihub/fairdataihub-docs.git
+https://github.com/fairdataihub/dev.fairdataihub.org.git
 ```
 
 Go to the project directory
 
 ```sh
-cd fairdataihub-docs
+cd dev.fairdataihub.org
 ```
 
 Install dependencies

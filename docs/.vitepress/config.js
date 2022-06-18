@@ -20,7 +20,7 @@ export default defineConfig({
 
     editLink: {
       pattern:
-        'https://github.com/fairdataihub/fairdataihub-docs/edit/main/docs/:path',
+        'https://github.com/fairdataihub/dev.fairdataihub.org/edit/main/docs/:path',
       text: 'Edit this page on GitHub',
     },
 
@@ -105,6 +105,7 @@ function sidebarGuide() {
       items: [
         { text: 'Commits on GitHub', link: '/git/commits.md' },
         { text: 'GitHub actions', link: '/git/workflows.md' },
+        { text: 'GitLab', link: '/git/gitlab.md' },
       ],
     },
 
