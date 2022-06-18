@@ -1,3 +1,11 @@
+## [2.2.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.2.0...v2.2.1) (2022-06-18)
+
+
+### Bug Fixes
+
+* 🐛 update release action ([c4d0129](https://github.com/fairdataihub/dev.fairdataihub.org/commit/c4d01293b7f0f59e6503f2f1ad735b91d32fac97))
+* 🐛 update release action ([14a834c](https://github.com/fairdataihub/dev.fairdataihub.org/commit/14a834c1d5d008bcfa65d6ccfe9cc4aa57b3f668))
+
 # [2.2.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.1.1...v2.2.0) (2022-06-18)
 
 ### Features
