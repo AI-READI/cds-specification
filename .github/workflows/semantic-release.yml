@@ -21,12 +21,6 @@ jobs:
       - name: Install Node.js dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Format check
-        run: yarn format
-
-      - name: Lint check
-        run: yarn lint
-
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_ACTIONS }}
