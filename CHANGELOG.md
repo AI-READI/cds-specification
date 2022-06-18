@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.2.1...v2.2.2) (2022-06-18)
+
+
+### Bug Fixes
+
+* **typo:** 🐛 typo fixes by misspell-fixer ([#36](https://github.com/fairdataihub/dev.fairdataihub.org/issues/36)) ([28bb91f](https://github.com/fairdataihub/dev.fairdataihub.org/commit/28bb91f78b93c732d8f1f45730452e3f5791de31))
+
 ## [2.2.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.2.0...v2.2.1) (2022-06-18)
 
 
