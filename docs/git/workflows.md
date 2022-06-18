@@ -182,6 +182,86 @@ jobs:
           days-before-pr-close: -1
 ```
 
+## Create a release on GitHub
+
+We use the `semantic-releases` for any repositories that are hosted on the web. This action will analyze the current version of the repository and create a release on GitHub if needed. Using conventional commits is required for this action to work. Your changelog will also be updated with the release notes.
+
+```yaml
+name: Create release on GitHub
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-version-on-github:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Node.js dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_ACTIONS }}
+        run: yarn semantic-release
+```
+
+For this action to work a number of prerequisites must be met.
+
+The following packages must be added to your repository:
+
+```sh
+yarn add -D @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/github @semantic-release/release-notes-generator semantic-release
+```
+
+Add a `.releaserc.json` file to the root of your project. You can adjust these items as needed.
+
+```json
+{
+  "branches": [
+    "+([0-9])?(.{+([0-9]),x}).x",
+    "main",
+    "master",
+    "next",
+    "next-major",
+    {
+      "name": "beta",
+      "prerelease": true
+    },
+    {
+      "name": "alpha",
+      "prerelease": true
+    }
+  ],
+  "repositoryUrl": "https://github.com/fairdataihub/<repo-name>.git",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/git"
+  ]
+}
+```
+
+Add this script to your package.json:
+
+```json
+    "scripts": {
+      "semantic-release": "semantic-release"
+    }
+```
+
 ## Conventional commits
 
 This one is just a reminder to use conventional commits. It will not block any commits so please be mindful of that. Currently this is a good tool to ensure commits in a PR are all in the same enforced style.

@@ -14,7 +14,7 @@
       "prerelease": true
     }
   ],
-  "repositoryUrl": "https://github.com/fairdataihub/fairdataihub-docs.git",
+  "repositoryUrl": "https://github.com/fairdataihub/dev.fairdataihub.org.git",
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
