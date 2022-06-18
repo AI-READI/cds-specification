@@ -75,6 +75,7 @@ function sidebarGuide() {
   return [
     {
       text: 'README',
+      collapsible: true,
       items: [
         { text: 'Overview', link: '/docs/overview.md' },
         {
@@ -111,6 +112,7 @@ function sidebarGuide() {
 
     {
       text: 'General',
+      collapsible: true,
       items: [{ text: 'Commenting code', link: '/general/comments.md' }],
     },
 
