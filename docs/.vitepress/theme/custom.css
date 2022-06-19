@@ -1,4 +1,9 @@
 :root {
   --vp-c-brand: #cb128d;
   --vp-c-brand-light: #ed32ae;
+  --vp-c-brand-dark: #ad0f78;
+}
+
+.outline-link.active {
+  color: var(--vp-c-brand) !important;
 }

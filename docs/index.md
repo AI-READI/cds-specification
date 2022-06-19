@@ -5,9 +5,12 @@ title: FAIR Data Innovations Hub
 titleTemplate: Making FAIR data practices more accessible
 
 hero:
-  name: FAIR Data Innovations Hub
+  name: Developer Docs
   text: ''
-  tagline: Making FAIR data practices more accessible.
+  tagline: Full documentation for every FAIR Data Innovations Hub developer...
+  image:
+    src: https://fairdataihub.org/logo.svg
+    alt: Vitest
   actions:
     - theme: brand
       text: Get Started 🚀
