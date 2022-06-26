@@ -33,7 +33,7 @@
     "lint-staged": "^13.0.2",
     "prettier": "^2.7.1",
     "semantic-release": "^19.0.3",
-    "vitepress": "^1.0.0-alpha.2",
+    "vitepress": "1.0.0-alpha.4",
     "vue": "^3.2.37"
   }
 }
