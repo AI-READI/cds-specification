@@ -162,3 +162,16 @@ Include tags in the following order:
 ::: details Additional information
 If you would like additional info on a better comment style, refer to this [blog post](https://blog.shhdharmen.me/comments-usage-and-best-practices-in-javascript) and this [blog post](https://www.digitalocean.com/community/tutorials/how-to-write-comments-in-javascript).
 :::
+
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
+
+```mermaid
+flowchart TD
+  Start --> Stop
+```

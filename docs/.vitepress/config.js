@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress';
+import MermaidPlugin from 'vitepress-plugin-mermaid';
 
 export default defineConfig({
   lang: 'en-US',
@@ -12,6 +13,7 @@ export default defineConfig({
 
   markdown: {
     lineNumbers: true,
+    config: MermaidPlugin,
   },
 
   themeConfig: {

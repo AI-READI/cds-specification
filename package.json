@@ -35,5 +35,9 @@
     "semantic-release": "^19.0.3",
     "vitepress": "1.0.0-alpha.4",
     "vue": "^3.2.37"
+  },
+  "dependencies": {
+    "mermaid": "^9.1.3",
+    "vitepress-plugin-mermaid": "^1.0.1"
   }
 }
