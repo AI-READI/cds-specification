@@ -1,9 +1,8 @@
 # [2.3.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.2.3...v2.3.0) (2022-07-07)
 
-
 ### Features
 
-* ✨ add support for mermaid ([c1d3b87](https://github.com/fairdataihub/dev.fairdataihub.org/commit/c1d3b87535aaaed86308e844e3fc23ea97325196))
+- ✨ add support for mermaid ([c1d3b87](https://github.com/fairdataihub/dev.fairdataihub.org/commit/c1d3b87535aaaed86308e844e3fc23ea97325196))
 
 ## [2.2.3](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.2.2...v2.2.3) (2022-06-18)
 
