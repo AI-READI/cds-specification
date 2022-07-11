@@ -1,9 +1,8 @@
 # [2.4.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.3.1...v2.4.0) (2022-07-11)
 
-
 ### Features
 
-* ✨ added instructions for @fairdataihub/config ([7d5b8f6](https://github.com/fairdataihub/dev.fairdataihub.org/commit/7d5b8f6278556353ef9e27f4c5d6cd13c27cb314))
+- ✨ added instructions for @fairdataihub/config ([7d5b8f6](https://github.com/fairdataihub/dev.fairdataihub.org/commit/7d5b8f6278556353ef9e27f4c5d6cd13c27cb314))
 
 ## [2.3.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.3.0...v2.3.1) (2022-07-11)
 
