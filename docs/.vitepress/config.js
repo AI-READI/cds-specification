@@ -12,7 +12,7 @@ export default defineConfig({
   lastUpdated: true,
 
   markdown: {
-    lineNumbers: true,
+    lineNumbers: false,
     config: MermaidPlugin,
   },
 

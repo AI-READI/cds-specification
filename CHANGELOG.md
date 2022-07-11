@@ -1,3 +1,15 @@
+## [2.3.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.3.0...v2.3.1) (2022-07-11)
+
+### Bug Fixes
+
+- disable lineNumbers until vitepress update vuejs/vitepress[#884](https://github.com/fairdataihub/dev.fairdataihub.org/issues/884) ([1f37d6d](https://github.com/fairdataihub/dev.fairdataihub.org/commit/1f37d6dd1687095fb0d2bb028f87b3e25f04838c))
+
+# [2.3.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.2.3...v2.3.0) (2022-07-07)
+
+### Features
+
+- ✨ add support for mermaid ([c1d3b87](https://github.com/fairdataihub/dev.fairdataihub.org/commit/c1d3b87535aaaed86308e844e3fc23ea97325196))
+
 ## [2.2.3](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.2.2...v2.2.3) (2022-06-18)
 
 ### Bug Fixes
