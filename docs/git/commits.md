@@ -65,18 +65,31 @@ git commit -m "feat(api)!: send an email to the customer when a product is shipp
 
 A prefix for the commit message describing the type of the change.
 
+:::tip
+The allowed types are provided as part of the [@fairdataihub/config](https://www.npmjs.com/package/@fairdataihub/config) library. To learn more about this module please refer to the [config](config) documentation.
+:::
+
 ### Type values allowed
 
-- `feat`: Changes which introduce a new feature
-- `fix`: Changes which patch a bug
-- `style`: Changes which don't affect code logic, such as white-spaces, formatting, missing semi-colons
-- `refactor`: Changes which neither fix a bug nor add a feature
-- `chore`: Changes which aren't user-facing such as updating dependencies, upgrading tools, file renames and moves.
-- `revert`: Changes which revert a previous commit
-- `perf`: Changes which improve performance
-- `docs`: Changes which affect documentation
-- `test`: Changes which add missing tests or correct existing
-- `build`: Changes which affect CI configuration files and scripts
+- `feat`: :sparkles: Changes which introduce a new feature
+- `breaking`: :boom: Changes which break compatibility
+- `fix`: :bug: Changes which patch a bug. Includes spelling error corrections
+- `style`: :art: Changes which don't affect code logic, such as white-spaces, formatting, missing semi-colons
+- `refactor`: :recycle: Changes which neither introduce a new feature nor fix a bug
+- `chore`: :wrench: Changes which aren't user-facing such as updating dependencies and upgrading tools
+- `wip`: :construction: Work in progress
+- `docs`: :page_facing_up: Changes which affect documentation
+- `release`: :rocket: Code deployment or publishing to external repositories
+- `ci`: :construction_worker: Updates to the continuous integration system and scripts
+- `build`: :package: Changes which affect the build process
+- `merge`: :twisted_rightwards_arrows: Merges a branch into another
+- `test`: :alembic: Changes which add missing tests or correct existing
+- `perf`: :zap: Changes which improve performance
+- `security`: :lock: Fixing security issues
+- `revert`: :rewind: Changes which revert a previous commit
+- `i18n`: :globe_with_meridians: Changes which affect internationalization
+- `add`: :heavy_plus_sign: Changes which add new files
+- `remove`: :fire: Changes which remove files
 
 Here is an example of the feature type used as a prefix.
 
@@ -126,6 +139,6 @@ git commit -m "fix(deps): correct typo in package.json package name"
 
 Most of the repositories in this organization have been setup to automatically add emoji to the commit message. You don't need to do this manually. Just write out your commit as usual.
 
-For example the following commit message: `docs: update commits documentation` will be automatically converted to: `docs: 📚️ update commits documentation`
+For example the following commit message: `docs: update commits documentation` will be automatically converted to: `docs: 📄 update commits documentation`
 
 All emoji based commits are created through git hooks using the [devmoji](https://github.com/folke/devmoji) library.

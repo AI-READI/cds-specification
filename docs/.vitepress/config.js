@@ -108,6 +108,7 @@ function sidebarGuide() {
       items: [
         { text: 'Commits on GitHub', link: '/git/commits.md' },
         { text: 'GitHub actions', link: '/git/workflows.md' },
+        { text: '@fairdataihub/config', link: '/git/config.md' },
         { text: 'GitLab', link: '/git/gitlab.md' },
       ],
     },
