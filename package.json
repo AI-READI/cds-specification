@@ -15,7 +15,7 @@
     "semantic-release": "semantic-release"
   },
   "lint-staged": {
-    "./**/*.{ts,js,jsx,tsx|md}": [
+    "./**/*.{ts,js,jsx,tsx,md}": [
       "yarn format"
     ]
   },
