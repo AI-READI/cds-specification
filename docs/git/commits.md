@@ -66,7 +66,7 @@ git commit -m "feat(api)!: send an email to the customer when a product is shipp
 A prefix for the commit message describing the type of the change.
 
 :::tip
-The allowed types are provided as part of the [@fairdataihub/config](https://www.npmjs.com/package/@fairdataihub/config) library. To learn more about this module please refer to the [config](config) documentation.
+The allowed types are provided as part of the [@fairdataihub/config](https://www.npmjs.com/package/@fairdataihub/config) library. To learn more about this module please refer to the [config](/general/config) documentation.
 :::
 
 ### Type values allowed
