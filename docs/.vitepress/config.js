@@ -108,7 +108,7 @@ function sidebarGuide() {
       items: [
         { text: 'Commits on GitHub', link: '/git/commits.md' },
         { text: 'GitHub actions', link: '/git/workflows.md' },
-        { text: '@fairdataihub/config', link: '/git/config.md' },
+
         { text: 'GitLab', link: '/git/gitlab.md' },
       ],
     },
@@ -116,7 +116,10 @@ function sidebarGuide() {
     {
       text: 'General',
       collapsible: true,
-      items: [{ text: 'Commenting code', link: '/general/comments.md' }],
+      items: [
+        { text: 'Commenting code', link: '/general/comments.md' },
+        { text: '@fairdataihub/config', link: '/general/config.md' },
+      ],
     },
 
     {
