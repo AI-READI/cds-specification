@@ -137,9 +137,9 @@ function sidebarGuide() {
           link: '/soda-for-sparc/soda-release.md',
         },
         {
-          text: "SODA Server",
-          link: "/soda-for-sparc/soda-server.md",
-        }
+          text: 'SODA Server',
+          link: '/soda-for-sparc/soda-server.md',
+        },
       ],
     },
 
