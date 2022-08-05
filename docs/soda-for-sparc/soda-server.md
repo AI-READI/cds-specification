@@ -50,6 +50,52 @@ For more concrete examples of the concepts check the stack overflow blog [here](
 Currently most endpoints don't follow REST guidelines. This was a decision to make the conversion faster. When refactoring or adding a new endpoint one easy way to make the API more RESTful is to follow the resource hierarchy model used by Pennsieve's API endpoints. Of course this is only true when adding features that are essentially just calling Pennsieve's endpoints to do the work. New features that work on SODA for SPARC resources that are exclusive to SODA for SPARC may require their own resource hierarchy model that will not be based on Pennsieves.  
 :::
 
+### Error Handling
+
+The server throws general exceptions when something unexpected happens. These should be returned to the client with a 500 status code. If something we expect to go wrong happens, the server should use an HTTPException object along with the appropriate status code. For instance, if the client provided invalid account credentials or a nonexistent dataset id/name return a 400 status code.
+
+Currently when validating credentials we assume there is a user error rather than checking to see if Pennsieve is down. We also do not bother differentiating between a 401 or a 400 response from Pennsieve when authenticating credentials. This is because the details will be logged - so we will know exact causes during investigation - and the difference doesn't matter to the client code.
+
+Here are the different ways to handle errors in the api files and the implementation code:
+
+#### In the API files
+
+Wrap a Try Except block around the call to the implementation function.
+
+```python
+
+    # inside of a route function in an api file
+    try:
+        return import_pennsieve_dataset(sodajsonobject)
+    except Exception as e:
+        if notBadRequestException(e):
+            api.abort(500, str(e))
+        raise e
+```
+
+Notice the use of notBadRequestException. This is a helper function that checks if the error is not the result of a bad request from the client. An example of a bad request would be if the client isn't a manager or owner of a dataset, but they tried to edit it anyways.
+
+If the error is not the result of a bad request, then something unexpected happened and we return a 500 status code along with the error message to the client. Otherwise we return the bad request exception message to the user along with the status code attached to `e`.
+
+While not precise - as we only return the 500 status code and ignore all other 500s - this is a good starting point for future work.
+
+#### In the implementation code
+
+For bad request exceptions use the abort function from flask.
+
+```python
+    import abort from flask
+
+    try:
+        ps = get_ps_account()
+    except Exception as e:
+        abort(400, "Error: Select a valid Pennsieve account. ")
+
+```
+
+This will raise an HTTPException with a 400 status code and the message from the exception. It will bubble up to the api file and be returned to the
+client from there. Use this pattern for all bad request exceptions.
+
 ### Logging - How and What
 
 #### Importing the logger into the namespace and implementation code
