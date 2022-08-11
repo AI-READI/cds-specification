@@ -41,7 +41,7 @@ npx husky add .husky/pre-commit 'yarn lint-staged'
 npx husky add .husky/prepare-commit-msg 'npx devmoji -e --lint'
 ```
 
-### Lint staged
+## Lint staged
 
 Run the following command to install the lint staged plugin:
 
@@ -81,19 +81,19 @@ Also add the following keys to your `package.json` file:
 You can update the path if you need something different for the commit hooks for linting.
 :::
 
-### Prettier
+## Prettier
 
 Refer to the [prettier section](/general/config.html#prettier) for more information on the options.
 
-### Commitlint
+## Commitlint
 
 Refer to the [commitlint section](/general/config.html#commitlint) for more information.
 
-### Devmoji
+## Devmoji
 
 Refer to the [devmoji section](/general/config.html#devmoji) for more information.
 
-### Semantic releases
+## Semantic releases
 
 Refer to the [semantic releases section](/general/config.html#semantic-releases) for more information.
 
