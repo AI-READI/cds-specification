@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.4.1...v2.5.0) (2022-08-11)
+
+
+### Features
+
+* ✨ add dev setup page ([#44](https://github.com/fairdataihub/dev.fairdataihub.org/issues/44)) ([46e4277](https://github.com/fairdataihub/dev.fairdataihub.org/commit/46e42778055e51b101df8debb3ca788fc1656985))
+
 ## [2.4.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.4.0...v2.4.1) (2022-08-05)
 
 ### Bug Fixes
