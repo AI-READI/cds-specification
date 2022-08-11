@@ -1,9 +1,8 @@
 ## [2.4.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.4.0...v2.4.1) (2022-08-05)
 
-
 ### Bug Fixes
 
-* 🐛 update broken config link ([deb659d](https://github.com/fairdataihub/dev.fairdataihub.org/commit/deb659d38d5eac8d321ddff7844441601b2283ac))
+- 🐛 update broken config link ([deb659d](https://github.com/fairdataihub/dev.fairdataihub.org/commit/deb659d38d5eac8d321ddff7844441601b2283ac))
 
 # [2.4.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.3.1...v2.4.0) (2022-07-11)
 
