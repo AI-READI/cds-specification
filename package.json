@@ -34,7 +34,7 @@
     "lint-staged": "13.0.3",
     "prettier": "2.7.1",
     "semantic-release": "19.0.3",
-    "vitepress": "1.0.0-alpha.4",
+    "vitepress": "1.0.0-alpha.10",
     "vue": "3.2.37"
   },
   "dependencies": {
