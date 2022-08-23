@@ -8,6 +8,8 @@ description: Generate open graph images for fairdataihub web apps
 
 To ensure that we follow a consistent online presence, an open graph image generation service has been setup at the domain og.fairdataihub.org. These images are meant to used in the `<head>` tag of any websites that need a thumbnail that will be visible when shared online. At the moment only three different style of backgrounds are used but this can be modified at any time.
 
+The repository for this service can be found here: [@fairdataihub/og.fairdataihub.org](https://github.com/fairdataihub/og.fairdataihub.org)
+
 ## Technical details
 
 This service is deployed on Vercel to take advantage of their serverless functions. However, this service also requires the [chrome-aws-lambda](https://www.npmjs.com/package/chrome-aws-lambda) module. This module takes up 98% of the maximum serverless function size so adding more features to this service might not be possible.
