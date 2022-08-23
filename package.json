@@ -6,8 +6,8 @@
   "author": "Sanjay Soundarajan <sanjay.16@live.com>",
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "vitepress dev docs",
-    "docs:dev": "vitepress dev docs",
+    "dev": "vitepress dev docs --port 3000",
+    "docs:dev": "vitepress dev docs --port 3000",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "format": "prettier --ignore-path .gitignore \"./**/*.+(ts|js|jsx|tsx|md)\" --write",

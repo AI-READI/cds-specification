@@ -175,6 +175,7 @@ function sidebarGuide() {
       items: [
         { text: 'Commenting code', link: '/general/comments.md' },
         { text: 'Project setup', link: '/general/project-setup.md' },
+        { text: 'Open Graph Image Generation', link: '/general/og-image.md' },
         { text: '@fairdataihub/config', link: '/general/config.md' },
       ],
     },

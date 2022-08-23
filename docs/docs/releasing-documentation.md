@@ -48,3 +48,7 @@ GitHub actions to automatically release the documentation to both GitHub and Zen
 ::: warning
 If you are going to release a major version of the documentation, ensure the commit message includes a footer starting with `BREAKING CHANGE`. View the info under step 2 of the release procedure to see how to do this.
 :::
+
+## Additional Information
+
+We still haven't determined how many app versions of the docs that we want to display. 3 major versions would be ideal. For any more, truncate the documentation versions so that we don't have to deal with excessively long build times for versions of the app that are no longer supported.
