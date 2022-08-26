@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.5.0...v2.6.0) (2022-08-26)
+
+
+### Features
+
+* ✨ add docs for og-image ([98ba7fb](https://github.com/fairdataihub/dev.fairdataihub.org/commit/98ba7fb77141db730e24c400f19ca0f1c20766aa))
+
 # [2.5.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.4.1...v2.5.0) (2022-08-11)
 
 ### Features
