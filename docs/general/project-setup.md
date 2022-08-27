@@ -39,6 +39,7 @@ Add the following hooks to your husky installation:
 npx husky add .husky/commit-msg 'yarn commitlint --edit $1'
 npx husky add .husky/pre-commit 'yarn lint-staged'
 npx husky add .husky/prepare-commit-msg 'npx devmoji -e --lint'
+npx husky add .husky/post-merge 'yarn'
 ```
 
 ## Lint staged
