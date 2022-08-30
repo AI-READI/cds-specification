@@ -1,3 +1,10 @@
+# [2.7.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.6.0...v2.7.0) (2022-08-30)
+
+
+### Features
+
+* add post-merge hook ([dd055e7](https://github.com/fairdataihub/dev.fairdataihub.org/commit/dd055e73f9532b1089b31be2ccd910e0f5877882))
+
 # [2.6.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.5.0...v2.6.0) (2022-08-26)
 
 ### Features
