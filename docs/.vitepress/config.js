@@ -10,9 +10,10 @@ export default defineConfig({
 
   appearance: true,
   lastUpdated: true,
+  ignoreDeadLinks: false,
 
   markdown: {
-    lineNumbers: false,
+    lineNumbers: true,
     config: MermaidPlugin,
   },
 
