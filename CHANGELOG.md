@@ -1,3 +1,22 @@
+## [2.7.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.7.0...v2.7.1) (2022-09-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vitepress-plugin-mermaid to v2 ([#54](https://github.com/fairdataihub/dev.fairdataihub.org/issues/54)) ([5ca34a7](https://github.com/fairdataihub/dev.fairdataihub.org/commit/5ca34a7d962651fb8c13f92a386ba3cce797253b))
+
+# [2.7.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.6.0...v2.7.0) (2022-08-30)
+
+### Features
+
+- add post-merge hook ([dd055e7](https://github.com/fairdataihub/dev.fairdataihub.org/commit/dd055e73f9532b1089b31be2ccd910e0f5877882))
+
+# [2.6.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.5.0...v2.6.0) (2022-08-26)
+
+### Features
+
+- ✨ add docs for og-image ([98ba7fb](https://github.com/fairdataihub/dev.fairdataihub.org/commit/98ba7fb77141db730e24c400f19ca0f1c20766aa))
+
 # [2.5.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.4.1...v2.5.0) (2022-08-11)
 
 ### Features
