@@ -39,6 +39,6 @@
   },
   "dependencies": {
     "mermaid": "^9.1.3",
-    "vitepress-plugin-mermaid": "^1.0.1"
+    "vitepress-plugin-mermaid": "^2.0.0"
   }
 }
