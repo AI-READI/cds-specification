@@ -182,6 +182,91 @@ jobs:
           days-before-pr-close: -1
 ```
 
+## Cypress end to end tests
+
+An action that you can use to trigger Cypress end to end tests. Only relevant for web apps at the moment. Three different jobs for Chrome, Firefox and Edge are included.
+
+```yaml
+name: End-to-end tests
+on: [push]
+jobs:
+  chrome:
+    runs-on: ubuntu-20.04
+
+    name: E2E on Chrome
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Node.js dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run Cypress tests on Chrome
+        uses: cypress-io/github-action@v4
+        with:
+          start: yarn dev
+          browser: chrome
+
+  firefox:
+    runs-on: ubuntu-latest
+
+    name: E2E on Firefox
+
+    container:
+      image: cypress/browsers:node16.5.0-chrome97-ff96
+      options: --user 1001
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Node.js dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run Cypress tests on Firefox
+        uses: cypress-io/github-action@v4
+        with:
+          start: yarn dev
+          browser: firefox
+
+  edge:
+    runs-on: ubuntu-latest
+
+    name: E2E on Edge
+
+    container:
+      image: cypress/browsers:node14.10.1-edge88
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Node.js dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run Cypress tests on Edge
+        uses: cypress-io/github-action@v4
+        with:
+          start: yarn dev
+          browser: edge
+```
+
 ## Create a release on GitHub
 
 We use the `semantic-releases` for any repositories that are hosted on the web. This action will analyze the current version of the repository and create a release on GitHub if needed. Using conventional commits is required for this action to work. Your changelog will also be updated with the release notes.
