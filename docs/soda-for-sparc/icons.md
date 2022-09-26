@@ -34,6 +34,10 @@ inkscape -w 256 -h 256 -e 256.png icon.svg
 inkscape -w 512 -h 512 -e 512.png icon.svg
 ```
 
+:::tip
+Use `-o` instead of `-e` if these lines are being run on macOS.
+:::
+
 Bundle the png files into the .ico format with the following commands:
 
 ```bash
