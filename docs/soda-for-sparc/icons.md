@@ -8,7 +8,7 @@ description: How to use the documentation site
 
 ## Windows
 
-To generate the .ico files needed for windows applications, we will need to use Linux to generate these files. The `inkscape` and `imagemagick` packages are required to do this.
+To generate the .ico files needed for windows applications, we will need to use either Linux or macOS to generate these files. The `inkscape` and `imagemagick` packages are required to do this.
 
 ::: warning Source files
 All source image files should be in the SVG format.
@@ -17,7 +17,14 @@ All source image files should be in the SVG format.
 Install the required packages.
 
 ```bash
+# Ubuntu
 sudo apt-get install inkscape imagemagick
+```
+
+```bash
+# macOS
+brew update && brew install imagemagick
+brew install --cask inkscape
 ```
 
 Generate all the variants needed for the ico file.
