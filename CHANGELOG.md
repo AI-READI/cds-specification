@@ -1,9 +1,8 @@
 # [2.8.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.7.1...v2.8.0) (2022-09-22)
 
-
 ### Features
 
-* ✨ add docs for cypress actions ([ffdeb26](https://github.com/fairdataihub/dev.fairdataihub.org/commit/ffdeb26dcdfdd580cd4df75aee3dfdb1b4527aa1))
+- ✨ add docs for cypress actions ([ffdeb26](https://github.com/fairdataihub/dev.fairdataihub.org/commit/ffdeb26dcdfdd580cd4df75aee3dfdb1b4527aa1))
 
 ## [2.7.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.7.0...v2.7.1) (2022-09-19)
 
