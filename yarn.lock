@@ -5234,10 +5234,10 @@ vitepress-plugin-mermaid@^2.0.0:
   resolved "https://registry.yarnpkg.com/vitepress-plugin-mermaid/-/vitepress-plugin-mermaid-2.0.4.tgz#0dc21c27ff22d02447ed56d49fe18870ae253104"
   integrity sha512-NNxHMxTflT6UNVcMWjCfcNmFRvIEzdrWIg9HFKU8c6qBwDBWHBbq3pYnhutXf3kwKmf3wh1zBbm6w7ECoz0w7A==
 
-vitepress@1.0.0-alpha.15:
-  version "1.0.0-alpha.15"
-  resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-1.0.0-alpha.15.tgz#26ff8a8b5bae298ac6e47e5fec20d873a3a5960a"
-  integrity sha512-+pHJQCpnv0wVgLRyonisrj7Y77PVhbns2nTLxV9GkH3T+RTY/W2JmRatzBg5WciMaPyO8Ms6F3YElO5PULVv3w==
+vitepress@1.0.0-alpha.17:
+  version "1.0.0-alpha.17"
+  resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-1.0.0-alpha.17.tgz#bde5038b20ce99fe3c0a5c4ff703f61f0a6777d0"
+  integrity sha512-8qsR0PPcvxZFDKSU7b7VenxDoqlEbWuWgogeyRhp1pQ96QIAlWPS9BbGGHWlnEfgdtLVDxEfAmCBRE0YJX/Thg==
   dependencies:
     "@docsearch/css" "^3.2.1"
     "@docsearch/js" "^3.2.1"
