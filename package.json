@@ -35,7 +35,7 @@
     "prettier": "2.7.1",
     "semantic-release": "19.0.5",
     "vitepress": "1.0.0-alpha.19",
-    "vue": "3.2.39"
+    "vue": "3.2.40"
   },
   "dependencies": {
     "mermaid": "^9.1.3",
