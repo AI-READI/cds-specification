@@ -18,7 +18,7 @@ Install the following dependencies for your project:
 
 ```sh
 yarn add -D @commitlint/cli @commitlint/config-conventional commitizen cz-conventional-changelog
-yarn add -D @fairdataihub/config devmoji
+yarn add -D @fairdataihub/config megasanjay-devmoji
 yarn add -D @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/github @semantic-release/npm @semantic-release/release-notes-generator semantic-release
 yarn add -D eslint prettier eslint-config-prettier eslint-plugin-prettier prettier-plugin-tailwindcss
 yarn add -D eslint-config-next eslint-import-resolver-typescript
@@ -38,7 +38,7 @@ Add the following hooks to your husky installation:
 ```sh
 npx husky add .husky/commit-msg 'yarn commitlint --edit $1'
 npx husky add .husky/pre-commit 'yarn lint-staged'
-npx husky add .husky/prepare-commit-msg 'npx devmoji -e --lint'
+npx husky add .husky/prepare-commit-msg 'npx megasanjay-devmoji -e --lint'
 npx husky add .husky/post-merge 'yarn install'
 ```
 

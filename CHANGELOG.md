@@ -1,9 +1,8 @@
 # [2.9.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.8.0...v2.9.0) (2022-10-24)
 
-
 ### Features
 
-* ✨ add new commit types ([8c9fa75](https://github.com/fairdataihub/dev.fairdataihub.org/commit/8c9fa75ad8190c69311e77c98c992a7d055db00c))
+- ✨ add new commit types ([8c9fa75](https://github.com/fairdataihub/dev.fairdataihub.org/commit/8c9fa75ad8190c69311e77c98c992a7d055db00c))
 
 # [2.8.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.7.1...v2.8.0) (2022-09-22)
 
