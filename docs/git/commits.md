@@ -73,23 +73,27 @@ The allowed types are provided as part of the [@fairdataihub/config](https://www
 
 - `feat`: :sparkles: Changes which introduce a new feature
 - `breaking`: :boom: Changes which break compatibility
-- `fix`: :bug: Changes which patch a bug. Includes spelling error corrections
+- `fix`: :bug: Changes which patch a bug
+- `typo`: :pencil2: Changes which fix a typo
 - `style`: :art: Changes which don't affect code logic, such as white-spaces, formatting, missing semi-colons
 - `refactor`: :recycle: Changes which neither introduce a new feature nor fix a bug
-- `chore`: :wrench: Changes which aren't user-facing such as updating dependencies and upgrading tools
+- `chore`: :wrench: Changes which aren't user-facing. Primarily used for maintenance tasks.
 - `wip`: :construction: Work in progress
-- `docs`: :page_facing_up: Changes which affect documentation
-- `release`: :rocket: Code deployment or publishing to external repositories
+- `docs`: :memo: Changes which affect documentation
 - `ci`: :construction_worker: Updates to the continuous integration system and scripts
 - `build`: :package: Changes which affect the build process
-- `merge`: :twisted_rightwards_arrows: Merges a branch into another
-- `test`: :alembic: Changes which add missing tests or correct existing
-- `perf`: :zap: Changes which improve performance
-- `security`: :lock: Fixing security issues
-- `revert`: :rewind: Changes which revert a previous commit
-- `i18n`: :globe_with_meridians: Changes which affect internationalization
+- `dx`: :technologist: Changes which improve developer experience
+- `ux`: :children_crossing: Changes which improve user experience/usability
+- `release`: :rocket: Code deployment or publishing to external repositories
 - `add`: :heavy_plus_sign: Changes which add new files
+- `perf`: :zap: Changes which improve performance
+- `test`: :alembic: Changes which add missing tests or correct existing
+- `revert`: :rewind: Changes which revert a previous commit
+- `merge`: :twisted_rightwards_arrows: Merges a branch into another
+- `security`: :lock: Fixing security issues
+- `initial`: :tada: Begin a project.Initial commit
 - `remove`: :fire: Changes which remove files
+- `i18n`: :globe_with_meridians: Changes which affect internationalization
 
 Here is an example of the feature type used as a prefix.
 
