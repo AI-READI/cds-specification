@@ -31,7 +31,7 @@
     "@semantic-release/release-notes-generator": "10.0.3",
     "devmoji": "2.3.0",
     "husky": "8.0.2",
-    "lint-staged": "13.0.4",
+    "lint-staged": "13.1.0",
     "prettier": "2.8.0",
     "semantic-release": "19.0.5",
     "vitepress": "1.0.0-alpha.29",
