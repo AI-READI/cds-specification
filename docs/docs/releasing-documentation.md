@@ -16,7 +16,7 @@ First digit is major version. Second digit is minor version. Third digit is patc
 You can get a deeper understanding of [Semantic Versioning](https://semver.org/) on their platform.
 :::
 
-## Procedure for changing Docs
+## Procedure for changing Docs ( Creating a new version in the version dropdown )
 
 1. Create a feature branch based off the `main` branch.
 2. Update the docs with whatever content changes/bug fixes you want to make.
@@ -48,3 +48,12 @@ GitHub actions to automatically release the documentation to both GitHub and Zen
 ::: warning
 If you are going to release a major version of the documentation, ensure the commit message includes a footer starting with `BREAKING CHANGE`. View the info under step 2 of the release procedure to see how to do this.
 :::
+
+
+## Procedure for fixing docs ( Updating the current version in the version dropdown when there is an issue )
+1. Create a feature branch based off the `main` branch.
+2. Update the upcoming and current version folder with the changes you want to make.
+3. Commit the changes using fix commit type.
+4. Push to the feature branch.
+5. Create a PR into the 'main' branch from the feature branch.
+6. Wait for review and once approved merge.
