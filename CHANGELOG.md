@@ -1,3 +1,45 @@
+# [2.9.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.8.0...v2.9.0) (2022-10-24)
+
+### Features
+
+- ✨ add new commit types ([8c9fa75](https://github.com/fairdataihub/dev.fairdataihub.org/commit/8c9fa75ad8190c69311e77c98c992a7d055db00c))
+
+# [2.8.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.7.1...v2.8.0) (2022-09-22)
+
+### Features
+
+- ✨ add docs for cypress actions ([ffdeb26](https://github.com/fairdataihub/dev.fairdataihub.org/commit/ffdeb26dcdfdd580cd4df75aee3dfdb1b4527aa1))
+
+## [2.7.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.7.0...v2.7.1) (2022-09-19)
+
+### Bug Fixes
+
+- **deps:** update dependency vitepress-plugin-mermaid to v2 ([#54](https://github.com/fairdataihub/dev.fairdataihub.org/issues/54)) ([5ca34a7](https://github.com/fairdataihub/dev.fairdataihub.org/commit/5ca34a7d962651fb8c13f92a386ba3cce797253b))
+
+# [2.7.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.6.0...v2.7.0) (2022-08-30)
+
+### Features
+
+- add post-merge hook ([dd055e7](https://github.com/fairdataihub/dev.fairdataihub.org/commit/dd055e73f9532b1089b31be2ccd910e0f5877882))
+
+# [2.6.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.5.0...v2.6.0) (2022-08-26)
+
+### Features
+
+- ✨ add docs for og-image ([98ba7fb](https://github.com/fairdataihub/dev.fairdataihub.org/commit/98ba7fb77141db730e24c400f19ca0f1c20766aa))
+
+# [2.5.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.4.1...v2.5.0) (2022-08-11)
+
+### Features
+
+- ✨ add dev setup page ([#44](https://github.com/fairdataihub/dev.fairdataihub.org/issues/44)) ([46e4277](https://github.com/fairdataihub/dev.fairdataihub.org/commit/46e42778055e51b101df8debb3ca788fc1656985))
+
+## [2.4.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.4.0...v2.4.1) (2022-08-05)
+
+### Bug Fixes
+
+- 🐛 update broken config link ([deb659d](https://github.com/fairdataihub/dev.fairdataihub.org/commit/deb659d38d5eac8d321ddff7844441601b2283ac))
+
 # [2.4.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.3.1...v2.4.0) (2022-07-11)
 
 ### Features

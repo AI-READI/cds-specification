@@ -1,13 +1,13 @@
 {
   "name": "fairdataihub-docs",
-  "version": "2.4.0",
+  "version": "2.9.0",
   "description": "Technical documentation for FAIR Data Innovations Hub",
   "main": "index.js",
   "author": "Sanjay Soundarajan <sanjay.16@live.com>",
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "vitepress dev docs",
-    "docs:dev": "vitepress dev docs",
+    "dev": "vitepress dev docs --port 3000",
+    "docs:dev": "vitepress dev docs --port 3000",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "format": "prettier --ignore-path .gitignore \"./**/*.+(ts|js|jsx|tsx|md)\" --write",
@@ -20,25 +20,25 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "17.0.3",
-    "@commitlint/config-conventional": "17.0.3",
-    "@fairdataihub/config": "^1.2.0",
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "8.0.5",
-    "@semantic-release/npm": "^9.0.1",
-    "@semantic-release/release-notes-generator": "^10.0.3",
-    "devmoji": "^2.3.0",
-    "husky": "^8.0.1",
-    "lint-staged": "13.0.3",
-    "prettier": "^2.7.1",
-    "semantic-release": "^19.0.3",
-    "vitepress": "1.0.0-alpha.4",
-    "vue": "^3.2.37"
+    "@commitlint/cli": "17.3.0",
+    "@commitlint/config-conventional": "17.3.0",
+    "@fairdataihub/config": "2.2.1",
+    "@semantic-release/changelog": "6.0.2",
+    "@semantic-release/commit-analyzer": "9.0.2",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/github": "8.0.7",
+    "@semantic-release/npm": "9.0.1",
+    "@semantic-release/release-notes-generator": "10.0.3",
+    "devmoji": "2.3.0",
+    "husky": "8.0.2",
+    "lint-staged": "13.1.0",
+    "prettier": "2.8.1",
+    "semantic-release": "19.0.5",
+    "vitepress": "1.0.0-alpha.31",
+    "vue": "3.2.45"
   },
   "dependencies": {
     "mermaid": "^9.1.3",
-    "vitepress-plugin-mermaid": "^1.0.1"
+    "vitepress-plugin-mermaid": "^2.0.0"
   }
 }

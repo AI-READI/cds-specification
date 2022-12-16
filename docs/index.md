@@ -15,9 +15,6 @@ hero:
     - theme: brand
       text: Get Started 🚀
       link: /docs/overview
-    - theme: alt
-      text: View on GitHub
-      link: https://github.com/fairdataihub
 
 features:
   - icon: 🙌
