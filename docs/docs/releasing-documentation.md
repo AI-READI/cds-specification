@@ -53,9 +53,8 @@ If you are going to release a major version of the documentation, ensure the com
 
 We still haven't determined how many app versions of the docs that we want to display. 3 major versions would be ideal. For any more, truncate the documentation versions so that we don't have to deal with excessively long build times for versions of the app that are no longer supported.
 
-
-
 ## Procedure for fixing docs ( Updating the current version in the version dropdown when there is an issue )
+
 1. Create a feature branch based off the `main` branch.
 2. Update the upcoming and current version folder with the changes you want to make.
 3. Commit the changes using fix commit type.
