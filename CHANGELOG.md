@@ -1,3 +1,10 @@
+# [2.10.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.9.0...v2.10.0) (2022-12-28)
+
+
+### Features
+
+* ✨ add support for text search ([f75c527](https://github.com/fairdataihub/dev.fairdataihub.org/commit/f75c527a707660e147d63e9b180f07485e25d403))
+
 # [2.9.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.8.0...v2.9.0) (2022-10-24)
 
 ### Features
