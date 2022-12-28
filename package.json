@@ -30,11 +30,14 @@
     "@semantic-release/npm": "9.0.1",
     "@semantic-release/release-notes-generator": "10.0.3",
     "devmoji": "2.3.0",
+    "flexsearch": "^0.7.31",
     "husky": "8.0.2",
     "lint-staged": "13.1.0",
+    "markdown-it": "^13.0.1",
     "prettier": "2.8.1",
     "semantic-release": "19.0.5",
     "vitepress": "1.0.0-alpha.33",
+    "vitepress-plugin-search": "^1.0.4-alpha.17",
     "vue": "3.2.45"
   },
   "dependencies": {
