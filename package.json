@@ -35,7 +35,7 @@
     "lint-staged": "13.1.0",
     "markdown-it": "^13.0.1",
     "prettier": "2.8.1",
-    "semantic-release": "20.0.3",
+    "semantic-release": "20.0.4",
     "vitepress": "1.0.0-alpha.33",
     "vitepress-plugin-search": "^1.0.4-alpha.17",
     "vue": "3.2.45"
