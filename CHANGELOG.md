@@ -1,3 +1,10 @@
+## [2.10.2](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.10.1...v2.10.2) (2023-03-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency mermaid to v10.0.2 ([#95](https://github.com/fairdataihub/dev.fairdataihub.org/issues/95)) ([4dbe3d0](https://github.com/fairdataihub/dev.fairdataihub.org/commit/4dbe3d042b8de99cc3eacb850cdea8032d873778))
+
 ## [2.10.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.10.0...v2.10.1) (2023-02-24)
 
 
