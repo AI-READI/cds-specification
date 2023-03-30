@@ -1,3 +1,10 @@
+## [2.11.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.11.0...v2.11.1) (2023-03-30)
+
+
+### Bug Fixes
+
+* 🐛 downgrade mermaid ([5bee90c](https://github.com/fairdataihub/dev.fairdataihub.org/commit/5bee90c52b36cce2e90413a3d1891cd77f88175e))
+
 # [2.11.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.10.2...v2.11.0) (2023-03-30)
 
 
