@@ -43,7 +43,7 @@
     "vue": "3.2.47"
   },
   "dependencies": {
-    "mermaid": "9.4.3",
+    "mermaid": "9.1.7",
     "vitepress-plugin-mermaid": "^2.0.10"
   }
 }
