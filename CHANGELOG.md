@@ -1,23 +1,20 @@
 ## [2.10.2](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.10.1...v2.10.2) (2023-03-15)
 
-
 ### Bug Fixes
 
-* **deps:** update dependency mermaid to v10.0.2 ([#95](https://github.com/fairdataihub/dev.fairdataihub.org/issues/95)) ([4dbe3d0](https://github.com/fairdataihub/dev.fairdataihub.org/commit/4dbe3d042b8de99cc3eacb850cdea8032d873778))
+- **deps:** update dependency mermaid to v10.0.2 ([#95](https://github.com/fairdataihub/dev.fairdataihub.org/issues/95)) ([4dbe3d0](https://github.com/fairdataihub/dev.fairdataihub.org/commit/4dbe3d042b8de99cc3eacb850cdea8032d873778))
 
 ## [2.10.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.10.0...v2.10.1) (2023-02-24)
 
-
 ### Bug Fixes
 
-* **deps:** update dependency mermaid to v10 ([#90](https://github.com/fairdataihub/dev.fairdataihub.org/issues/90)) ([a3cf775](https://github.com/fairdataihub/dev.fairdataihub.org/commit/a3cf775a66a03b6688655ac66cbeb7b525a217d2))
+- **deps:** update dependency mermaid to v10 ([#90](https://github.com/fairdataihub/dev.fairdataihub.org/issues/90)) ([a3cf775](https://github.com/fairdataihub/dev.fairdataihub.org/commit/a3cf775a66a03b6688655ac66cbeb7b525a217d2))
 
 # [2.10.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.9.0...v2.10.0) (2022-12-28)
 
-
 ### Features
 
-* ✨ add support for text search ([f75c527](https://github.com/fairdataihub/dev.fairdataihub.org/commit/f75c527a707660e147d63e9b180f07485e25d403))
+- ✨ add support for text search ([f75c527](https://github.com/fairdataihub/dev.fairdataihub.org/commit/f75c527a707660e147d63e9b180f07485e25d403))
 
 # [2.9.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.8.0...v2.9.0) (2022-10-24)
 
