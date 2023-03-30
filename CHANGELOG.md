@@ -1,3 +1,10 @@
+# [2.11.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.10.2...v2.11.0) (2023-03-30)
+
+
+### Features
+
+* ✨ add umami for analytics ([68da813](https://github.com/fairdataihub/dev.fairdataihub.org/commit/68da813201a5d6510ceac909314c5b52a4db899c))
+
 ## [2.10.2](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.10.1...v2.10.2) (2023-03-15)
 
 
