@@ -1,134 +1,147 @@
 import { defineConfig } from 'vitepress';
-import MermaidPlugin from 'vitepress-plugin-mermaid';
+import { withMermaid } from 'vitepress-plugin-mermaid';
 
-export default defineConfig({
-  lang: 'en-US',
-  title: 'Developer Documentation',
-  description: 'Documentation for FAIR Data Innovations Hub developers',
-  titleTemplate: 'FAIR Data Innovations Hub',
-  port: 3000,
+export default withMermaid(
+  defineConfig({
+    lang: 'en-US',
+    title: 'Developer Documentation',
+    description: 'Documentation for FAIR Data Innovations Hub developers',
+    titleTemplate: 'FAIR Data Innovations Hub',
+    port: 3000,
 
-  appearance: true,
-  lastUpdated: true,
-  ignoreDeadLinks: false,
+    appearance: true,
+    lastUpdated: true,
+    ignoreDeadLinks: false,
 
-  markdown: {
-    lineNumbers: true,
-    config: MermaidPlugin,
-  },
-
-  head: [
-    [
-      'link',
-      {
-        rel: 'apple-touch-icon',
-        sizes: '180x180',
-        href: 'apple-touch-icon.png',
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'icon',
-
-        href: 'favicon.ico',
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '32x32',
-        href: 'favicon-32x32.png',
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '16x16',
-        href: 'favicon-16x16.png',
-      },
-    ],
-    ['link', { rel: 'manifest', href: 'site.webmanifest' }],
-    [
-      'link',
-      {
-        rel: 'mask-icon',
-        href: 'safari-pinned-tab.svg',
-        color: '#3a0839',
-      },
-    ],
-    ['link', { rel: 'shortcut icon', href: 'favicon.ico' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#3a0839' }],
-    [
-      'meta',
-      {
-        name: 'msapplication-config',
-        content: 'browserconfig.xml',
-      },
-    ],
-    ['meta', { name: 'theme-color', content: '#ffffff' }],
-  ],
-
-  themeConfig: {
-    // logo: "https://fairdataihub.org/logo.svg",
-    // siteTitle: false,
-
-    editLink: {
-      pattern:
-        'https://github.com/fairdataihub/dev.fairdataihub.org/edit/main/docs/:path',
-      text: 'Edit this page on GitHub',
+    markdown: {
+      lineNumbers: true,
     },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/fairdataihub' },
-      { icon: 'twitter', link: 'https://twitter.com/fairdataihub' },
-      {
-        icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/california-medical-innovations-institute/',
-      },
+    mermaid: {},
+
+    head: [
+      [
+        'link',
+        {
+          rel: 'apple-touch-icon',
+          sizes: '180x180',
+          href: 'apple-touch-icon.png',
+        },
+      ],
+      [
+        'link',
+        {
+          rel: 'icon',
+
+          href: 'favicon.ico',
+        },
+      ],
+      [
+        'link',
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: 'favicon-32x32.png',
+        },
+      ],
+      [
+        'link',
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '16x16',
+          href: 'favicon-16x16.png',
+        },
+      ],
+      ['link', { rel: 'manifest', href: 'site.webmanifest' }],
+      [
+        'link',
+        {
+          rel: 'mask-icon',
+          href: 'safari-pinned-tab.svg',
+          color: '#3a0839',
+        },
+      ],
+      ['link', { rel: 'shortcut icon', href: 'favicon.ico' }],
+      ['meta', { name: 'msapplication-TileColor', content: '#3a0839' }],
+      [
+        'meta',
+        {
+          name: 'msapplication-config',
+          content: 'browserconfig.xml',
+        },
+      ],
+      ['meta', { name: 'theme-color', content: '#ffffff' }],
+      [
+        'script',
+        {
+          src: 'https://umami.fairdataihub.org/mushroom.js',
+          crossorigin: 'anonymous',
+          async: true,
+          defer: true,
+          'data-website-id': '55e27271-19cf-40c3-b4fa-8951322298b4',
+        },
+      ],
     ],
 
-    nav: [
-      {
-        text: 'Home',
-        link: '/',
-      },
-      {
-        text: 'Overview',
-        link: '/docs/overview.md',
-      },
-      {
-        text: 'SODA for SPARC',
-        link: '/soda-for-sparc/storybook.md',
-      },
-      {
-        text: 'FAIRshare',
-        link: '/fairshare/storybook.md',
-      },
-      {
-        text: 'fairdataihub.org',
-        link: 'https://fairdataihub.org',
-      },
-    ],
+    themeConfig: {
+      // logo: "https://fairdataihub.org/logo.svg",
+      // siteTitle: false,
 
-    sidebar: {
-      '/docs': sidebarGuide(),
-      '/git': sidebarGuide(),
-      '/general': sidebarGuide(),
-      '/soda-for-sparc': sidebarGuide(),
-      '/fairshare': sidebarGuide(),
-    },
+      editLink: {
+        pattern:
+          'https://github.com/fairdataihub/dev.fairdataihub.org/edit/main/docs/:path',
+        text: 'Edit this page on GitHub',
+      },
 
-    footer: {
-      message: 'Released under the Apache-2.0 License.',
-      copyright: 'Copyright © 2021-present | FAIR Data Innovations Hub',
+      socialLinks: [
+        { icon: 'github', link: 'https://github.com/fairdataihub' },
+        { icon: 'twitter', link: 'https://twitter.com/fairdataihub' },
+        {
+          icon: 'linkedin',
+          link: 'https://www.linkedin.com/company/california-medical-innovations-institute/',
+        },
+      ],
+
+      nav: [
+        {
+          text: 'Home',
+          link: '/',
+        },
+        {
+          text: 'Overview',
+          link: '/docs/overview.md',
+        },
+        {
+          text: 'SODA for SPARC',
+          link: '/soda-for-sparc/storybook.md',
+        },
+        {
+          text: 'FAIRshare',
+          link: '/fairshare/storybook.md',
+        },
+        {
+          text: 'fairdataihub.org',
+          link: 'https://fairdataihub.org',
+        },
+      ],
+
+      sidebar: {
+        '/docs': sidebarGuide(),
+        '/git': sidebarGuide(),
+        '/general': sidebarGuide(),
+        '/soda-for-sparc': sidebarGuide(),
+        '/fairshare': sidebarGuide(),
+      },
+
+      footer: {
+        message: 'Released under the Apache-2.0 License.',
+        copyright: 'Copyright © 2021-present | FAIR Data Innovations Hub',
+      },
     },
-  },
-});
+  }),
+);
 
 function sidebarGuide() {
   return [
@@ -177,6 +190,7 @@ function sidebarGuide() {
         { text: 'Commenting code', link: '/general/comments.md' },
         { text: 'Project setup', link: '/general/project-setup.md' },
         { text: 'Open Graph Image Generation', link: '/general/og-image.md' },
+        { text: 'Mermaid', link: '/general/mermaid.md' },
         { text: '@fairdataihub/config', link: '/general/config.md' },
       ],
     },
