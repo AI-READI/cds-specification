@@ -1,3 +1,10 @@
+# [2.12.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.11.1...v2.12.0) (2023-04-04)
+
+
+### Features
+
+* add instructions for run-script-os ([30c6971](https://github.com/fairdataihub/dev.fairdataihub.org/commit/30c697195e757a066046ec5777e642fe922b0a86))
+
 ## [2.11.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.11.0...v2.11.1) (2023-03-30)
 
 
