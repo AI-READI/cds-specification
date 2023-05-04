@@ -1,3 +1,10 @@
+## [2.12.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.12.0...v2.12.1) (2023-05-04)
+
+
+### Bug Fixes
+
+* 🐛 update umami script url ([d22f379](https://github.com/fairdataihub/dev.fairdataihub.org/commit/d22f37926c6a719a514b265a3fcf8eec11e67fad))
+
 # [2.12.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.11.1...v2.12.0) (2023-04-04)
 
 
