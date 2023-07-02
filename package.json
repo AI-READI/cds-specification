@@ -36,7 +36,7 @@
     "lint-staged": "13.2.3",
     "markdown-it": "^13.0.1",
     "prettier": "2.8.1",
-    "semantic-release": "21.0.5",
+    "semantic-release": "21.0.6",
     "vite": "^4.2.1",
     "vitepress": "1.0.0-alpha.33",
     "vitepress-plugin-search": "^1.0.4-alpha.17",
