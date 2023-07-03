@@ -16,10 +16,10 @@ Create a new anaconda environment that is used ONLY for release. This will make 
 
 Create a personal access token here (`repo` permissions should be all enabled): [GitHub: Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
-Set personal access token to an environment variable. Replace `my-personal-token` with the token. Leave the rest as is.
+Set personal access token to an environment variable. Replace `my-personal-token` with the token.
 
 ```sh
-  [Environment]::SetEnvironmentVariable("GH_TOKEN", "my-personal-token", "User")
+$Env:GH_TOKEN = "my-personal-token"
 ```
 
 If `GH_TOKEN` has been enabled before, verify its visibility: `$Env:GH_TOKEN`
