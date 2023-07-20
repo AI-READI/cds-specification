@@ -4,7 +4,7 @@ title: GitHub actions
 description: How to commit to a FAIR Data Innovations Hub repository
 ---
 
-# GitHub actions
+# GitHub Actions
 
 Almost all the repositories we use in FAIR Data Innovations Hub are hosted on GitHub. To help with certain tasks, we use GitHub actions to automate some additional tasks related to our version control system. Actions like linting should be included in every repository we use.
 

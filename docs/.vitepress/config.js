@@ -106,10 +106,6 @@ export default withMermaid(
 
       nav: [
         {
-          text: 'Home',
-          link: '/',
-        },
-        {
           text: 'Overview',
           link: '/docs/overview.md',
         },
@@ -177,7 +173,7 @@ function sidebarGuide() {
       collapsible: true,
       items: [
         { text: 'Commits on GitHub', link: '/git/commits.md' },
-        { text: 'GitHub actions', link: '/git/workflows.md' },
+        { text: 'GitHub Actions', link: '/git/workflows.md' },
 
         { text: 'GitLab', link: '/git/gitlab.md' },
       ],
@@ -189,7 +185,7 @@ function sidebarGuide() {
       items: [
         { text: 'Commenting code', link: '/general/comments.md' },
         { text: 'Project setup', link: '/general/project-setup.md' },
-        { text: 'Open Graph Image Generation', link: '/general/og-image.md' },
+        { text: 'Open Graph image generation', link: '/general/og-image.md' },
         { text: 'Mermaid', link: '/general/mermaid.md' },
         { text: '@fairdataihub/config', link: '/general/config.md' },
       ],
