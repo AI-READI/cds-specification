@@ -30,6 +30,7 @@ Install the following dependencies for your project:
 
 ```sh
 npx husky-init
+yarn add run-script-os
 yarn install
 ```
 
@@ -56,7 +57,9 @@ Add the following scripts to your `package.json` file:
   "scripts": {
     "lint": "eslint --ignore-path .gitignore \"./**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .gitignore \"./**/*.+(ts|js|tsx)\" --write",
-    "prepare": "husky install",
+    "prepare": "run-script-os",
+    "prepare:win32": "husky install",
+    "prepare:darwin:linux": "husky install && chmod ug+x .husky/*  && chmod ug+x .git/hooks/*"
     "commit": "cz",
     "semantic-release": "semantic-release",
   }

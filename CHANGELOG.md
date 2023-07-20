@@ -1,9 +1,32 @@
-# [2.11.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.10.2...v2.11.0) (2023-03-30)
+## [2.12.2](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.12.1...v2.12.2) (2023-07-03)
 
+### Bug Fixes
+
+- 🐛 update windows env set ([8378415](https://github.com/fairdataihub/dev.fairdataihub.org/commit/83784157884aa77566e92c18ae4c923797fcad87))
+
+## [2.12.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.12.0...v2.12.1) (2023-05-04)
+
+### Bug Fixes
+
+- 🐛 update umami script url ([d22f379](https://github.com/fairdataihub/dev.fairdataihub.org/commit/d22f37926c6a719a514b265a3fcf8eec11e67fad))
+
+# [2.12.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.11.1...v2.12.0) (2023-04-04)
 
 ### Features
 
-* ✨ add umami for analytics ([68da813](https://github.com/fairdataihub/dev.fairdataihub.org/commit/68da813201a5d6510ceac909314c5b52a4db899c))
+- add instructions for run-script-os ([30c6971](https://github.com/fairdataihub/dev.fairdataihub.org/commit/30c697195e757a066046ec5777e642fe922b0a86))
+
+## [2.11.1](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.11.0...v2.11.1) (2023-03-30)
+
+### Bug Fixes
+
+- 🐛 downgrade mermaid ([5bee90c](https://github.com/fairdataihub/dev.fairdataihub.org/commit/5bee90c52b36cce2e90413a3d1891cd77f88175e))
+
+# [2.11.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.10.2...v2.11.0) (2023-03-30)
+
+### Features
+
+- ✨ add umami for analytics ([68da813](https://github.com/fairdataihub/dev.fairdataihub.org/commit/68da813201a5d6510ceac909314c5b52a4db899c))
 
 ## [2.10.2](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.10.1...v2.10.2) (2023-03-15)
 

@@ -76,7 +76,7 @@ export default withMermaid(
       [
         'script',
         {
-          src: 'https://umami.fairdataihub.org/mushroom.js',
+          src: 'https://umami.fairdataihub.org/mushroom',
           crossorigin: 'anonymous',
           async: true,
           defer: true,
