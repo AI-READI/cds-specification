@@ -1,6 +1,6 @@
 {
   "name": "fairdataihub-docs",
-  "version": "2.12.2",
+  "version": "2.12.3",
   "description": "Technical documentation for FAIR Data Innovations Hub",
   "main": "index.js",
   "author": "Sanjay Soundarajan <sanjay.16@live.com>",
