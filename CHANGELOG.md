@@ -1,3 +1,11 @@
+## [2.12.4](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.12.3...v2.12.4) (2023-08-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency mermaid to v10.3.1 ([#143](https://github.com/fairdataihub/dev.fairdataihub.org/issues/143)) ([0127ba7](https://github.com/fairdataihub/dev.fairdataihub.org/commit/0127ba787dffc324ba284063db80e1962c07f196))
+* **deps:** update dependency vitepress-plugin-mermaid to v2.0.14 ([#142](https://github.com/fairdataihub/dev.fairdataihub.org/issues/142)) ([81a55c9](https://github.com/fairdataihub/dev.fairdataihub.org/commit/81a55c917e6e9fb16998574f9c0deb230ef65288))
+
 ## [2.12.3](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.12.2...v2.12.3) (2023-07-31)
 
 
