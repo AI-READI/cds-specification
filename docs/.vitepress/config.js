@@ -209,6 +209,10 @@ function sidebarGuide() {
           text: 'SODA Server',
           link: '/soda-for-sparc/soda-server.md',
         },
+        {
+          text: 'Error Handling',
+          link: '/soda-for-sparc/error-handling.md',
+        },
       ],
     },
 
