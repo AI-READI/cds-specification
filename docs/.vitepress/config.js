@@ -164,11 +164,11 @@ function sidebarGuide() {
       text: 'Rationale',
       collapsible: true,
       items: [
-        { text: 'Section 1', link: '/rationale/storybook.md' },
-        { text: 'Section 2', link: '/rationale/icons.md' },
+        { text: 'Section 1', link: '/rationale/section-1.md' },
+        { text: 'Section 2', link: '/rationale/section-2.md' },
         {
           text: 'Section 3',
-          link: '/rationale/build-soda.md',
+          link: '/rationale/section-3.md',
         },
       ],
     },
