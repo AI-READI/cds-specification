@@ -1,4 +1,6 @@
-# [cds-specification]
+# cds-specification
+
+Clinical Dataset Structure (CSD) specification
 
 ## Acknowledgements
 
