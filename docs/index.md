@@ -1,15 +1,15 @@
 ---
 layout: home
 
-title: FAIR Data Innovations Hub
+title: CDS-Specification
 titleTemplate: Making FAIR data practices more accessible
 
 hero:
   name: Developer Docs
   text: ''
-  tagline: Full documentation for every FAIR Data Innovations Hub developer...
+  tagline: Full documentation for CDS-Specification...
   image:
-    src: https://fairdataihub.org/logo.svg
+    src: https://github.com/AI-READI/AI-READI-logo/blob/main/logo/png/option2.png?raw=true
     alt: Vitest
   actions:
     - theme: brand
