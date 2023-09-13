@@ -6,7 +6,7 @@ export default withMermaid(
     lang: 'en-US',
     title: 'Developer Documentation',
     description: 'Documentation for CDS-Specification',
-    titleTemplate: 'AI-Readi',
+    titleTemplate: 'AI-READI',
     port: 3000,
 
     appearance: true,
@@ -93,8 +93,8 @@ export default withMermaid(
       },
 
       socialLinks: [
-        { icon: 'github', link: 'https://github.com/fairdataihub' },
-        { icon: 'twitter', link: 'https://twitter.com/fairdataihub' },
+        { icon: 'github', link: 'https://github.com/AI-READI' },
+        { icon: 'twitter', link: 'https://twitter.com/AI-READI' },
         {
           icon: 'linkedin',
           link: 'https://www.linkedin.com/company/california-medical-innovations-institute/',
@@ -108,29 +108,28 @@ export default withMermaid(
         },
         {
           text: 'The CDS Specification',
-          link: '/soda-for-sparc/storybook.md',
+          link: '/cds-specification/section-1.md',
         },
         {
           text: 'Rationale',
-          link: '/fairshare/storybook.md',
+          link: '/rationale/section-1.md',
         },
         {
           text: 'Resources',
-          link: 'https://fairdataihub.org',
+          link: '/resources/section-1.md',
         },
       ],
 
       sidebar: {
         '/docs': sidebarGuide(),
-        '/git': sidebarGuide(),
-        '/general': sidebarGuide(),
-        '/soda-for-sparc': sidebarGuide(),
-        '/fairshare': sidebarGuide(),
+        '/cds-specification': sidebarGuide(),
+        '/resources': sidebarGuide(),
+        '/rationale': sidebarGuide(),
       },
 
       footer: {
         message: 'Released under the Apache-2.0 License.',
-        copyright: 'Copyright © 2022-present | AI-Readi',
+        copyright: 'Copyright © 2022-present | AI-READI',
       },
     },
   }),
@@ -151,81 +150,42 @@ function sidebarGuide() {
     },
 
     {
-      text: 'Docs',
+      text: 'CDS Specification',
       collapsible: true,
       items: [
+        { text: 'Section 1', link: '/cds-specification/section-1.md' },
+        { text: 'Section 2', link: '/cds-specification/section-2.md' },
+        { text: 'Section 3', link: '/cds-specification/section-3.md' },
+        { text: 'Section 4', link: '/cds-specification/section-4.md' },
+      ],
+    },
+
+    {
+      text: 'Rationale',
+      collapsible: true,
+      items: [
+        { text: 'Section 1', link: '/rationale/storybook.md' },
+        { text: 'Section 2', link: '/rationale/icons.md' },
         {
-          text: 'Documentation release procedure',
-          link: '/docs/releasing-documentation.md',
-        },
-        {
-          text: 'Semantic versioning',
-          link: '/docs/semantic-versioning.md',
+          text: 'Section 3',
+          link: '/rationale/build-soda.md',
         },
       ],
     },
 
     {
-      text: 'Git',
+      text: 'Resources',
       collapsible: true,
       items: [
-        { text: 'Commits on GitHub', link: '/git/commits.md' },
-        { text: 'GitHub Actions', link: '/git/workflows.md' },
-
-        { text: 'GitLab', link: '/git/gitlab.md' },
-      ],
-    },
-
-    {
-      text: 'General',
-      collapsible: true,
-      items: [
-        { text: 'Commenting code', link: '/general/comments.md' },
-        { text: 'Project setup', link: '/general/project-setup.md' },
-        { text: 'Open Graph image generation', link: '/general/og-image.md' },
-        { text: 'Mermaid', link: '/general/mermaid.md' },
-        { text: '@fairdataihub/config', link: '/general/config.md' },
-      ],
-    },
-
-    {
-      text: 'SODA for SPARC',
-      collapsible: true,
-      items: [
-        { text: 'Storybook', link: '/soda-for-sparc/storybook.md' },
-        { text: 'Icons', link: '/soda-for-sparc/icons.md' },
+        { text: 'Section 1', link: '/resources/section-1.md' },
+        { text: 'Section 2', link: '/resources/section-2.md' },
         {
-          text: 'Build instructions',
-          link: '/soda-for-sparc/build-soda.md',
+          text: 'Section 3',
+          link: '/resources/section-3.md',
         },
         {
-          text: 'Release procedure',
-          link: '/soda-for-sparc/soda-release.md',
-        },
-        {
-          text: 'SODA Server',
-          link: '/soda-for-sparc/soda-server.md',
-        },
-        {
-          text: 'Error Handling',
-          link: '/soda-for-sparc/error-handling.md',
-        },
-      ],
-    },
-
-    {
-      text: 'FAIRshare',
-      collapsible: true,
-      items: [
-        { text: 'Storybook', link: '/fairshare/storybook.md' },
-        { text: 'Icons', link: '/fairshare/icons.md' },
-        {
-          text: 'Build instructions',
-          link: '/fairshare/build-fairshare.md',
-        },
-        {
-          text: 'Release procedure',
-          link: '/fairshare/fairshare-release.md',
+          text: 'Section 4',
+          link: '/resources/section-4.md',
         },
       ],
     },

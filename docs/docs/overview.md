@@ -1,7 +1,7 @@
 ---
 lang: en-US
 title: Overview
-description: Overview of how to use fairdataihub documentation
+description: Overview of how to use CDS-Specification documentation
 ---
 
 # Overview
