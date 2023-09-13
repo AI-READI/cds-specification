@@ -1,7 +1,7 @@
 {
-  "name": "fairdataihub-docs",
+  "name": "cds-specification-docs",
   "version": "2.12.5",
-  "description": "Technical documentation for FAIR Data Innovations Hub",
+  "description": "Technical documentation for CDS Specification",
   "main": "index.js",
   "author": "Sanjay Soundarajan <sanjay.16@live.com>",
   "license": "Apache-2.0",
