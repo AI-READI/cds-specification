@@ -31,7 +31,7 @@ conda install -c conda-forge yarn nodejs
 Clone the project
 
 ```sh
-https://github.com/fairdataihub/dev.fairdataihub.org.git
+git clone https://github.com/AI-READI/cds-specification.git
 ```
 
 Go to the project directory
