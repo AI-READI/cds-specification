@@ -48,8 +48,6 @@ A full release of SODA for SPARC requires two releases. One release on GitHub an
 6. Update the GitHub draft release text content to match that of previous releases.
 7. Publish the release on GitHub.
 
-The next step in the release process is to release the SODA for SPARC Docs repository. Check the [documentation release guide](/docs/releasing-documentation.html) for instructions on how to do that.
-
 ::: tip
 It is a good idea to incrementally add documentation as each feature gets completed rather than waiting until release time to create it.
 :::
