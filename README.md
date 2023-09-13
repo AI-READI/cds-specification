@@ -23,19 +23,19 @@ conda install -c conda-forge yarn nodejs
 Clone the project
 
 ```bash
-  git clone https://github.com/AI-READI/cds-specification.git
+git clone https://github.com/AI-READI/cds-specification.git
 ```
 
 Install the dependencies
 
 ```bash
-  yarn install
+yarn install
 ```
 
 Start the server
 
 ```bash
-  yarn start
+yarn start
 ```
 
 ### Build Locally
@@ -43,7 +43,7 @@ Start the server
 Use this step to build a local production version of the site. User `serve` to preview the local build.
 
 ```bash
-  yarn build
+yarn build
 ```
 
 ## Acknowledgements
