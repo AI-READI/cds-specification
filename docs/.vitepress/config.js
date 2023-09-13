@@ -5,8 +5,8 @@ export default withMermaid(
   defineConfig({
     lang: 'en-US',
     title: 'Developer Documentation',
-    description: 'Documentation for FAIR Data Innovations Hub developers',
-    titleTemplate: 'FAIR Data Innovations Hub',
+    description: 'Documentation for CDS-Specification',
+    titleTemplate: 'AI-Readi',
     port: 3000,
 
     appearance: true,
@@ -86,9 +86,6 @@ export default withMermaid(
     ],
 
     themeConfig: {
-      // logo: "https://fairdataihub.org/logo.svg",
-      // siteTitle: false,
-
       editLink: {
         pattern:
           'https://github.com/fairdataihub/dev.fairdataihub.org/edit/main/docs/:path',
@@ -110,15 +107,15 @@ export default withMermaid(
           link: '/docs/overview.md',
         },
         {
-          text: 'SODA for SPARC',
+          text: 'The CDS Specification',
           link: '/soda-for-sparc/storybook.md',
         },
         {
-          text: 'FAIRshare',
+          text: 'Rationale',
           link: '/fairshare/storybook.md',
         },
         {
-          text: 'fairdataihub.org',
+          text: 'Resources',
           link: 'https://fairdataihub.org',
         },
       ],
@@ -133,7 +130,7 @@ export default withMermaid(
 
       footer: {
         message: 'Released under the Apache-2.0 License.',
-        copyright: 'Copyright © 2021-present | FAIR Data Innovations Hub',
+        copyright: 'Copyright © 2022-present | AI-Readi',
       },
     },
   }),
