@@ -1,6 +1,6 @@
 ---
 lang: en-US
-title: Fairdataihub developer documentation
+title: CDS Documentation documentation
 description: How to use the documentation site
 ---
 
