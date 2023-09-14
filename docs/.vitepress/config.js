@@ -92,14 +92,7 @@ export default withMermaid(
         text: 'Edit this page on GitHub',
       },
 
-      socialLinks: [
-        { icon: 'github', link: 'https://github.com/AI-READI' },
-        { icon: 'twitter', link: 'https://twitter.com/AI-READI' },
-        {
-          icon: 'linkedin',
-          link: 'https://www.linkedin.com/company/california-medical-innovations-institute/',
-        },
-      ],
+      socialLinks: [{ icon: 'github', link: 'https://github.com/AI-READI' }],
 
       nav: [
         {
