@@ -88,7 +88,7 @@ export default withMermaid(
     themeConfig: {
       editLink: {
         pattern:
-          'https://github.com/fairdataihub/dev.fairdataihub.org/edit/main/docs/:path',
+          'https://github.com/AI-READI/cds-specification/edit/main/docs/:path',
         text: 'Edit this page on GitHub',
       },
 
