@@ -35,7 +35,7 @@ yarn install
 Start the server
 
 ```bash
-yarn start
+yarn dev
 ```
 
 ### Build Locally
