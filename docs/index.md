@@ -5,7 +5,7 @@ title: CDS-Specification
 titleTemplate: Making FAIR data practices more accessible
 
 hero:
-  name: Developer Docs
+  name: CDS Documentation
   text: ''
   tagline: Full documentation for CDS-Specification...
   image:
@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started 🚀
-      link: /docs/overview
+      link: /docs/intro
 
 features:
   - icon: 🙌

@@ -4,7 +4,7 @@ import { withMermaid } from 'vitepress-plugin-mermaid';
 export default withMermaid(
   defineConfig({
     lang: 'en-US',
-    title: 'Developer Documentation',
+    title: 'CDS Documentation',
     description: 'Documentation for CDS-Specification',
     titleTemplate: 'AI-READI',
     port: 3000,

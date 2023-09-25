@@ -17,18 +17,8 @@ description: Description of the general principles of the CDS
 
 ## High-level dataset structure
 
-- The data files must be organized into one folder per data type. No data file must be present at the highest level of a dataset.
-- Each folder must be named according the folder naming specification provided [here](folder_naming/folder_naming_specs.md).
-- Inside each folder, the data must be organized according to existing community-accepted standard for that data type if available or following some other standard structure. This must be documented in the metadata files as explained in the metadata files specifications.
+- The data files must be organized into one folder per data type. No data file must be present at the root level of a dataset.
+- Each folder must be named according the folder naming specification provided [here](folder-structure/overview.md).
+- Inside each folder, the data must be organized according to existing community-accepted standard for that data type if available or following some other standard structure. This must be documented in the metadata files where applicable.
 - No empty folders are allowed.
-
-### High-level metadata files
-
-The following metadata files must be included at the highest/root level of the dataset:
-
-- [study_description.json](metadata_files/study_description_specs.md): A metadata file containing provenance metadata, contextual metadata, as well as additional metadata about the study associated with the dataset. This metadata file is intended to prioritize machine readability. See [here](metadata_files/study_description_specs.md) for specifications about this metadata file.
-- [dataset_description.json](metadata_files/dataset_description_specs.md): A metadata file containing provenance metadata, contextual metadata, as well as additional metadata necessary for reusing the dataset. This metadata file is intended to prioritize machine readability. See [here](metadata_files/dataset_description_specs.md) for specifications about this metadata file.
-- [README.md](metadata_files/readme_specs.md): A metadata file containing a detailed description of the study and dataset in a human-friendly format to supplement the study_description.json and dataset_description.json files. See [here](metadata_files/readme_specs.md) for specifications about this metadata file.
-- [participants.tsv and participants.json](metadata_files/participants_specs.md): Metadata files containing basic information about the participants in the study. The participant.tsv file contains the information while the participant.json file acts as a sidecar that describes the columns in the participant.tsv file. See [here](metadata_files/participants_specs.md) for specifications about these metadata files.
-- [CHANGELOG.md](metadata_files/changelog_specs.md): A metadata file containing information about the changes between different versions of the dataset that are released. See [here](metadata_files/changelog_specs.md) for specifications about this metadata file.
-- [LICENSE.txt](metadata_files/license_specs.md): A metadata file containing the terms under which the dataset is shared. See [here](metadata_files/license_specs.md) for specifications about this metadata file.
+- Only the set of metadata files specified [here](metadata-files/overview.md) are allowed at the root level
