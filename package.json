@@ -3,8 +3,8 @@
   "version": "2.12.5",
   "description": "Technical documentation for CDS Specification",
   "main": "index.js",
-  "author": "Sanjay Soundarajan <sanjay.16@live.com>",
-  "license": "Apache-2.0",
+  "author": "AI-READI Team",
+  "license": "MIT",
   "scripts": {
     "dev": "vitepress dev docs --port 3000",
     "docs:dev": "vitepress dev docs --port 3000",

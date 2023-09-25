@@ -1,14 +1,16 @@
 ---
 lang: en-US
-title: Overview
-description: Overview of how to use CDS-Specification documentation
+title: Contributing/Feedback
+description: Referencing the CDS
 ---
 
-# Overview
+# Contributing/Feedback
 
-This documentation is a central repository for storing FAIR Data Innovations Hub project documentation. It is intended to be used by the developer team for getting instructions on running, building, and releasing our projects. It also provides the conventions the team should be using while working on our projects.
+## Overview
 
-## Using the documentation
+The Clinical Dataset Structure (CDS) is a simple and intuitive way to organize and describe clinical research datasets at the highest level such that they are interoperable and easily reusable by humans and machines (AI/ML).
+
+## Why we need the CDS
 
 All documentation that applies to all fairdataihub projects will be in the docs section.
 For project specific instructions use the sidebar to navigate to the desired project for its build and release instructions.
@@ -23,7 +25,7 @@ Whenever a change in build, release, or development instructions occurs update t
 git clone https://github.com/fairdataihub/dev.fairdataihub.org.git
 ```
 
-- Get the project running locally using the [README](/docs/README.md) instructions
+- Get the project running locally using the [README](/docs/about.md) instructions
 - Create a separate branch based off `main`
 - Make your changes to the project and commit them to the local repository
 - Create a PR to the main branch with [@megasanjay](https://github.com/megasanjay) and/or [@slugb0t](https://github.com/slugb0t) as reviewers

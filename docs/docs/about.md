@@ -4,7 +4,7 @@ title: CDS Documentation documentation
 description: How to use the documentation site
 ---
 
-# About the documentation
+# About this documentation
 
 ## Tech Stack
 

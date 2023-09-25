@@ -96,8 +96,8 @@ export default withMermaid(
 
       nav: [
         {
-          text: 'Overview',
-          link: '/docs/overview.md',
+          text: 'Introduction to the CDS',
+          link: '/docs/intro.md',
         },
         {
           text: 'The CDS Specification',
@@ -109,20 +109,21 @@ export default withMermaid(
         },
         {
           text: 'Resources',
-          link: '/resources/section-1.md',
+          link: '/resources/changelog.md',
         },
       ],
 
       sidebar: {
         '/docs': sidebarGuide(),
         '/cds-specification': sidebarGuide(),
+        '/implementing-cds': sidebarGuide(),
         '/resources': sidebarGuide(),
         '/rationale': sidebarGuide(),
       },
 
       footer: {
-        message: 'Released under the Apache-2.0 License.',
-        copyright: 'Copyright © 2022-present | AI-READI',
+        message: 'Released under the MIT License.',
+        copyright: 'Copyright © 2023-present | AI-READI',
       },
     },
   }),
@@ -131,13 +132,21 @@ export default withMermaid(
 function sidebarGuide() {
   return [
     {
-      text: 'README',
+      text: 'Getting Started',
       collapsible: true,
       items: [
-        { text: 'Overview', link: '/docs/overview.md' },
+        { text: 'Introduction to the CDS', link: '/docs/intro.md' },
         {
-          text: 'About these docs',
-          link: '/docs/README.md',
+          text: 'About this documentation',
+          link: '/docs/about.md',
+        },
+        {
+          text: 'How to reference the CDS',
+          link: '/docs/referencing.md',
+        },
+        {
+          text: 'Contributing/Feedback',
+          link: '/docs/contributing-feedback.md',
         },
       ],
     },
@@ -146,22 +155,130 @@ function sidebarGuide() {
       text: 'CDS Specification',
       collapsible: true,
       items: [
-        { text: 'Section 1', link: '/cds-specification/section-1.md' },
-        { text: 'Section 2', link: '/cds-specification/section-2.md' },
-        { text: 'Section 3', link: '/cds-specification/section-3.md' },
-        { text: 'Section 4', link: '/cds-specification/section-4.md' },
+        {
+          text: 'General principles',
+          link: '/cds-specification/general-principles.md',
+        },
+        {
+          text: 'Folder structure',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            {
+              text: 'Overview',
+              link: '/cds-specification/folder-structure/overview.md',
+            },
+            {
+              text: 'Data type dictionary',
+              link: '/cds-specification/folder-structure/data-type-dictionary.md',
+            },
+          ],
+        },
+        {
+          text: 'Metadata files',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            {
+              text: 'Overview',
+              link: '/cds-specification/metadata-files/overview.md',
+            },
+            {
+              text: 'README.md',
+              link: '/cds-specification/metadata-files/readme.md',
+            },
+            {
+              text: 'datasheet.md',
+              link: '/cds-specification/metadata-files/datasheet.md',
+            },
+            {
+              text: 'study_description.json',
+              link: '/cds-specification/metadata-files/study-description.md',
+            },
+            {
+              text: 'dataset_description.json',
+              link: '/cds-specification/metadata-files/dataset-description.md',
+            },
+            {
+              text: 'participants',
+              link: '/cds-specification/metadata-files/participants.md',
+            },
+            {
+              text: 'LICENSE.txt',
+              link: '/cds-specification/metadata-files/license.md',
+            },
+            {
+              text: 'CHANGELOG.md',
+              link: '/cds-specification/metadata-files/changelog.md',
+            },
+          ],
+        },
       ],
     },
 
     {
-      text: 'Rationale',
+      text: 'Implementing the CDS',
       collapsible: true,
       items: [
-        { text: 'Section 1', link: '/rationale/section-1.md' },
-        { text: 'Section 2', link: '/rationale/section-2.md' },
         {
-          text: 'Section 3',
-          link: '/rationale/section-3.md',
+          text: 'Step-by-Step Guide',
+          link: '/implementing-cds/step-by-step-guide.md',
+        },
+      ],
+    },
+
+    {
+      text: 'Design Rationale',
+      collapsible: true,
+      items: [
+        { text: 'Overview', link: '/design-rationale/overview.md' },
+        {
+          text: 'Folder structure',
+          link: '/design-rationale/folder-structure.md',
+        },
+        {
+          text: 'Metadata files',
+          link: '/design-rationale/metadata-files.md',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            {
+              text: 'Overview',
+              link: '/cds-specification/design-rationale/overview.md',
+            },
+            {
+              text: 'README.md',
+              link: '/cds-specification/design-rationale/readme.md',
+            },
+            {
+              text: 'datasheet.md',
+              link: '/cds-specification/design-rationale/datasheet.md',
+            },
+            {
+              text: 'study_description.json',
+              link: '/cds-specification/design-rationale/study-description.md',
+            },
+            {
+              text: 'dataset_description.json',
+              link: '/cds-specification/design-rationale/dataset-description.md',
+            },
+            {
+              text: 'participants',
+              link: '/cds-specification/design-rationale/participants.md',
+            },
+            {
+              text: 'LICENSE.txt',
+              link: '/cds-specification/design-rationale/license.md',
+            },
+            {
+              text: 'CHANGELOG.md',
+              link: '/cds-specification/design-rationale/changelog.md',
+            },
+            {
+              text: 'CHANGELOG.md',
+              link: '/cds-specification/design-rationale/metadata-elements.md',
+            },
+          ],
         },
       ],
     },
@@ -170,15 +287,11 @@ function sidebarGuide() {
       text: 'Resources',
       collapsible: true,
       items: [
-        { text: 'Section 1', link: '/resources/section-1.md' },
-        { text: 'Section 2', link: '/resources/section-2.md' },
+        { text: 'Changelog', link: '/resources/changelog.md' },
+        { text: 'Template', link: '/resources/template.md' },
         {
-          text: 'Section 3',
-          link: '/resources/section-3.md',
-        },
-        {
-          text: 'Section 4',
-          link: '/resources/section-4.md',
+          text: 'Examples',
+          link: '/resources/examples.md',
         },
       ],
     },
