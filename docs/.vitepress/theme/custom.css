@@ -1,14 +1,18 @@
 :root {
-  --vp-c-brand: #000000;
-  --vp-c-brand-light: #ed32ae;
-  --vp-c-brand-dark: #ad0f78;
+  --vp-c-brand: #1D67B2;
+  --vp-c-brand-light: #1D67B2;
+  --vp-c-brand-dark: black | white;
 
-  --vt-c-brand: #000000;
+  --vt-c-brand: #1D67B2;
   --vt-c-text-3: #213547;
 }
 
 .outline-link.active {
   color: var(--vp-c-brand) !important;
+}
+
+.dark .outline-link.active {
+  color: var(--vp-c-brand-light) !important;
 }
 
 .VPNavBarSearch {
