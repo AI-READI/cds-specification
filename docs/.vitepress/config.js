@@ -144,10 +144,6 @@ function sidebarGuide() {
           text: 'How to reference the CDS',
           link: '/docs/referencing.md',
         },
-        {
-          text: 'Contributing/Feedback',
-          link: '/docs/contributing-feedback.md',
-        },
       ],
     },
 
@@ -224,6 +220,10 @@ function sidebarGuide() {
           text: 'Step-by-Step Guide',
           link: '/implementing-cds/step-by-step-guide.md',
         },
+        {
+          text: 'Examples',
+          link: '/implementing-cds/examples.md',
+        },
       ],
     },
 
@@ -288,10 +288,13 @@ function sidebarGuide() {
       collapsible: true,
       items: [
         { text: 'Changelog', link: '/resources/changelog.md' },
-        { text: 'Template', link: '/resources/template.md' },
         {
-          text: 'Examples',
-          link: '/resources/examples.md',
+          text: 'Governance',
+          link: '/resources/governance.md',
+        },
+        {
+          text: 'Contributing/Feedback',
+          link: '/docresourcess/contributing.md',
         },
       ],
     },

@@ -1,67 +1,27 @@
 ---
 lang: en-US
-title: CDS Documentation documentation
+title: About this documentation
 description: How to use the documentation site
 ---
 
 # About this documentation
 
-## Tech Stack
+## Structure
 
-- [Vitepress](https://vitepress.vuejs.org/)
+This documentation is conveniently organized so you can easily find what you are looking for:
 
-## Getting started
+- The [CDS Specification section](../cds-specification/general-principles.md) if for those of you who are interested in the fine details of the CDS. It contains the specification of the CDS, i.e., what is considered a data type, how to create a CDS-compliant folder structure, what metadata files are required, format should each metadata file follow, etc.
 
-### ⚠️ Prerequisites
+- The [Implementing the CDS section](../implementing-cds/step-by-step-guide.md) is for those of you who just want to implement the CDS. It contains a step-by-step guide along all relevant tools and resources to do so.
 
-This project uses `Yarn` as package manager.
+- The [Design Rationale](../design-rationale/overview.md) section is for those of you who are interest on the rationale behind the design of the CDS. It contains detailed explanation on the different choices made in the CDS (Why one folder per data type? Why the study_description.json file follow the ClinicalTrials.gov schema, etc.).
 
-```sh
-npm install --global yarn
-```
+- The [Resources](../resources/changelog.md) section contains various information that didn't fit into the previous three sections.
 
-If you already have a conda environment on your machine, you can install the dependencies with:
+## Maintenance
 
-```sh
-conda install -c conda-forge yarn nodejs
-```
+This documentation is maintained from its GitHub repository accessible [here](https://github.com/AI-READI/cds-specification).
 
-### Run locally
+## Suggestions/Feedback
 
-Clone the project
-
-```sh
-git clone https://github.com/AI-READI/cds-specification.git
-```
-
-Go to the project directory
-
-```sh
-cd dev.fairdataihub.org
-```
-
-Install dependencies
-
-```sh
-yarn install
-```
-
-Start the server
-
-```sh
-yarn dev
-```
-
-### Build locally
-
-Use this step to build a local production version of the site. Use `serve` to preview the local build.
-
-```sh
-yarn docs:build
-```
-
-## Acknowledgements
-
-A special thank you to Vercel for hosting our application documentation.
-
-![](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)
+Have a suggestion for improving the CDS? Need help implementing the CDS? Checkout instructions in our [Contributing page](../resources/contributing.md).
