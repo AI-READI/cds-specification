@@ -21,4 +21,8 @@ The Clinical Dataset Structure (CDS) is standard established to address these li
 
 ## Development of the CDS
 
-The CDS is developed as part of the [AI-READI project](https://aireadi.org/) funded by the [NIH Bridge2AI Common Fund](https://commonfund.nih.gov/bridge2ai).
+The CDS is developed as part of the [AI-READI project](https://aireadi.org/) funded by the [NIH Bridge2AI Common Fund](https://commonfund.nih.gov/bridge2ai). We refer to the [Governance section](../resources/governance.md) for information regarding the continuous development and maintenance of the CDS.
+
+## Acknowledgment
+
+This project is funded by the NIH under award number 1OT2OD032644. The content is solely the responsibility of the authors and does not necessarily represent the official views of the NIH.

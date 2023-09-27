@@ -1,6 +1,6 @@
 ---
 lang: en-US
-title: Release procedure
+title: Overview - Folder structure
 description: How to release SODA for SPARC to the public
 ---
 

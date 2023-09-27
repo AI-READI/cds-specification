@@ -25,3 +25,7 @@ This documentation is maintained from its GitHub repository accessible [here](ht
 ## Suggestions/Feedback
 
 Have a suggestion for improving the CDS? Need help implementing the CDS? Checkout instructions in our [Contributing page](../resources/contributing.md).
+
+## Inspiration
+
+The structure and some content of this documentation is inspired by the documentation of the [BIDS specification](https://bids-specification.readthedocs.io/en/stable/).

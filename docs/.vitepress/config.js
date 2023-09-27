@@ -156,13 +156,13 @@ function sidebarGuide() {
           link: '/cds-specification/general-principles.md',
         },
         {
-          text: 'Folder structure',
+          text: 'Folder naming',
           collapsible: true,
           collapsed: true,
           items: [
             {
-              text: 'Overview',
-              link: '/cds-specification/folder-structure/overview.md',
+              text: 'Naming convention',
+              link: '/cds-specification/folder-naming/naming-convention.md',
             },
             {
               text: 'Data type dictionary',
@@ -233,8 +233,12 @@ function sidebarGuide() {
       items: [
         { text: 'Overview', link: '/design-rationale/overview.md' },
         {
-          text: 'Folder structure',
-          link: '/design-rationale/folder-structure.md',
+          text: 'General principles',
+          link: '/design-rationale/general-principles.md',
+        },
+        {
+          text: 'Folder naming',
+          link: '/design-rationale/folder-naming.md',
         },
         {
           text: 'Metadata files',
@@ -294,7 +298,7 @@ function sidebarGuide() {
         },
         {
           text: 'Contributing/Feedback',
-          link: '/docresourcess/contributing.md',
+          link: '/resources/contributing.md',
         },
       ],
     },
