@@ -38,7 +38,7 @@ The CDS specifies the following at the root level of a dataset:
 
 <div align="center">
   <figure>
-    <img src="/images/docs/cds-example.png" alt="cds-example" width="300"/>
+    <img src="/images/docs/CDS-example.png" alt="cds-example" width="300"/>
     <figcaption> Illustration of a dataset with two data types (electrocardiogram/ecg and optical coherence tomography/oct) structured following the CDS. </figcaption>
   </figure>
 </div>
