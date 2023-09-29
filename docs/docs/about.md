@@ -12,7 +12,7 @@ This documentation is conveniently organized so you can easily find what you are
 
 - The [CDS Specification section](../cds-specification/general-principles.md) if for those of you who are interested in the fine details of the CDS. It contains the specification of the CDS, i.e., what is considered a data type, how to create a CDS-compliant folder structure, what metadata files are required, format should each metadata file follow, etc.
 
-- The [Implementing the CDS section](../implementing-cds/step-by-step-guide.md) is for those of you who just want to implement the CDS. It contains a step-by-step guide along all relevant tools and resources to do so.
+- The [Implementing the CDS section](../implementing-cds/step-by-step-guide.md) contains a step-by-step guide to implement the CDS. We recognize that the specifications are quite extensive and can be difficult and time consuming to implement so we have developed support tools and resources designed to enable anyone to implement CDS without any specific knowledge or expertise. Those tools and resources are also introduced in this section.
 
 - The [Design Rationale](../design-rationale/overview.md) section is for those of you who are interest on the rationale behind the design of the CDS. It contains detailed explanation on the different choices made in the CDS (Why one folder per data type? Why the study_description.json file follow the ClinicalTrials.gov schema, etc.).
 

@@ -1,0 +1,60 @@
+{
+  "$id": "https://schema.aireadi.org/files/datatype_dictionary.json",
+  "title": "datatype_dictionary schema",
+  "description": "Schema for the datatype_dictionary.json metadata file required in the CDS",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "datatype_name": {
+        "type": "string",
+        "description": "The standard name used to designate the data type. It must be all lower case and use underscore as word separator. It must be unique in the dictionary. We refer to https://github.com/AI-READI/datatype-dictionary for instructions on choosing a suitable code name. For instance, if your datatype is already listed in the official dictionary, we recommend using it."
+      },
+      "datatype_description": {
+        "type": "string",
+        "description": "Succinct description of the datatype."
+      },
+      "alternate_name": {
+        "type": "array",
+        "description": "Possible alternate names other than 'datatype_name' that are commonly used to designate the datatype",
+        "items": {
+          "type": "string"
+        }
+      },
+      "related_terms": {
+        "type": "array",
+        "description": "URLs of terms related to the datatype that are used in existing ontologies, taxonomy, or other dictionaries.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "standards_followed": {
+        "type": "array",
+        "description": "Standards that were followed to structure, format, and include metadata for that data type.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "standard_name": {
+              "type": "string",
+              "description": "The standard name used to designate the data type. It must be all lower case and use underscore as word separator. It must be unique in the dictionary. We refer to https://github.com/AI-READI/datatype-dictionary for instructions on choosing a suitable code name. For instance, if your datatype is already listed in the official dictionary, we recommend using it."
+            },
+            "standard_uri": {
+              "type": "array",
+              "description": "URIs of the standards, for e.g., documentation page, GitHub repo, etc.",
+              "items": {
+                "type": "string"
+              }
+            },
+            "usage_explanation": {
+              "type": "string",
+              "description": "Explanation of how the standard was used, it it was modified, etc."
+            }
+          },
+          "required": ["standard_name", "standard_uri"]
+        }
+      }
+    },
+    "required": ["datatype_name", "datatype_description"]
+  },
+  "minItems": 1
+}

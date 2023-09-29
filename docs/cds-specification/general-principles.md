@@ -24,11 +24,21 @@ The CDS specifies the following at the root level of a dataset:
 3. Each folder must be named according the folder naming convention provided [here](folder-naming/naming-convention.md).
 4. Inside each folder, the data must be organized according to existing community-accepted standard for that data type if available or following some other standard structure established by the dataset authors. This must be documented in the metadata datatype-dictionary.json metadata file (c.f. point 6).
 5. No empty folders are allowed.
-6. Metadata files specified [here](metadata-files/overview.md) must be included as applicable.
+6. The following metadata files must be included at the root level:
+
+   - [README.md](metadata-files/readme.md)
+   - [LICENSE.txt](metadata-files/license.md)
+   - [datasheet.md](metadata-files/datasheet.md)
+   - [datatype-dictionary.json](metadata-files/datasheet.md)
+   - [study-description.json](metadata-files/study-description.md)
+   - [dataset-description.json](metadata-files/dataset-description.md)
+   - [participants.tsv and participants.json](metadata-files/participants.md)
+
+7. A [CHANGELOG.md](metadata-files/changelog.md) metadata file must be included at the root level if a new version of a dataset is created.
 
 <div align="center">
   <figure>
-    <img src="/images/docs/CDS-example.png" alt="CDS-example" width="300"/>
-    <figcaption> Illustration of a dataset with two data types (electrocardiogram/ecg and optical coherence tomography/oct) structured following the CDS </figcaption>
+    <img src="/images/docs/cds-example.png" alt="cds-example" width="300"/>
+    <figcaption> Illustration of a dataset with two data types (electrocardiogram/ecg and optical coherence tomography/oct) structured following the CDS. </figcaption>
   </figure>
 </div>

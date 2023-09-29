@@ -1,0 +1,62 @@
+{
+  "$id": "https://schema.aireadi.org/files/participants.json",
+  "title": "README",
+  "description": "Additional text here",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "participant_id": {
+        "type": "string",
+        "description": "A participant identifier matching a participant entity found in the dataset. Values in participant_id MUST be unique.",
+      },
+      "age": {
+        "type": "number",
+        "description": "Numeric value in years (float or integer value)",
+        "exclusiveMinimum": 0
+      },
+      "sex": {
+        "type": "string",
+        "enum": [
+          "male",
+          "m",
+          "M",
+          "MALE",
+          "Male",
+          "female",
+          "f",
+          "F",
+          "FEMALE",
+          "Female",
+          "other",
+          "o",
+          "O",
+          "OTHER",
+          "Other"
+        ]
+      },
+      "handedness": {
+        "type": "string",
+        "enum": [
+          "left",
+          "l",
+          "L",
+          "LEFT",
+          "Left",
+          "right",
+          "r",
+          "R",
+          "RIGHT",
+          "Right",
+          "ambidextrous",
+          "a",
+          "A",
+          "AMBIDEXTROUS",
+          "Ambidextrous"
+        ]
+      },
+    },
+    "required": ["participant_id"]
+  },
+  "minItems": 1
+}

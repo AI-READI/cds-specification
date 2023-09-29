@@ -176,12 +176,12 @@ function sidebarGuide() {
           collapsed: true,
           items: [
             {
-              text: 'Overview',
-              link: '/cds-specification/metadata-files/overview.md',
-            },
-            {
               text: 'README.md',
               link: '/cds-specification/metadata-files/readme.md',
+            },
+            {
+              text: 'LICENSE.txt',
+              link: '/cds-specification/metadata-files/license.md',
             },
             {
               text: 'datasheet.md',
@@ -196,12 +196,12 @@ function sidebarGuide() {
               link: '/cds-specification/metadata-files/dataset-description.md',
             },
             {
-              text: 'participants',
-              link: '/cds-specification/metadata-files/participants.md',
+              text: 'datatype_dictionary.json',
+              link: '/cds-specification/metadata-files/datatype-dictionary.md',
             },
             {
-              text: 'LICENSE.txt',
-              link: '/cds-specification/metadata-files/license.md',
+              text: 'participants.tsv and .json',
+              link: '/cds-specification/metadata-files/participants.md',
             },
             {
               text: 'CHANGELOG.md',
@@ -219,6 +219,10 @@ function sidebarGuide() {
         {
           text: 'Step-by-Step Guide',
           link: '/implementing-cds/step-by-step-guide.md',
+        },
+        {
+          text: 'template',
+          link: '/implementing-cds/template.md',
         },
         {
           text: 'Examples',

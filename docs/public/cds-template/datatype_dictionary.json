@@ -1,0 +1,18 @@
+{
+    "datatypes": [
+        {
+            "datatype_name": "ekg",
+            "datatype_description": "Measurements of the electrical signals of the heart over time.",
+            "alternate_name": ["electrocardiogram", "ecg"],
+            "related_terms":["", ""],
+            "standards_followed":[
+                {
+                    "standard_name": "standard x",
+                    "standard_uri": [],
+                    "usage_explanation": ""        
+                }
+            ]    
+     
+        }
+    ]
+}
