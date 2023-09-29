@@ -4,7 +4,7 @@ title: datatype_dictionary.json
 description: Specifications for the datatype_dictionary.json metadata file
 ---
 
-# study_description.json
+# datatype_dictionary.json
 
 ## About
 

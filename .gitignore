@@ -4,6 +4,7 @@ node_modules
 node_modules
 .temp
 .cache
+.yarn
 yarn-error.log
 docs/.vitepress/cache
 docs/.vitepress/dist/

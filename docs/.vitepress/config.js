@@ -101,11 +101,7 @@ export default withMermaid(
         },
         {
           text: 'The CDS Specification',
-          link: '/cds-specification/section-1.md',
-        },
-        {
-          text: 'Rationale',
-          link: '/rationale/section-1.md',
+          link: '/specification/general-principles.md',
         },
         {
           text: 'Resources',
@@ -115,8 +111,9 @@ export default withMermaid(
 
       sidebar: {
         '/docs': sidebarGuide(),
-        '/cds-specification': sidebarGuide(),
+        '/specification': sidebarGuide(),
         '/implementing-cds': sidebarGuide(),
+        '/design-rationale': sidebarGuide(),
         '/resources': sidebarGuide(),
         '/rationale': sidebarGuide(),
       },
@@ -153,7 +150,7 @@ function sidebarGuide() {
       items: [
         {
           text: 'General principles',
-          link: '/cds-specification/general-principles.md',
+          link: '/specification/general-principles.md',
         },
         {
           text: 'Folder naming',
@@ -162,7 +159,7 @@ function sidebarGuide() {
           items: [
             {
               text: 'Naming convention',
-              link: '/cds-specification/folder-naming/naming-convention.md',
+              link: '/specification/folder-naming/naming-convention.md',
             },
           ],
         },
@@ -173,35 +170,35 @@ function sidebarGuide() {
           items: [
             {
               text: 'README.md',
-              link: '/cds-specification/metadata-files/readme.md',
+              link: '/specification/metadata-files/readme.md',
             },
             {
               text: 'LICENSE.txt',
-              link: '/cds-specification/metadata-files/license.md',
+              link: '/specification/metadata-files/license.md',
             },
             {
               text: 'datasheet.md',
-              link: '/cds-specification/metadata-files/datasheet.md',
+              link: '/specification/metadata-files/datasheet.md',
             },
             {
               text: 'study_description.json',
-              link: '/cds-specification/metadata-files/study-description.md',
+              link: '/specification/metadata-files/study-description.md',
             },
             {
               text: 'dataset_description.json',
-              link: '/cds-specification/metadata-files/dataset-description.md',
+              link: '/specification/metadata-files/dataset-description.md',
             },
             {
               text: 'datatype_dictionary.json',
-              link: '/cds-specification/metadata-files/datatype-dictionary.md',
+              link: '/specification/metadata-files/datatype-dictionary.md',
             },
             {
               text: 'participants.tsv and .json',
-              link: '/cds-specification/metadata-files/participants.md',
+              link: '/specification/metadata-files/participants.md',
             },
             {
               text: 'CHANGELOG.md',
-              link: '/cds-specification/metadata-files/changelog.md',
+              link: '/specification/metadata-files/changelog.md',
             },
           ],
         },
@@ -248,39 +245,39 @@ function sidebarGuide() {
           items: [
             {
               text: 'Overview',
-              link: '/cds-specification/design-rationale/overview.md',
+              link: '/design-rationale/metadata-files/overview.md',
             },
             {
               text: 'README.md',
-              link: '/cds-specification/design-rationale/readme.md',
-            },
-            {
-              text: 'datasheet.md',
-              link: '/cds-specification/design-rationale/datasheet.md',
-            },
-            {
-              text: 'study_description.json',
-              link: '/cds-specification/design-rationale/study-description.md',
-            },
-            {
-              text: 'dataset_description.json',
-              link: '/cds-specification/design-rationale/dataset-description.md',
-            },
-            {
-              text: 'participants',
-              link: '/cds-specification/design-rationale/participants.md',
+              link: '/design-rationale/metadata-files/readme.md',
             },
             {
               text: 'LICENSE.txt',
-              link: '/cds-specification/design-rationale/license.md',
+              link: '/design-rationale/metadata-files/license.md',
+            },
+            {
+              text: 'datasheet.md',
+              link: '/design-rationale/metadata-files/datasheet.md',
+            },
+            {
+              text: 'study_description.json',
+              link: '/design-rationale/metadata-files/study-description.md',
+            },
+            {
+              text: 'dataset_description.json',
+              link: '/design-rationale/metadata-files/dataset-description.md',
+            },
+            {
+              text: 'datatype_dictionary.json',
+              link: '/design-rationale/metadata-files/datatype-dictionary.md',
+            },
+            {
+              text: 'participants.tsv and .json',
+              link: '/design-rationale/metadata-files/participants.md',
             },
             {
               text: 'CHANGELOG.md',
-              link: '/cds-specification/design-rationale/changelog.md',
-            },
-            {
-              text: 'CHANGELOG.md',
-              link: '/cds-specification/design-rationale/metadata-elements.md',
+              link: '/design-rationale/metadata-files/changelog.md',
             },
           ],
         },
