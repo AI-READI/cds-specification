@@ -1,5 +1,3 @@
-<From https://github.com/fau-masters-collected-works-cgarbin/datasheet-for-dataset-template>
-
 # Datasheet for dataset "add dataset name here"
 
 Questions from the [Datasheets for Datasets](https://arxiv.org/abs/1803.09010) paper, v7.

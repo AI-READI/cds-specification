@@ -164,10 +164,6 @@ function sidebarGuide() {
               text: 'Naming convention',
               link: '/cds-specification/folder-naming/naming-convention.md',
             },
-            {
-              text: 'Data type dictionary',
-              link: '/cds-specification/folder-structure/data-type-dictionary.md',
-            },
           ],
         },
         {
