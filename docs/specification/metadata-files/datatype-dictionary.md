@@ -22,4 +22,4 @@ This metadata file must be named `datatype_dictionary` and must be in the JSON f
 
 ### Content
 
-This metadata file must be structured as per the JSON schema provided [here](schemas/datatype_dictionary.schema.json).
+This metadata file must be structured as per the JSON schema provided [here](/schemas/datatype_dictionary.schema.json).

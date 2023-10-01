@@ -153,15 +153,8 @@ function sidebarGuide() {
           link: '/specification/general-principles.md',
         },
         {
-          text: 'Folder naming',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            {
-              text: 'Naming convention',
-              link: '/specification/folder-naming/naming-convention.md',
-            },
-          ],
+          text: 'Folder structure',
+          link: '/specification/folder-structure.md',
         },
         {
           text: 'Metadata files',
