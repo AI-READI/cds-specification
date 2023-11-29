@@ -46,5 +46,5 @@
     "mermaid": "^10.2.4",
     "vitepress-plugin-mermaid": "^2.0.13"
   },
-  "type": "module"
+  "type": "commonjs"
 }

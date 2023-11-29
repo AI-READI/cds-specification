@@ -9,8 +9,8 @@ description: Description of the general principles of the CDS
 ## Definitions
 
 - The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC2119](https://www.ietf.org/rfc/rfc2119.txt).
-- Clinical dataset: A set of data files and associated metadata files resulting from clinical research study.
-- Data type: In a clinical research study, multiple modalities of data are collected. We postulate that data from one or multiple modalities can be characterized as being of a single data type if at least of of these is applicable:
+- Clinical dataset: A set of data files and associated metadata files resulting from a clinical research study.
+- Data type: In a clinical research study, multiple modalities of data are collected. We postulate that data from one or multiple modalities can be characterized as being of a single data type if at least of these is applicable:
   1. There exists an established standard structure for organizing data from these modalities together
   2. The modalities were collected through a shared method (instrument, device, etc.).
   3. The modalities cannot be interpreted separately
