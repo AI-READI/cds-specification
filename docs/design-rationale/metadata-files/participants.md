@@ -1,7 +1,9 @@
 ---
 lang: en-US
-title: SODA Server
-description: The SODA for SPARC server architecture, development, and testing guide
+title: participants.tsv and participants.json
+description: Rationale behind the design of the participants.tsv and participants.json metadata files
 ---
 
-# Overview
+# participants.tsv and participants.json
+
+Coming soon...

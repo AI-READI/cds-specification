@@ -26,11 +26,11 @@ There is no mandatory requirements for the content of this metadata file, it is 
 
 - **Include the name of the dataset at the top of the file**
 
-- **Identifier**: In this section, indicate the DOI or any other globally unique and persistent identifier of the latest version of the dataset
+- **Identifier**: In this section, indicate the DOI or any other globally unique and persistent identifier of the current version of the dataset.
 
-- **Latest version number**: In this section, indicate the latest version number of the published dataset.
+- **Latest version number**: In this section, indicate the current version number of the published dataset.
 
-- **Publication date**: In this section, indicate the date when the latest version of the dataset was published (i.e., made available outside of the project members openly or through a restricted access). It is suggested to follow the [ISO 8601 date format](https://www.iso.org/iso-8601-date-and-time-format.html) (YYYY-MM-DD).
+- **Publication date**: In this section, indicate the date when the current version of the dataset was published (i.e., made available outside of the project members openly or through a restricted access). It is suggested to follow the [ISO 8601 date format](https://www.iso.org/iso-8601-date-and-time-format.html) (YYYY-MM-DD).
 
 - **License**: In this section, mention the name of the data reuse license (refer to the [LICENSE.txt](license.txt) file in your dataset for additional details).
 

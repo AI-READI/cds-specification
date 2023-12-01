@@ -1,7 +1,9 @@
 ---
 lang: en-US
-title: SODA Server
-description: The SODA for SPARC server architecture, development, and testing guide
+title: CHANGELOG.md
+description: Rationale behind the design of the CHANGELOG.md metadata file
 ---
 
-# Overview
+# CHANGELOG.md
+
+Coming soon...

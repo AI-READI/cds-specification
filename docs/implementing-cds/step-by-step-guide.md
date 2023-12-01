@@ -6,9 +6,9 @@ description: Step-by-step guide for implementing the CDS
 
 # Step-by-step guide for implementing the CDS
 
-## 1. Organize data into one folder per data type
+Coming soon...
 
-The Clinical Dataset Structure (CDS) is a simple and intuitive way to organize and describe clinical research datasets at the highest level such that they are readily interoperable and easily reusable by humans and machines. The CDS is especially designed to optimize AI-readiness of datasets.
+## 1. Organize data into one folder per data type
 
 ## 2. Prepare metadata files
 

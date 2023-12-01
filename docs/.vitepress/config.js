@@ -207,8 +207,8 @@ function sidebarGuide() {
           link: '/implementing-cds/step-by-step-guide.md',
         },
         {
-          text: 'template',
-          link: '/implementing-cds/template.md',
+          text: 'Templates',
+          link: '/implementing-cds/templates.md',
         },
         {
           text: 'Examples',

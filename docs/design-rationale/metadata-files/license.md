@@ -1,7 +1,9 @@
 ---
 lang: en-US
-title: SODA Server
-description: The SODA for SPARC server architecture, development, and testing guide
+title: LICENSE.txt
+description: Rationale behind the design of the LICENSE.txt metadata file
 ---
 
-# Overview
+# LICENSE.txt
+
+Coming soon...

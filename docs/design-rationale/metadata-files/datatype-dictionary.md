@@ -1,7 +1,9 @@
 ---
 lang: en-US
-title: SODA Server
-description: The SODA for SPARC server architecture, development, and testing guide
+title: datatype-dictionary.json
+description: Rationale behind the design of the datatype-dictionary.json metadata file
 ---
 
-# Overview
+# datatype-dictionary.json
+
+Coming soon...

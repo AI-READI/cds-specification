@@ -1,7 +1,9 @@
 ---
 lang: en-US
-title: SODA Server
-description: The SODA for SPARC server architecture, development, and testing guide
+title: Overview
+description: Overview of the metadata files design
 ---
 
 # Overview
+
+Coming soon...

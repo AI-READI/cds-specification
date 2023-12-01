@@ -1,7 +1,9 @@
 ---
 lang: en-US
-title: SODA Server
-description: The SODA for SPARC server architecture, development, and testing guide
+title: README.md
+description: Rationale behind the design of the README.md metadata file
 ---
 
-# Overview
+# README.md
+
+Coming soon...

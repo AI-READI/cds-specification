@@ -1,5 +1,9 @@
 ---
 lang: en-US
 title: Folder structure
-description: How to commit to a FAIR Data Innovations Hub repository
+description: Rationale behind the folder structure into one folder per datatype
 ---
+
+# Folder structure
+
+Coming soon...

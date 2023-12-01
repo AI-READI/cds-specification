@@ -1,7 +1,9 @@
 ---
 lang: en-US
-title: SODA Server
-description: The SODA for SPARC server architecture, development, and testing guide
+title: dataset_description.json
+description: Rationale behind the design of the dataset_description.json metadata file
 ---
 
-# Overview
+# dataset_description.json
+
+Coming soon...
