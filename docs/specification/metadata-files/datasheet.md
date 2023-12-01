@@ -22,4 +22,4 @@ This metadata file must be named `datasheet` and must be in the markdown format.
 
 ### Content
 
-The content of this metadata file must be exactly as specified in the ["Datasheets for Datasets"](https://doi.org/10.48550/arXiv.1803.09010) that introduced the concept for this datasheet. The template provided [here](../../implementing-cds/template.md) specifies the required structure and content.
+The content of this metadata file must be exactly as specified in the ["Datasheets for Datasets"](https://doi.org/10.48550/arXiv.1803.09010) that introduced the concept for this datasheet. The template provided [here](../../implementing-cds/templates.md) specifies the required structure and content.
