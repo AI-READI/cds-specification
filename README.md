@@ -40,7 +40,7 @@ yarn dev
 
 ### Build Locally
 
-Use this step to build a local production version of the site. User `docs:serve` to preview the local build.
+Use this to build a local production version of the site. User `docs:serve` to preview the local build.
 
 ```bash
 yarn docs:build

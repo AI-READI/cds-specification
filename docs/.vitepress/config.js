@@ -182,7 +182,7 @@ function sidebarGuide() {
               link: '/specification/metadata-files/dataset-description.md',
             },
             {
-              text: 'datatype_dictionary.json',
+              text: 'datatype_dictionary.yaml',
               link: '/specification/metadata-files/datatype-dictionary.md',
             },
             {
@@ -261,7 +261,7 @@ function sidebarGuide() {
               link: '/design-rationale/metadata-files/dataset-description.md',
             },
             {
-              text: 'datatype_dictionary.json',
+              text: 'datatype_dictionary.yaml',
               link: '/design-rationale/metadata-files/datatype-dictionary.md',
             },
             {

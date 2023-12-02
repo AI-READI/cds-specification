@@ -38,4 +38,4 @@ Irrepective of the approach for choosing the name, the following naming conventi
 
 ### Documenting folder structure
 
-The name of each datatype folder, what datatype it contains, etc. must be documented in the [datatype_dictionary.json](metadata-files/datatype-dictionary) metadata file.
+The name of each datatype folder, what datatype it contains, etc. must be documented in the [datatype_dictionary.yaml](metadata-files/datatype-dictionary) metadata file.

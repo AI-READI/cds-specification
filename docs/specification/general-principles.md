@@ -27,7 +27,7 @@ The CDS specifies the following at the root level of a dataset:
    - [README.md](metadata-files/readme.md)
    - [LICENSE.txt](metadata-files/license.md)
    - [datasheet.md](metadata-files/datasheet.md)
-   - [datatype-dictionary.json](metadata-files/datasheet.md)
+   - [datatype-dictionary.yaml](metadata-files/datatype-dictionary.md)
    - [study-description.json](metadata-files/study-description.md)
    - [dataset-description.json](metadata-files/dataset-description.md)
    - [participants.tsv and participants.json](metadata-files/participants.md)

@@ -1,9 +1,9 @@
 ---
 lang: en-US
-title: datatype-dictionary.json
-description: Rationale behind the design of the datatype-dictionary.json metadata file
+title: datatype_dictionary.yaml
+description: Rationale behind the design of the datatype-dictionary.yaml metadata file
 ---
 
-# datatype-dictionary.json
+# datatype_dictionary.yaml
 
 Coming soon...

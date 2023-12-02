@@ -1,14 +1,14 @@
 ---
 lang: en-US
-title: datatype_dictionary.json
-description: Specifications for the datatype_dictionary.json metadata file
+title: datatype_dictionary.yaml
+description: Specifications for the datatype_dictionary.yaml metadata file
 ---
 
-# datatype_dictionary.json
+# datatype_dictionary.yaml
 
 ## About
 
-The datatype_dictionary.json is a document the data types present in the dataset and specify the standards followed to structure and document each data type. This metadata file is intended to prioritize machine readability.
+The datatype_dictionary.yaml is intended to document the datatypes present in the dataset and specify the standards followed to structure and document each datatype. This metadata file is intended to balance both human and machine readability.
 
 ## Specifications
 
@@ -18,8 +18,8 @@ This metadata is mandatory for all datasets.
 
 ### Name and format
 
-This metadata file must be named `datatype_dictionary` and must be in the JSON format. The full name with extension must thus be `datatype_dictionary.json`.
+This metadata file must be named `datatype_dictionary` and must be in the YAML format. The full name with extension must thus be `datatype_dictionary.yaml`.
 
 ### Content
 
-This metadata file must be structured as per the JSON schema provided [here](/schemas/datatype_dictionary.schema.json).
+This metadata file must be structured as per the linkML schema provided [here](https://github.com/AI-READI/datatype-dictionary/blob/main/datatypeinfo.yaml).
