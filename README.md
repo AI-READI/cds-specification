@@ -47,6 +47,12 @@ Documentation of the CDS, a standardized high-level data and metadata structure 
 
 The Clinical Dataset Structure (CDS) is a simple and intuitive standard for the high-level organization of clinical research data and metadata. The CDS is designed to facilitate reusability of the dataset by humans and machines by making it intuitive to navigate and exposing information they may need when looking at the dataset. You can find everything about the CDS in [its documentation](https://cds-specification.vercel.app/) that is maintained from this repository.
 
+<div align="center">
+    <img src="docs/public/images/docs/CDS-example.png" alt="CDS example" width="400" height="auto" />
+    <p><i> Illustration of a dataset with two data types (electrocardiogram and optical coherence tomography) structured following the CDS. </i></p>
+</div>
+
+
 ## Contributing
 
 <a href="https://github.com/AI-READI/cds-template/graphs/contributors">
