@@ -118,7 +118,7 @@
           "required": ["CompletionDate", "CompletionDateType"]
         }
       },
-      "required": ["OverallStatus", "StartDateStruct"]
+      "required": ["OverallStatus", "StartDateStruct", "CompletionDateStruct"]
     },
     "SponsorCollaboratorsModule": {
       "type": "object",
