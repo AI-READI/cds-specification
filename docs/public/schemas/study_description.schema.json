@@ -29,6 +29,7 @@
             },
             "OrgStudyIdLink": {
               "type": "string",
+              "description": "If the ID has a resolvable link, optionally provide the full link here. For instance, if ID is 'K01HL147713' then the ID link is 'https://reporter.nih.gov/quickSearch/K01HL147713'"
               "format": "uri",
               "minLength": 1
             }
@@ -885,7 +886,9 @@
         "GenderBased",
         "MinimumAge",
         "MaximumAge",
-        "EligibilityCriteria"
+        "EligibilityCriteria",
+        "StudyPopulation",
+        "SamplingMethod"
       ]
     },
     "ContactsLocationsModule": {
@@ -937,6 +940,7 @@
         },
         "OverallOfficialList": {
           "type": "array",
+          "description": "",
           "items": {
             "type": "object",
             "additionalProperties": false,
