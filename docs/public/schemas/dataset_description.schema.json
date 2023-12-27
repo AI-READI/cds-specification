@@ -88,12 +88,14 @@
                 "nameIdentifierScheme": {
                   "type": "string",
                   "minLength": 1,
-                  "description": "The name of the name identifier scheme. Example: ORCID, ISNI, ROR, GRID."
+                  "description": "The name of the name identifier scheme.",
+                  "examples": ["ORCID", "ISNI", "ROR", "GRID"]
                 },
                 "schemeURI": {
                   "type": "string",
                   "minLength": 1,
-                  "description": "The URI of the name identifier scheme. Example: https://ror.org, https://isni.org, https://orcid.org, https://grid.ac"
+                  "description": "The URI of the name identifier scheme.",
+                  "examples": ["https://orcid.org", "https://isni.org", "https://ror.org", "https://grid.ac"]
                 }
               },
               "required": ["nameIdentifierValue", "nameIdentifierScheme"]
@@ -102,25 +104,33 @@
           },
           "affiliation": {
             "type": "array",
-            "description": "The organizational or institutional affiliation of the creator. Only needed if the creator is a person",
+            "description": "The organizational or institutional affiliation of the creator.",
             "items": {
               "type": "object",
               "additionalProperties": false,
               "properties": {
+                "affiliationName": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Name of the organizational or institutional affiliation of the creator. In the case of an organizational creator, e.g., a research group, this will often be the name of the institution to which that organization belongs."
+                },
                 "affiliationIdentifier": {
                   "type": "string",
                   "minLength": 1,
-                  "description": "Uniquely identifies the organizational affiliation of the creator."
+                  "description": "Uniquely identifies the organizational affiliation of the creator.",
+                  "examples": ["https://ror.org/04aj4c181"]
                 },
                 "affiliationIdentifierScheme": {
                   "type": "string",
                   "minLength": 1,
-                  "description": "The name of the name identifier scheme. Example: ORCID, ISNI, ROR, GRID."
+                  "description": "The name of the name identifier scheme.",
+                  "examples": ["ISNI", "ROR", "GRID"]
                 },
                 "SchemeURI": {
                   "type": "string",
                   "minLength": 1,
-                  "description": "The URI of the name identifier scheme. Example: https://ror.org, https://isni.org, https://orcid.org, https://grid.ac"
+                  "description": "The URI of the name identifier scheme.",
+                  "examples": ["https://isni.org", "https://ror.org", "https://grid.ac"]
                 }
               },
               "required": [
@@ -172,12 +182,14 @@
                 "nameIdentifierScheme": {
                   "type": "string",
                   "minLength": 1,
-                  "description": "The name of the name identifier scheme. Example: ORCID, ISNI, ROR, GRID."
+                  "description": "The name of the name identifier scheme.",
+                  "examples": ["ORCID", "ISNI", "ROR", "GRID"]
                 },
                 "schemeURI": {
                   "type": "string",
                   "minLength": 1,
-                  "description": "The URI of the name identifier scheme. Example: https://ror.org, https://isni.org, https://orcid.org, https://grid.ac"
+                  "description": "The URI of the name identifier scheme.",
+                  "examples": ["https://orcid.org", "https://isni.org", "https://ror.org", "https://grid.ac"]
                 }
               },
               "required": ["nameIdentifierValue", "nameIdentifierScheme"]
@@ -187,25 +199,33 @@
           },
           "affiliation": {
             "type": "array",
-            "description": "The organizational or institutional affiliation of the creator. Only needed if the creator is a person",
+            "description": "The organizational or institutional affiliation of the contributor.",
             "items": {
               "type": "object",
               "additionalProperties": false,
               "properties": {
+                "affiliationName": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Name of the organizational or institutional affiliation of the contributor. In the case of an organizational contributor, e.g., a research group, this will often be the name of the institution to which that organization belongs."
+                },
                 "affiliationIdentifier": {
                   "type": "string",
                   "minLength": 1,
-                  "description": "Uniquely identifies the organizational affiliation of the creator."
+                  "description": "Uniquely identifies the organizational affiliation of the contributor.",
+                  "examples": ["https://ror.org/04aj4c181"]
                 },
                 "affiliationIdentifierScheme": {
                   "type": "string",
                   "minLength": 1,
-                  "description": "The name of the name identifier scheme. Example: ORCID, ISNI, ROR, GRID."
+                  "description": "The name of the name identifier scheme.",
+                  "examples": ["ISNI", "ROR", "GRID"]
                 },
                 "SchemeURI": {
                   "type": "string",
                   "minLength": 1,
-                  "description": "The URI of the name identifier scheme. Example: https://ror.org, https://isni.org, https://orcid.org, https://grid.ac"
+                  "description": "The URI of the name identifier scheme.",
+                  "examples": ["https://orcid.org", "https://isni.org", "https://ror.org", "https://grid.ac"]
                 }
               },
               "required": [
@@ -326,41 +346,6 @@
         }
       },
       "required": ["resourceTypeValue", "resourceTypeGeneral"]
-    },
-    "DatasetRecordKeys": {
-      "type": "object",
-      "additionalProperties": false,
-      "description": "A set of keys that uniquely identify the dataset within the repository",
-      "properties": {
-        "keysType": {
-          "type": "string",
-          "description": "Provides an indication of the types of keys used in the dataset, in particular if they are claimed to be anonymous or pseudonymous",
-          "oneOf": [
-            {
-              "const": "NotKnown",
-              "description": "No clear information available about the record keys in use."
-            },
-            {
-              "const": "Anonymised",
-              "description": "Data controller or manager describes dataset as `anonymised`, in their interpretation of the term."
-            },
-            {
-              "const": "Pseudonymised",
-              "description": "Data controller or manager describes dataset as `pseudonymised`, in their interpretation of the term."
-            },
-            {
-              "const": "Identifiable",
-              "description": "Data controller or manager describes dataset as `identifiable`, in their interpretation of the term."
-            }
-          ]
-        },
-        "keysDetails": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Provides further details of the record key types, perhaps referring to dataset preparation, if available"
-        }
-      },
-      "required": ["keysType"]
     },
     "DatasetDeIdentLevel": {
       "type": "object",
@@ -529,19 +514,8 @@
                 ]
               },
               {
-                "const": "SeriesInformation",
-                "description": "Information about a repeating series, such as volume, issue, number."
-              },
-              {
-                "const": "TableOfContents",
-                "description": "A listing of the Table of Contents.",
-                "examples": [
-                  "https://data.datacite.org/application/vnd.datacite.datacit e+xml/10.5678/LCRS/FOR816.CIT.1031"
-                ]
-              },
-              {
                 "const": "TechnicalInfo",
-                "description": "Detailed information that may be associated with design, implementation, operation, use, and/or maintenance of a process or  system."
+                "description": "Detailed information that may be associated with design, implementation, operation, use, and/or maintenance of a process or system."
               },
               {
                 "const": "Other",
@@ -577,7 +551,7 @@
           },
           "relationType": {
             "$ref": "#/definitions/relationType",
-            "description": "The type of relationship between the resource being registered and the RelatedIdentifier."
+            "description": "The type of relationship between the dataset and the RelatedIdentifier."
           },
           "relatedMetadataScheme": {
             "type": "string",
@@ -610,7 +584,6 @@
     },
     "Subject": {
       "type": "array",
-      "description": "Subject, keyword, classification code, or key phrase describing the resource",
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -619,35 +592,40 @@
           "subjectValue": {
             "type": "string",
             "minLength": 1,
-            "description": "The subject, keyword, classification code, or key phrase that describes the resource"
+            "description": "The subject, keyword, classification code, or key phrase that describes the dataset",
+            "examples": [
+              "Diabetes mellitus"
+            ]
           },
           "subjectScheme": {
             "type": "string",
             "minLength": 1,
-            "description": "The name of the subject scheme or classification code or authority if one is used",
+            "description": "The name of the subject scheme or classification code or authority if one is used (e.g., name of ontology)",
             "examples": [
-              "Library of Congress Subject Headings (LCSH)",
-              "ANZSRC Fields of Research"
+              "Logical Observation Identifier Names and Codes (LOINC)"
             ]
           },
           "schemeURI": {
             "type": "string",
             "minLength": 1,
             "description": "The URI of the subject identifier scheme",
-            "examples": ["https://id.loc.gov/authorities/subjects.html"]
+            "examples": ["https://loinc.org/"]
           },
           "valueURI": {
             "type": "string",
             "minLength": 1,
             "description": "The URI of the subject term",
             "examples": [
-              "https://id.loc.gov/authorities/subjects/sh85118622.html"
+              "https://loinc.org/45636-8"
             ]
           },
           "classificationCode": {
             "type": "string",
             "minLength": 1,
-            "description": "The classification code used for the subject term in the subject scheme"
+            "description": "The classification code used for the subject term in the subject scheme",
+            "examples": [
+              "45636-8"
+            ]
           }
         },
         "required": ["subjectValue"]
@@ -657,12 +635,11 @@
     "ManagingOrganisation": {
       "type": "object",
       "additionalProperties": false,
-      "description": "The organisation managing the object, in particular that determines access to it",
       "properties": {
         "name": {
           "type": "string",
           "minLength": 1,
-          "description": "The name of the organisation managing the object"
+          "description": "The name of the organization managing the dataset, in particular that determines access to it"
         },
         "rorId": {
           "type": "string",
@@ -674,7 +651,7 @@
     },
     "AccessType": {
       "type": "string",
-      "description": "The type of access to the object",
+      "description": "The type of access to the dataset",
       "oneOf": [
         {
           "const": "PublicOnScreenAccess",
@@ -752,7 +729,7 @@
     },
     "Rights": {
       "type": "array",
-      "description": "The rights associated with the object",
+      "description": "The rights associated with the dataset",
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -792,7 +769,7 @@
     },
     "Size": {
       "type": "array",
-      "description": "Size (e.g., bytes, pages, inches, etc.) or duration (extent), e.g., hours, minutes, days, etc., of a resource",
+      "description": "Size (e.g., bytes, pages, inches, etc.) relevant for the dataset",
       "items": {
         "type": "string",
         "minLength": 1,
@@ -892,45 +869,7 @@
           },
           "relationType": {
             "$ref": "#/definitions/relationType",
-            "description": "The general type of the related resource."
-          },
-          "relatedItemIdentifier": {
-            "type": "array",
-            "description": "The identifier for the related item.",
-            "items": {
-              "type": "object",
-              "description": "",
-              "additionalProperties": false,
-              "properties": {
-                "relatedItemIdentifierValue": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "The identifier for the related item."
-                },
-                "relatedItemIdentifierType": {
-                  "$ref": "#/definitions/identifierType",
-                  "description": "The type of the related item identifier."
-                },
-                "relatedMetadataScheme": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "The name of the scheme. Use only with this relationType pair: (HasMetadata/ IsMetadataFor)"
-                },
-                "schemeURI": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "The URI of the relatedMetadataScheme. Use only with this relationType pair: (HasMetadata/ IsMetadataFor)"
-                },
-                "schemeType": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "The type of the relatedMetadataScheme, linked with the schemeURI. Use only with this relationType pair: (HasMetadata/ IsMetadataFor)",
-                  "examples": ["XSD", "DDT", "Turtle"]
-                }
-              },
-              "required": ["relatedItemIdentifierValue"]
-            },
-            "uniqueItems": true
+            "description": "The type of relationship between the dataset and the RelatedItem."
           },
           "creator": {
             "type": "array",
@@ -1050,6 +989,7 @@
   "required": [
     "Identifier",
     "Title",
+    "Version",
     "Creator",
     "PublicationYear",
     "ResourceType",
@@ -1059,6 +999,7 @@
     "ManagingOrganisation",
     "AccessType",
     "AccessDetails",
+    "Rights",
     "Publisher"
   ],
   "definitions": {
@@ -1493,7 +1434,7 @@
     },
     "relationType": {
       "type": "string",
-      "description": "Description of the relationship of the resource being registered (A) and the related resource (B).",
+      "description": "Description of the relationship of the dataset (A) and the related resource (B).",
       "oneOf": [
         {
           "const": "IsCitedBy",
@@ -1577,7 +1518,7 @@
         },
         {
           "const": "Documents",
-          "description": "indicates A is documentation about B; e.g. points to software                 documentation"
+          "description": "indicates A is documentation about B; e.g. points to software documentation"
         },
         {
           "const": "IsCompiledBy",
