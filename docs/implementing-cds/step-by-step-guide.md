@@ -22,7 +22,7 @@ Coming soon...
 
 ### 2.5. README.md
 
-### 2.6. datasheet.md
+### 2.6. healthsheet.md
 
 ### 2.8. LICENSE.txt
 

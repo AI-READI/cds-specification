@@ -170,8 +170,8 @@ function sidebarGuide() {
               link: '/specification/metadata-files/license.md',
             },
             {
-              text: 'datasheet.md',
-              link: '/specification/metadata-files/datasheet.md',
+              text: 'healthsheet.md',
+              link: '/specification/metadata-files/healthsheet.md',
             },
             {
               text: 'study_description.json',
@@ -249,8 +249,8 @@ function sidebarGuide() {
               link: '/design-rationale/metadata-files/license.md',
             },
             {
-              text: 'datasheet.md',
-              link: '/design-rationale/metadata-files/datasheet.md',
+              text: 'healthsheet.md',
+              link: '/design-rationale/metadata-files/healthsheet.md',
             },
             {
               text: 'study_description.json',
