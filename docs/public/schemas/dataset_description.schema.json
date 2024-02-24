@@ -1,27 +1,32 @@
 {
   "$id": "https://schema.aireadi.org/files/dataset_description.json",
   "title": "Dataset Description",
-  "description": "This is the schema for the dataset_description.json metadata file from the Clinical Dataset Structure (CDS)",
+  "description": "This is the schema for the dataset_description.json metadata file from the Clinical Dataset Structure (CDS). It is inspired mostly by the DataCite Metadata Schema v4.5 with some extensions from the the ECRIN Metadata Schema 6.0 for data object and modifications as necessary for tailoring it to clinical research datasets.",
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "Identifier": {
+    "identifier": {
+      "$comment": "This key is from DataCite Metadata Schema v4.5",
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "identifierValue": {
+          "$comment": "This key has been added to fit the JSON structure. Description is from DataCite Metadata Schema v4.5 for 'identifier' but modified to suit dataset.",
           "type": "string",
           "minLength": 1,
-          "description": "Unique string that identifies the dataset."
+          "description": "Unique string that identifies the dataset.",
+          "examples": ["10.21384/foo"]
         },
         "identifierType": {
+          "$comment": "This key is from DataCite Metadata Schema v4.5. Description is from DataCite Metadata Schema v4.5 but modified to suit dataset.",
           "$ref": "#/definitions/identifierType",
           "description": "The type of identifier used to identify the dataset."
         }
       },
       "required": ["identifierValue", "identifierType"]
     },
-    "Title": {
+    "title": {
+      "$comment": "This key is from DataCite Metadata Schema v4.5",
       "type": "array",
       "items": {
         "$ref": "#/definitions/titleItem"
@@ -30,12 +35,13 @@
       "minItems": 1,
       "uniqueItems": true
     },
-    "Version": {
+    "version": {
+      "$comment": "This key is from DataCite Metadata Schema v4.5. Description is from DataCite Metadata Schema v4.5 but modified to suit dataset. It is not mandatory in the DataCite Schema but it is mandatory here in the CDS.",
       "type": "string",
-      "description": "The version number of the dataset. Suggested practice: major_version.minor_version. Register a new identifier for a major version change. ",
+      "description": "The version number of the dataset. Suggested practice: major_version.minor_version. Register a new identifier for a major version change. May be used in conjunction with properties 'alternateIdentifier' and 'relatedIdentifier' to indicate various information updates. May be used in conjunction with property 'description' to indicate the nature and file/record range of version.",
       "minLength": 1
     },
-    "AlternateIdentifier": {
+    "alternateIdentifier": {
       "type": "array",
       "description": "An identifier other than the primary Identifier applied to the resource being registered. This may be any alphanumeric string which is unique within its domain of issue. May be used for local identifiers. The AlternateIdentifier should be an additional identifier for the same instance of the resource (i.e., same location, same file).",
       "items": {
@@ -57,7 +63,7 @@
       "minItems": 1,
       "uniqueItems": true
     },
-    "Creator": {
+    "creator": {
       "type": "array",
       "items": {
         "type": "object",
@@ -95,7 +101,12 @@
                   "type": "string",
                   "minLength": 1,
                   "description": "The URI of the name identifier scheme.",
-                  "examples": ["https://orcid.org", "https://isni.org", "https://ror.org", "https://grid.ac"]
+                  "examples": [
+                    "https://orcid.org",
+                    "https://isni.org",
+                    "https://ror.org",
+                    "https://grid.ac"
+                  ]
                 }
               },
               "required": ["nameIdentifierValue", "nameIdentifierScheme"]
@@ -130,7 +141,11 @@
                   "type": "string",
                   "minLength": 1,
                   "description": "The URI of the name identifier scheme.",
-                  "examples": ["https://isni.org", "https://ror.org", "https://grid.ac"]
+                  "examples": [
+                    "https://isni.org",
+                    "https://ror.org",
+                    "https://grid.ac"
+                  ]
                 }
               },
               "required": [
@@ -147,7 +162,7 @@
       "minItems": 1,
       "uniqueItems": true
     },
-    "Contributor": {
+    "contributor": {
       "type": "array",
       "items": {
         "type": "object",
@@ -189,7 +204,12 @@
                   "type": "string",
                   "minLength": 1,
                   "description": "The URI of the name identifier scheme.",
-                  "examples": ["https://orcid.org", "https://isni.org", "https://ror.org", "https://grid.ac"]
+                  "examples": [
+                    "https://orcid.org",
+                    "https://isni.org",
+                    "https://ror.org",
+                    "https://grid.ac"
+                  ]
                 }
               },
               "required": ["nameIdentifierValue", "nameIdentifierScheme"]
@@ -225,7 +245,12 @@
                   "type": "string",
                   "minLength": 1,
                   "description": "The URI of the name identifier scheme.",
-                  "examples": ["https://orcid.org", "https://isni.org", "https://ror.org", "https://grid.ac"]
+                  "examples": [
+                    "https://orcid.org",
+                    "https://isni.org",
+                    "https://ror.org",
+                    "https://grid.ac"
+                  ]
                 }
               },
               "required": [
@@ -242,11 +267,11 @@
       "description": "The institution or person responsible for collecting, managing, distributing, or otherwise contributing to the development of the dataset. To supply multiple contributors, repeat this property.",
       "uniqueItems": true
     },
-    "PublicationYear": {
+    "publicationYear": {
       "$ref": "#/definitions/publicationYear",
       "description": "The year in which the dataset was published."
     },
-    "Date": {
+    "date": {
       "type": "array",
       "description": "Different dates relevant to the dataset",
       "items": {
@@ -329,7 +354,7 @@
       "minItems": 1,
       "uniqueItems": true
     },
-    "ResourceType": {
+    "resourceType": {
       "type": "object",
       "additionalProperties": false,
       "description": "Description of the type of dataset",
@@ -347,7 +372,7 @@
       },
       "required": ["resourceTypeValue", "resourceTypeGeneral"]
     },
-    "DatasetDeIdentLevel": {
+    "datasetDeIdentLevel": {
       "type": "object",
       "additionalProperties": false,
       "description": "For dataset objects only, indicates the level of de-identification applied to the dataset",
@@ -409,7 +434,7 @@
         "deIdentKAnon"
       ]
     },
-    "DatasetConsent": {
+    "datasetConsent": {
       "type": "object",
       "additionalProperties": false,
       "description": "For dataset objects only, provides an indication of the level of explicit consent for secondary use of the data",
@@ -483,7 +508,7 @@
         "consentNoMethods"
       ]
     },
-    "Description": {
+    "description": {
       "type": "array",
       "description": "All additional information that does not fit in any of the other categories. May be used for technical information.",
       "items": {
@@ -528,12 +553,12 @@
       },
       "uniqueItems": true
     },
-    "Language": {
+    "language": {
       "type": "string",
       "minLength": 2,
       "description": "The primary language used in the dataset. Allowed values are taken from  IETF BCP 47, ISO 639-1 language codes"
     },
-    "RelatedIdentifier": {
+    "relatedIdentifier": {
       "type": "array",
       "description": "Identifiers of related resources. These must be globally unique identifiers.",
       "items": {
@@ -582,7 +607,7 @@
       },
       "uniqueItems": true
     },
-    "Subject": {
+    "subject": {
       "type": "array",
       "items": {
         "type": "object",
@@ -593,9 +618,7 @@
             "type": "string",
             "minLength": 1,
             "description": "The subject, keyword, classification code, or key phrase that describes the dataset",
-            "examples": [
-              "Diabetes mellitus"
-            ]
+            "examples": ["Diabetes mellitus"]
           },
           "subjectScheme": {
             "type": "string",
@@ -615,24 +638,20 @@
             "type": "string",
             "minLength": 1,
             "description": "The URI of the subject term",
-            "examples": [
-              "https://loinc.org/45636-8"
-            ]
+            "examples": ["https://loinc.org/45636-8"]
           },
           "classificationCode": {
             "type": "string",
             "minLength": 1,
             "description": "The classification code used for the subject term in the subject scheme",
-            "examples": [
-              "45636-8"
-            ]
+            "examples": ["45636-8"]
           }
         },
         "required": ["subjectValue"]
       },
       "uniqueItems": true
     },
-    "ManagingOrganisation": {
+    "managingOrganisation": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -649,7 +668,7 @@
       },
       "required": ["name"]
     },
-    "AccessType": {
+    "accessType": {
       "type": "string",
       "description": "The type of access to the dataset",
       "oneOf": [
@@ -703,7 +722,7 @@
         }
       ]
     },
-    "AccessDetails": {
+    "accessDetails": {
       "type": "object",
       "additionalProperties": false,
       "description": "Further details of the access (especially if non public)",
@@ -727,7 +746,7 @@
       },
       "required": ["description"]
     },
-    "Rights": {
+    "rights": {
       "type": "array",
       "description": "The rights associated with the dataset",
       "items": {
@@ -763,11 +782,11 @@
       },
       "uniqueItems": true
     },
-    "Publisher": {
+    "publisher": {
       "$ref": "#/definitions/publisher",
       "description": "The name of the entity that holds, archives, publishes prints, distributes, releases, issues, or produces the dataset. This property will be used to formulate the citation, so consider the prominence of the role."
     },
-    "Size": {
+    "size": {
       "type": "array",
       "description": "Size (e.g., bytes, pages, inches, etc.) relevant for the dataset",
       "items": {
@@ -778,7 +797,7 @@
       },
       "uniqueItems": true
     },
-    "FundingReference": {
+    "fundingReference": {
       "type": "array",
       "description": "Information about financial support (funding) for the dataset",
       "items": {
@@ -855,7 +874,7 @@
       },
       "uniqueItems": true
     },
-    "RelatedItem": {
+    "relatedItem": {
       "type": "array",
       "description": "Information about a resource related to the dataset, e.g., a journal or book of which the article or chapter is part. Can be used to provide series information or a text citation where the related resource does not have an identifier. However, it is also optional to provide an identifier here.",
       "items": {
@@ -987,23 +1006,24 @@
     }
   },
   "required": [
-    "Identifier",
-    "Title",
-    "Version",
-    "Creator",
-    "PublicationYear",
-    "ResourceType",
-    "DatasetRecordKeys",
-    "DatasetDeIdentLevel",
-    "DatasetConsent",
-    "ManagingOrganisation",
-    "AccessType",
-    "AccessDetails",
-    "Rights",
-    "Publisher"
+    "identifier",
+    "title",
+    "version",
+    "creator",
+    "publicationYear",
+    "resourceType",
+    "datasetRecordKeys",
+    "datasetDeIdentLevel",
+    "datasetConsent",
+    "managingOrganisation",
+    "accessType",
+    "accessDetails",
+    "rights",
+    "publisher"
   ],
   "definitions": {
     "identifierType": {
+      "$comment": "The options and their description are exactly from DataCite Metadata Schema v4.5 extended with the 'Other' option from the 'object_identifiers' in the ECRIN Metadata Sschema v6.0 for data object",
       "type": "string",
       "oneOf": [
         {
@@ -1083,7 +1103,7 @@
           "description": "Permanent identifier for Web applications. Mostly used to publish vocabularies and ontologies. The letters `w3` stand for `World Wide Web`."
         },
         {
-          "const": "other",
+          "const": "Other",
           "description": "None of the listed identifier types."
         }
       ]
@@ -1093,18 +1113,21 @@
       "additionalProperties": false,
       "properties": {
         "titleValue": {
+          "$comment": "This key has been added to fit the JSON structure. Description is from DataCite Metadata Schema v4.5 for 'title' but modified to suit dataset.",
           "type": "string",
           "minLength": 1,
           "description": "The name by which the dataset is known."
         },
         "titleType": {
+          "$comment": "This key is from DataCite Metadata Schema v4.5. Description is from DataCite Metadata Schema v4.5 but modified to for more clarity.",
           "$ref": "#/definitions/titleType",
-          "description": "Empty if titleValue is the main tile. Must be from the controlled values of titleType otherwise."
+          "description": "Not required if titleValue is the main tile. Must be from the controlled values of titleType otherwise."
         }
       },
       "required": ["titleValue"]
     },
     "titleType": {
+      "$comment": "The options and their description are exactly from DataCite Metadata Schema v4.5",
       "type": "string",
       "oneOf": [
         {
