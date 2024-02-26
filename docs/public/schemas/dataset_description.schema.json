@@ -936,7 +936,7 @@
     "format": {
       "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to suit datasets", 
       "type": "array",
-      "description": "Technical format of the resource in the dataset. Use file extension or MIME type where possible, e.g., PDF, XML, MPG or application/pdf, text/xml, video/mpeg.", 
+      "description": "Technical format of the data files in the dataset. Use file extension or MIME type where possible, e.g., PDF, XML, MPG or application/pdf, text/xml, video/mpeg.", 
       "items": {
         "type": "string"
         },
