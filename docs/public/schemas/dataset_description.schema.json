@@ -223,6 +223,7 @@
               },
               "required": ["nameIdentifierValue", "nameIdentifierScheme"]
             },
+            "minItems": 1,
             "uniqueItems": true
           },
           "affiliation": {
@@ -889,7 +890,7 @@
                 "description": "The type of funder identifier used.",
                 "enum": ["Crossref Funder ID", "GRID", "ISNI", "ROR", "Other"]
               },
-              "SchemeURI": {
+              "schemeURI": {
                 "type": "string",
                 "minLength": 1,
                 "description": "The URI of the funder identifier scheme",
