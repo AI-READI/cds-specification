@@ -82,8 +82,8 @@
           },
           "nameType": {
             "$comment": "Not mandatory in the DataCite Metadata Schema v4.5 but mandatory here",
-            "$ref": "#/definitions/typeOfNameOfPersonOrOrganization",
-            "description": "The type of name. Must be from the controlled list of typeOfNameOfPersonOrOrganization."
+            "$ref": "#/definitions/nameType",
+            "description": "The type of name. Must be from the controlled list of nameType."
           },
           "nameIdentifier": {
             "type": "array",
@@ -187,8 +187,8 @@
           },
           "nameType": {
             "$comment": "Not mandatory in the DataCite schema but mandatory here",
-            "$ref": "#/definitions/typeOfNameOfPersonOrOrganization",
-            "description": "The type of name. Must be from the list of controlled values typeOfNameOfPersonOrOrganization."
+            "$ref": "#/definitions/nameType",
+            "description": "The type of name. Must be from the list of controlled values nameType."
           },
           "nameIdentifier": {
             "type": "array",
@@ -1086,7 +1086,7 @@
         }
       ]
     },
-    "typeOfNameOfPersonOrOrganization": {
+    "nameType": {
       "type": "string",
       "oneOf": [
         {
