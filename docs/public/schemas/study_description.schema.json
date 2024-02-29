@@ -2,7 +2,7 @@
   "$id": "https://schema.aireadi.org/files/study_description.json",
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "Study Description",
-  "description": "This is the schema for the study_description.json metadata file from the Clinical Dataset Structure (CDS). It is based on the ClinicalTrials.gov study protocol registration schema, unless specified otherwise in $comment. The keys are based on the the Clinicaltrials.gov JSON study record (https://classic.clinicaltrials.gov/api/info/study_structure?fmt=JSON) where we kept only the keys relevant to the study protocol registration as per the Clinicaltrials.gov Data Elements (https://prsinfo.clinicaltrials.gov/definitions.html). The descriptions, requirements, and controlled lists are based on the Clinicaltrials.gov Data Elements (https://prsinfo.clinicaltrials.gov/definitions.html) and extended with the ClinicalTrials.gov XML schema descriptor (https://prsinfo.clinicaltrials.gov/ProtocolRecordSchema.xsd) when necessary. Character limits have been removed unless otherwise specified. Note that the 'BriefTitle', 'OutcomesModule', 'IPDSharingStatementModule', and 'ReferencesModule' properties from ClinicalTrials.gov are not included as they were not deemed relevant for the usecase in the CDS. Some keys, values in controlled lists, etc. are from the the ECRIN Metadata Schema for study v6.0. We have also introduced some modifications as necessary for tailoring the schema to clinical research datasets. All keys are camelCase.",
+  "description": "This is the schema for the study_description.json metadata file from the Clinical Dataset Structure (CDS). It is based on the ClinicalTrials.gov study protocol registration schema, unless specified otherwise in $comment. The keys are based on the the Clinicaltrials.gov JSON study record (https://classic.clinicaltrials.gov/api/info/study_structure?fmt=JSON) where we kept only the keys relevant to the study protocol registration as per the Clinicaltrials.gov Data Elements (https://prsinfo.clinicaltrials.gov/definitions.html). The descriptions, requirements, and controlled lists are based on the Clinicaltrials.gov Data Elements (https://prsinfo.clinicaltrials.gov/definitions.html) and extended with the ClinicalTrials.gov XML schema descriptor (https://prsinfo.clinicaltrials.gov/ProtocolRecordSchema.xsd) when necessary. Character limits have been removed unless otherwise specified. Note that the 'BriefTitle', 'OutcomesModule', 'IPDSharingStatementModule', and 'ReferencesModule' properties from ClinicalTrials.gov are not included as they were not deemed relevant for the use case in the CDS. Some keys, values in controlled lists, etc. are from the the ECRIN Metadata Schema for study v6.0. We have also introduced some modifications as necessary for tailoring the schema to clinical research datasets. All keys are camelCase.",
   "type": "object",
   "additionalProperties": false,
   "properties": {
@@ -49,7 +49,21 @@
               "minLength": 1
             }
           },
-          "required": ["orgStudyId", "orgStudyIdType"]
+          "required": ["orgStudyId", "orgStudyIdType"],
+          "if": {
+            "properties": {
+              "orgStudyIdType": {
+                "enum": [
+                  "Other Grant/Funding Number",
+                  "Registry Identifier",
+                  "Other Identifier"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": ["orgStudyIdDomain"]
+          }
         },
         "secondaryIdInfoList": {
           "type": "array",
@@ -110,14 +124,14 @@
           "description": "The estimated date on which the clinical study will be open for recruitment of participants, or the actual date on which the first participant was enrolled. Note: 'Enrolled' means a participant's, or their legally authorized representative's, agreement to participate in a clinical study following completion of the informed consent process. Potential participants who are screened for the purpose of determining eligibility for the study, but do not participate in the study, are not considered enrolled, unless otherwise specified by the protocol.",
           "properties": {
             "startDate": {
-              "$comment": "The date format is from the XML schema descriptor. This has been added here in the description.", 
+              "$comment": "The date format is from the XML schema descriptor. This has been added here in the description.",
               "type": "string",
               "description": "Format must be 'YYYY-MM'",
               "format": "date",
               "minLength": 1
             },
             "startDateType": {
-              "$comment": "Description added here", 
+              "$comment": "Description added here",
               "description": "Specify if the start date is actual or anticipated",
               "type": "string",
               "enum": ["Actual", "Anticipated"]
@@ -132,14 +146,14 @@
           "description": "The date the final participant was examined or received an intervention for purposes of final collection of data (for example, last participant's last visit), whether the clinical study concluded according to the pre-specified protocol or was terminated. If the study is not completed yet, an anticipated date can be provided.",
           "properties": {
             "completionDate": {
-              "$comment": "The date format is from the XML schema descriptor. This has been added here in the description.", 
+              "$comment": "The date format is from the XML schema descriptor. This has been added here in the description.",
               "type": "string",
               "description": "Format must be 'YYYY-MM'",
               "format": "date",
               "minLength": 1
             },
             "completionDateType": {
-              "$comment": "Description added here", 
+              "$comment": "Description added here",
               "description": "Specify if the start date is actual or anticipated",
               "type": "string",
               "enum": ["Actual", "Anticipated"]
@@ -165,27 +179,25 @@
               "minLength": 1
             },
             "leadSponsorIdentifier": {
-              "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+              "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
               "type": "string",
               "description": "Uniquely identifies sponsor, according to various schemes.",
               "minLength": 1,
               "examples": ["https://ror.org/04aj4c18"]
             },
             "leadSponsorIdentifierScheme": {
-              "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+              "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
               "type": "string",
               "minLength": 1,
               "description": "The name of the identifier scheme.",
               "examples": ["ROR"]
             },
             "schemeURI": {
-              "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+              "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
               "type": "string",
               "minLength": 1,
               "description": "The URI of the name identifier scheme.",
-              "examples": [
-                "https://ror.org"
-              ]
+              "examples": ["https://ror.org"]
             }
           },
           "required": ["leadSponsorName"]
@@ -225,7 +237,7 @@
               "examples": ["Professor of Medicine"]
             },
             "responsiblePartyInvestigatorIdentifier": {
-              "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify the investigator and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+              "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify the investigator and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
               "type": "array",
               "description": "Uniquely identifies an investigator, according to various schemes.",
               "items": {
@@ -235,7 +247,7 @@
                   "responsiblePartyInvestigatorIdentifierValue": {
                     "type": "string",
                     "minLength": 1,
-                    "description": "Uniquely identifies an investigator.", 
+                    "description": "Uniquely identifies an investigator.",
                     "examples": ["https://orcid.org/0000-0001-5727-2427"]
                   },
                   "responsiblePartyInvestigatorIdentifierScheme": {
@@ -248,9 +260,7 @@
                     "type": "string",
                     "minLength": 1,
                     "description": "The URI of the name identifier scheme.",
-                    "examples": [
-                      "https://orcid.org"
-                    ]
+                    "examples": ["https://orcid.org"]
                   }
                 },
                 "required": ["responsiblePartyInvestigatorIdentifierValue"]
@@ -258,14 +268,58 @@
               "uniqueItems": true
             },
             "responsiblePartyInvestigatorAffiliation": {
-              "$comment": "Description is based on the ClinicalTrials.gov Data Elements but modified for clarity ('investigator' used intead of 'individual')", 
-              "type": "string",
+              "$comment": "Made into an object. Description is based on the ClinicalTrials.gov Data Elements but modified for clarity ('investigator' used instead of 'individual')",
               "description": "Primary organizational affiliation of the investigator (required if ResponsiblePartyType is 'Principal Investigator' or 'Sponsor-Investigator')",
-              "minLength": 1,
-              "examples": ["University of California, San Diego"]
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "responsiblePartyInvestigatorAffiliationName": {
+                  "$comment": "Key added to fit the name in the object",
+                  "type": "string",
+                  "description": "The name of the affiliation of the investigator",
+                  "minLength": 1,
+                  "examples": ["University of California, San Diego"]
+                },
+                "responsiblePartyInvestigatorAffiliationIdentifier": {
+                  "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                  "type": "string",
+                  "description": "Uniquely identifies affiliation, according to various schemes.",
+                  "minLength": 1,
+                  "examples": ["https://ror.org/04aj4c18"]
+                },
+                "responsiblePartyInvestigatorAffiliationIdentifierScheme": {
+                  "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "The name of the identifier scheme.",
+                  "examples": ["ROR"]
+                },
+                "schemeURI": {
+                  "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "The URI of the name identifier scheme.",
+                  "examples": ["https://ror.org"]
+                }
+              },
+              "required": ["responsiblePartyInvestigatorAffiliationName"]
             }
           },
-          "required": ["responsiblePartyType"]
+          "required": ["responsiblePartyType"],
+          "if": {
+            "properties": {
+              "responsiblePartyType": {
+                "enum": ["Principal Investigator", "Sponsor-Investigator"]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "responsiblePartyInvestigatorFullName",
+              "responsiblePartyInvestigatorTitle",
+              "responsiblePartyInvestigatorAffiliation"
+            ]
+          }
         },
         "collaboratorList": {
           "type": "array",
@@ -280,27 +334,25 @@
                 "description": "The name of the collaborating organization"
               },
               "collaboratorNameIdentifier": {
-                "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify collaborator and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify collaborator and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
                 "type": "string",
                 "description": "Uniquely identifies the organization, according to various schemes.",
                 "minLength": 1,
                 "examples": ["https://ror.org/04aj4c18"]
               },
               "collaboratorNameIdentifierScheme": {
-                "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify collaborator and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify collaborator and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
                 "type": "string",
                 "minLength": 1,
                 "description": "The name of the identifier scheme.",
                 "examples": ["ROR"]
               },
               "schemeURI": {
-                "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify collaborator and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify collaborator and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
                 "type": "string",
                 "minLength": 1,
                 "description": "The URI of the name identifier scheme.",
-                "examples": [
-                  "https://ror.org"
-                ]
+                "examples": ["https://ror.org"]
               }
             },
             "required": ["collaboratorName"]
@@ -316,11 +368,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "oversightHasDMC": {
-          "type": "string",
-          "description": "Indicate whether a data monitoring committee has been appointed for this study. The data monitoring committee (board) is a group of independent scientists who are appointed to monitor the safety and scientific integrity of a human research intervention, and to make recommendations to the sponsor regarding the stopping of the trial for efficacy, for harms or for futility. The composition of the committee is dependent upon the scientific skills and knowledge required for monitoring the particular study.",
-          "enum": ["Yes", "No"]
-        },
         "isFDARegulatedDrug": {
           "type": "string",
           "description": "Indication that a clinical study is studying a drug product (including a biological product) subject to section 505 of the Federal Food, Drug, and Cosmetic Act or to section 351 of the Public Health Service Act.",
@@ -332,9 +379,14 @@
           "enum": ["Yes", "No"]
         },
         "humanSubjectReviewStatus": {
-          "$comment": "This key is not in the ClinicalTrials.gov JSON study record but it has been added here to match the corresponding the Data Elements. 'Board Approval Number', 'Board Name', 'Board Affiliation', and 'Board Contact' Data Elements were not kept here as they were deemed not relevant for datasets.", 
+          "$comment": "This key is not in the ClinicalTrials.gov JSON study record but it has been added here to match the corresponding the Data Elements. 'Board Approval Number', 'Board Name', 'Board Affiliation', and 'Board Contact' Data Elements were not kept here as they were deemed not relevant for datasets.",
           "description": "Indicate whether a clinical study has been reviewed and approved by at least one human subjects protection review board or such review is not required per applicable law (for example, 21 CFR Part 56, 45 CFR Part 46, or other applicable regulation)",
           "$ref": "#/definitions/humanSubjectReviewStatus"
+        },
+        "oversightHasDMC": {
+          "type": "string",
+          "description": "Indicate whether a data monitoring committee has been appointed for this study. The data monitoring committee (board) is a group of independent scientists who are appointed to monitor the safety and scientific integrity of a human research intervention, and to make recommendations to the sponsor regarding the stopping of the trial for efficacy, for harms or for futility. The composition of the committee is dependent upon the scientific skills and knowledge required for monitoring the particular study.",
+          "enum": ["Yes", "No"]
         }
       },
       "required": ["humanSubjectReviewStatus"]
@@ -366,20 +418,20 @@
       "additionalProperties": false,
       "properties": {
         "conditionList": {
-          "$comment": "Besides 'conditionName' all keys have been added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely map condition names to controlled vocabulary and make schema more FAIR. Descriptions and examples are based on the dataset_description schema but modified to suit here.",
+          "$comment": "Besides 'conditionName' all keys have been added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely map condition names to controlled vocabulary and make schema more FAIR. Descriptions and examples are based on the dataset_description schema but modified to suit here.",
           "type": "array",
           "description": "The name(s) of the disease(s) or condition(s) studied in the clinical study, or the focus of the clinical study. Use, if available, appropriate descriptors from NLM's Medical Subject Headings (MeSH)-controlled vocabulary thesaurus or terms from another vocabulary, such as the Systematized Nomenclature of Medicine—Clinical Terms (SNOMED CT), that has been mapped to MeSH within the Unified Medical Language System (UMLS) Metathesaurus.",
           "items": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
-              "conditionName":{
+              "conditionName": {
                 "type": "string",
                 "description": "Name of the condition",
                 "minLength": 1,
                 "examples": ["Diabetes mellitus"]
               },
-              "conditionScheme": { 
+              "conditionScheme": {
                 "type": "string",
                 "minLength": 1,
                 "description": "The name of the scheme or classification code or authority if one is used (e.g., name of ontology) for the condition name",
@@ -412,26 +464,24 @@
           "uniqueItems": true
         },
         "keywordList": {
-          "$comment": "Besides 'keywordValue' all keys have been added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely map condition keywords to controlled vocabulary and make schema more FAIR. Descriptions and examples are based on the dataset_description schema but modified to suit here. Description has been modified to allow  terms from another vocabulary than MeSH",
+          "$comment": "Besides 'keywordValue' all keys have been added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely map condition keywords to controlled vocabulary and make schema more FAIR. Descriptions and examples are based on the dataset_description schema but modified to suit here. Description has been modified to allow  terms from another vocabulary than MeSH",
           "type": "array",
           "description": "Words or phrases that best describe the study. Use NLM's Medical Subject Heading (MeSH)-controlled vocabulary terms or terms from another vocabulary where appropriate. Be as specific and precise as possible. Avoid acronyms and abbreviations.",
           "items": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
-              "keywordValue":{
+              "keywordValue": {
                 "type": "string",
                 "description": "Keyword or phrase",
                 "minLength": 1,
-                "examples": ["Artifical intelligence"]
+                "examples": ["Artificial intelligence"]
               },
-              "keywordScheme": { 
+              "keywordScheme": {
                 "type": "string",
                 "minLength": 1,
                 "description": "The name of the scheme or classification code or authority if one is used (e.g., name of ontology) for the keyword",
-                "examples": [
-                  "Medical Subject Headings (MeSH)"
-                ]
+                "examples": ["Medical Subject Headings (MeSH)"]
               },
               "schemeURI": {
                 "type": "string",
@@ -439,20 +489,20 @@
                 "description": "The URI of the keyword identifier scheme",
                 "examples": ["https://meshb.nlm.nih.gov/"]
               },
-              "conditionURI": {
+              "keywordURI": {
                 "type": "string",
                 "minLength": 1,
                 "description": "The URI of the keyword in the scheme",
                 "examples": ["https://meshb.nlm.nih.gov/record/ui?ui=D001185"]
               },
-              "conditionClassificationCode": {
+              "keywordClassificationCode": {
                 "type": "string",
                 "minLength": 1,
                 "description": "The classification code used for the condition name in the scheme",
                 "examples": ["D001185"]
               }
             },
-            "required": ["conditionName"]
+            "required": ["keywordValue"]
           },
           "minItems": 1,
           "uniqueItems": true
@@ -735,7 +785,7 @@
           "then": {
             "properties": {
               "isPatientRegistry": {
-                "$comment": "This key is not in the ClinicalTrials.gov JSON study record but it has been added here to specify if an observational study is a Patient Registry.", 
+                "$comment": "This key is not in the ClinicalTrials.gov JSON study record but it has been added here to specify if an observational study is a Patient Registry.",
                 "type": "string",
                 "description": "Indicate if the observational study is a Patient Registry, i.e., an observational study that is also considered to be a Patient Registry. Note: The Agency for Healthcare Research and Quality (AHRQ) defines a Patient Registry as including an organized system that uses observational methods to collect uniform data (clinical and other) prospectively for a population defined by a particular disorder/disease, condition (including susceptibility to a disorder), or exposure (including products, healthcare services, and/or procedures) and that serves a predetermined scientific, clinical, or policy purpose. Patient registries may be single purpose or on-going data collection programs that address one or more questions.",
                 "enum": ["Yes", "No"]
@@ -853,36 +903,10 @@
                 "$ref": "#/definitions/enrollmentInfo"
               },
               "targetDuration": {
-                "type": "object",
+                "type": "string",
                 "description": "For Patient Registries, the anticipated time period over which each participant is to be followed.",
-                "additionalProperties": false,
-                "properties": {
-                  "targetDurationValue": {
-                    "type": "string",
-                    "description": "Integer representing the duration",
-                    "pattern": "^[0-9]+$",
-                    "minLength": 1
-                  },
-                  "targetDurationUnit": {
-                    "type": "string",
-                    "description": "Unit for the duration",
-                    "oneOf": [
-                      {
-                        "const": "Day(s)",
-                      },
-                      {
-                        "const": "Week(s)"
-                      },
-                      {
-                        "const": "Month(s)"                     
-                      },
-                      {
-                        "const": "Year(s)"                     
-                      }
-                    ]
-                  }
-                },
-                "required": ["targetDurationValue, targetDurationUnit"]
+                "minLength": 1,
+                "pattern": "^[0-9]+(\\.[0-9]+)?\\s*(Years|Months|Weeks|Days|Hours)?$"
               },
               "numberGroupsCohorts": {
                 "$comment": "This key is not in the ClinicalTrials.gov JSON study record but it has been added here to match the corresponding the Data Elements",
@@ -896,9 +920,18 @@
               "isPatientRegistry",
               "designInfo",
               "enrollmentInfo",
-              "targetDuration",
               "numberGroupsCohorts"
-            ]
+            ],
+            "if": {
+              "properties": {
+                "isPatientRegistry": {
+                  "const": "Yes"
+                }
+              }
+            },
+            "then": {
+              "required": ["targetDuration"]
+            }
           }
         }
       ]
@@ -916,7 +949,7 @@
             "additionalProperties": false,
             "properties": {
               "armGroupLabel": {
-                "description": "If the study is interventional: The short name used to identify the arm. || If the study is observational: The short name used to identify the group.", 
+                "description": "If the study is interventional: The short name used to identify the arm. || If the study is observational: The short name used to identify the group.",
                 "type": "string",
                 "minLength": 1
               },
@@ -934,7 +967,7 @@
               },
               "armGroupDescription": {
                 "$comment": "Made mandatory here since otherwise it would not be possible to understand the labels",
-                "description": "If the study is interventional:  If needed, additional descriptive information (including which interventions are administered in each arm) to differentiate each arm from other arms in the clinical trial. || Explanation of the nature of the study group (for example, those with a condition and those without a condition; those with an exposure and those without an exposure).", 
+                "description": "If the study is interventional:  If needed, additional descriptive information (including which interventions are administered in each arm) to differentiate each arm from other arms in the clinical trial. || Explanation of the nature of the study group (for example, those with a condition and those without a condition; those with an exposure and those without an exposure).",
                 "type": "string",
                 "minLength": 1
               },
@@ -1022,16 +1055,6 @@
                 "description": "Details that can be made public about the intervention, other than the Intervention Name(s) and Other Intervention Name(s), sufficient to distinguish the intervention from other, similar interventions studied in the same or another clinical study. For example, interventions involving drugs may include dosage form, dosage, frequency, and duration",
                 "minLength": 1
               },
-              "interventionArmGroupLabelList": {
-                "type": "array",
-                "description": "The name of the arm or group associated with the intervention studied in this clinical study. At least one Arm Group Label must be provided.",
-                "items": {
-                  "type": "string",
-                  "minLength": 1
-                },
-                "minItems": 1,
-                "uniqueItems": true
-              },
               "interventionOtherNameList": {
                 "type": "array",
                 "description": "Other current and former name(s) or alias(es), if any, different from the Intervention Name(s), that the sponsor has used publicly to identify the intervention(s), including, but not limited to, past or present names such as brand name(s), or serial numbers.",
@@ -1101,13 +1124,13 @@
           "minLength": 1
         },
         "healthyVolunteers": {
-          "$comment": "Made mandatory for both interventional and observational studies", 
+          "$comment": "Made mandatory for both interventional and observational studies",
           "type": "string",
           "description": "Indication that participants who do not have a disease or condition, or related conditions or symptoms, under study in the clinical study are permitted to participate in the clinical study.",
           "enum": ["Yes", "No"]
         },
         "eligibilityCriteria": {
-          "$comment": "This is a string in the ClinicalTrials.gov JSON study record but made an object here to better seperate inclusion and exclusion criteria. Description has been modified to suit datasets.",
+          "$comment": "This is a string in the ClinicalTrials.gov JSON study record but made an object here to better separate inclusion and exclusion criteria. Description has been modified to suit datasets.",
           "type": "object",
           "description": "A limited list of criteria for selection of participants in the clinical study, provided in terms of inclusion and exclusion criteria.",
           "properties": {
@@ -1193,7 +1216,7 @@
                 "minLength": 1
               },
               "centralContactIdentifier": {
-                "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify the central contact and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify the central contact and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
                 "type": "array",
                 "description": "Uniquely identifies a central contract, according to various schemes.",
                 "items": {
@@ -1203,7 +1226,7 @@
                     "centralContactIdentifierValue": {
                       "type": "string",
                       "minLength": 1,
-                      "description": "Uniquely identifies an central contact.", 
+                      "description": "Uniquely identifies an central contact.",
                       "examples": ["https://orcid.org/0000-0001-5727-2427"]
                     },
                     "centralContactIdentifierScheme": {
@@ -1216,9 +1239,7 @@
                       "type": "string",
                       "minLength": 1,
                       "description": "The URI of the central contact identifier scheme.",
-                      "examples": [
-                        "https://orcid.org"
-                      ]
+                      "examples": ["https://orcid.org"]
                     }
                   },
                   "required": ["centralContactIdentifierValue"]
@@ -1235,27 +1256,25 @@
                     "minLength": 1
                   },
                   "centralContactAffiliationIdentifier": {
-                    "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify central contact affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                    "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify central contact affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
                     "type": "string",
-                    "description": "Uniquely identifies sponsor, according to various schemes.",
+                    "description": "Uniquely identifies central contact affiliation, according to various schemes.",
                     "minLength": 1,
                     "examples": ["https://ror.org/04aj4c18"]
                   },
                   "centralContactAffiliationIdentifierScheme": {
-                    "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify central contact affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                    "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify central contact affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
                     "type": "string",
                     "minLength": 1,
                     "description": "The name of the identifier scheme.",
                     "examples": ["ROR"]
                   },
                   "schemeURI": {
-                    "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify central contact affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                    "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify central contact affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
                     "type": "string",
                     "minLength": 1,
                     "description": "The URI of the name identifier scheme.",
-                    "examples": [
-                      "https://ror.org"
-                    ]
+                    "examples": ["https://ror.org"]
                   }
                 },
                 "required": ["centralContactAffiliationName"]
@@ -1307,7 +1326,7 @@
                 "minLength": 1
               },
               "overallOfficialIdentifier": {
-                "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify the official and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify the official and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
                 "type": "array",
                 "description": "Uniquely identifies an official, according to various schemes.",
                 "items": {
@@ -1317,7 +1336,7 @@
                     "overallOfficialIdentifierValue": {
                       "type": "string",
                       "minLength": 1,
-                      "description": "Uniquely identifies an official.", 
+                      "description": "Uniquely identifies an official.",
                       "examples": ["https://orcid.org/0000-0001-5727-2427"]
                     },
                     "overallOfficialIdentifierScheme": {
@@ -1330,12 +1349,10 @@
                       "type": "string",
                       "minLength": 1,
                       "description": "The URI of the official identifier scheme.",
-                      "examples": [
-                        "https://orcid.org"
-                      ]
+                      "examples": ["https://orcid.org"]
                     }
                   },
-                  "required": ["overallOfficialIdentifier"]
+                  "required": ["overallOfficialIdentifierValue"]
                 },
                 "uniqueItems": true
               },
@@ -1349,27 +1366,25 @@
                     "minLength": 1
                   },
                   "overallOfficialAffiliationIdentifier": {
-                    "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify official affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                    "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify official affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
                     "type": "string",
                     "description": "Uniquely identifies official affiliation, according to various schemes.",
                     "minLength": 1,
                     "examples": ["https://ror.org/04aj4c18"]
                   },
                   "overallOfficialAffiliationIdentifierScheme": {
-                    "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify official affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                    "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify official affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
                     "type": "string",
                     "minLength": 1,
                     "description": "The name of the identifier scheme.",
                     "examples": ["ROR"]
                   },
                   "schemeURI": {
-                    "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify official affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                    "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify official affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
                     "type": "string",
                     "minLength": 1,
                     "description": "The URI of the name identifier scheme.",
-                    "examples": [
-                      "https://ror.org"
-                    ]
+                    "examples": ["https://ror.org"]
                   }
                 },
                 "required": ["overallOfficialAffiliationName"]
@@ -1430,7 +1445,7 @@
                 "minLength": 1
               },
               "locationIdentifier": {
-                "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify location and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify location and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
@@ -1450,9 +1465,7 @@
                     "type": "string",
                     "minLength": 1,
                     "description": "The URI of the name identifier scheme.",
-                    "examples": [
-                      "https://ror.org"
-                    ]
+                    "examples": ["https://ror.org"]
                   }
                 },
                 "required": ["locationIdentifierValue"]
@@ -1474,7 +1487,7 @@
                       "minLength": 1
                     },
                     "locationContactIdentifier": {
-                      "$comment": "Key added based on the dataset_descrition.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify the location contact and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
+                      "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify the location contact and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
                       "type": "array",
                       "description": "Uniquely identifies a location contract, according to various schemes.",
                       "items": {
@@ -1484,8 +1497,10 @@
                           "locationContactIdentifierValue": {
                             "type": "string",
                             "minLength": 1,
-                            "description": "Uniquely identifies a location contact.", 
-                            "examples": ["https://orcid.org/0000-0001-5727-2427"]
+                            "description": "Uniquely identifies a location contact.",
+                            "examples": [
+                              "https://orcid.org/0000-0001-5727-2427"
+                            ]
                           },
                           "locationContactIdentifierScheme": {
                             "type": "string",
@@ -1497,9 +1512,7 @@
                             "type": "string",
                             "minLength": 1,
                             "description": "The URI of the location contact identifier scheme.",
-                            "examples": [
-                              "https://orcid.org"
-                            ]
+                            "examples": ["https://orcid.org"]
                           }
                         },
                         "required": ["centralContactIdentifierValue"]
