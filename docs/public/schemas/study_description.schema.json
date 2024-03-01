@@ -471,6 +471,12 @@
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
+                  "conditionClassificationCode": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The classification code used for the condition name in the scheme",
+                    "examples": ["45636-8"]
+                  },
                   "conditionScheme": {
                     "type": "string",
                     "minLength": 1,
@@ -490,15 +496,9 @@
                     "minLength": 1,
                     "description": "The URI of the condition name in the scheme",
                     "examples": ["https://loinc.org/45636-8"]
-                  },
-                  "conditionClassificationCode": {
-                    "type": "string",
-                    "minLength": 1,
-                    "description": "The classification code used for the condition name in the scheme",
-                    "examples": ["45636-8"]
                   }
                 },
-                "required": []
+                "required": ["conditionClassificationCode", "conditionScheme"]
               }
             },
             "required": ["conditionName"]
@@ -507,7 +507,6 @@
           "uniqueItems": true
         },
         "keywordList": {
-          "$comment": "Besides 'keywordValue' all keys have been added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely map condition keywords to controlled vocabulary and make schema more FAIR. Descriptions and examples are based on the dataset_description schema but modified to suit here. Description has been modified to allow  terms from another vocabulary than MeSH",
           "type": "array",
           "description": "Words or phrases that best describe the study. Use NLM's Medical Subject Heading (MeSH)-controlled vocabulary terms or terms from another vocabulary where appropriate. Be as specific and precise as possible. Avoid acronyms and abbreviations.",
           "items": {
@@ -520,29 +519,39 @@
                 "minLength": 1,
                 "examples": ["Artificial intelligence"]
               },
-              "keywordScheme": {
-                "type": "string",
-                "minLength": 1,
-                "description": "The name of the scheme or classification code or authority if one is used (e.g., name of ontology) for the keyword",
-                "examples": ["Medical Subject Headings (MeSH)"]
-              },
-              "schemeURI": {
-                "type": "string",
-                "minLength": 1,
-                "description": "The URI of the keyword identifier scheme",
-                "examples": ["https://meshb.nlm.nih.gov/"]
-              },
-              "keywordURI": {
-                "type": "string",
-                "minLength": 1,
-                "description": "The URI of the keyword in the scheme",
-                "examples": ["https://meshb.nlm.nih.gov/record/ui?ui=D001185"]
-              },
-              "keywordClassificationCode": {
-                "type": "string",
-                "minLength": 1,
-                "description": "The classification code used for the condition name in the scheme",
-                "examples": ["D001185"]
+              "keywordIdentifier": {
+                "$comment": "Added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely map condition keywords to controlled vocabulary and make schema more FAIR. Descriptions and examples are based on the dataset_description schema but modified to suit here. Description has been modified to allow terms from another vocabulary than MeSH",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "keywordClassificationCode": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The classification code used for the keyword in the scheme",
+                    "examples": ["D001185"]
+                  },
+                  "keywordScheme": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The name of the scheme or classification code or authority if one is used (e.g., name of ontology) for the keyword",
+                    "examples": ["Medical Subject Headings (MeSH)"]
+                  },
+                  "schemeURI": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The URI of the keyword identifier scheme",
+                    "examples": ["https://meshb.nlm.nih.gov/"]
+                  },
+                  "keywordURI": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The URI of the keyword in the scheme",
+                    "examples": [
+                      "https://meshb.nlm.nih.gov/record/ui?ui=D001185"
+                    ]
+                  }
+                },
+                "required": ["keywordClassificationCode", "keywordScheme"]
               }
             },
             "required": ["keywordValue"]
