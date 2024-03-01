@@ -1012,7 +1012,7 @@
     "resourceType",
     "datasetDeIdentLevel",
     "datasetConsent",
-    "managingOrganisation",
+    "managingOrganization",
     "accessType",
     "accessDetails",
     "rights",
