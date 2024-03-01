@@ -96,8 +96,12 @@
                   "$comment": "This key is not in the DataCite Metadata Schema v4.5 but has been added to fit the JSON structure. It is not clear from the DataCite documentation if the scheme URI should be included in the value. Here, the scheme URI must be included in the value.",
                   "type": "string",
                   "minLength": 1,
-                  "description": "Uniquely identifies an individual or legal entity, according to various schemes.", 
-                  "examples": ["https://orcid.org/0000-0001-5727-2427", "https://isni.org/isni/0000000492299539", "https://ror.org/04aj4c18"]
+                  "description": "Uniquely identifies an individual or legal entity, according to various schemes.",
+                  "examples": [
+                    "https://orcid.org/0000-0001-5727-2427",
+                    "https://isni.org/isni/0000000492299539",
+                    "https://ror.org/04aj4c18"
+                  ]
                 },
                 "nameIdentifierScheme": {
                   "type": "string",
@@ -132,33 +136,45 @@
                   "type": "string",
                   "minLength": 1,
                   "description": "Name of the organizational or institutional affiliation of the creator. In the case of an organizational creator, e.g., a research group, this will often be the name of the institution to which that organization belongs.",
-                  "examples": ["German National Library of Science and Technology", "DataCite"]
+                  "examples": [
+                    "German National Library of Science and Technology",
+                    "DataCite"
+                  ]
                 },
                 "affiliationIdentifier": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "Uniquely identifies the organizational affiliation of the creator.",
-                  "examples": ["https://ror.org/04aj4c181", "https://isni.org/isni/0000000492299539"]
-                },
-                "affiliationIdentifierScheme": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "The name of the name identifier scheme. If affiliationIdentifier is used, affiliationIdentifierScheme is mandatory.",
-                  "examples": ["ISNI", "ROR"]
-                },
-                "schemeURI": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "The URI of the name identifier scheme.",
-                  "examples": [
-                    "https://isni.org",
-                    "https://ror.org"
+                  "$comment": "Created an object for the identifier here to better handle requirements",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "affiliationIdentifierValue": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Uniquely identifies the organizational affiliation of the creator.",
+                      "examples": [
+                        "https://ror.org/04aj4c181",
+                        "https://isni.org/isni/0000000492299539"
+                      ]
+                    },
+                    "affiliationIdentifierScheme": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "The name of the name identifier scheme. If affiliationIdentifier is used, affiliationIdentifierScheme is mandatory.",
+                      "examples": ["ISNI", "ROR"]
+                    },
+                    "schemeURI": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "The URI of the name identifier scheme.",
+                      "examples": ["https://isni.org", "https://ror.org"]
+                    }
+                  },
+                  "required": [
+                    "affiliationIdentifierValue",
+                    "affiliationIdentifierScheme"
                   ]
                 }
               },
-              "required": [
-                "affiliationName"
-              ]
+              "required": ["affiliationName"]
             },
             "minItems": 1,
             "uniqueItems": true
@@ -202,8 +218,12 @@
                   "$comment": "This key is not in the DataCite Metadata Schema v4.5 but has been added to fit the JSON structure. It is not clear from the DataCite documentation if the scheme URI should be included in the value. Here, the scheme URI must be included in the value.",
                   "type": "string",
                   "minLength": 1,
-                  "description": "Uniquely identifies an individual or legal entity, according to various schemes.", 
-                  "examples": ["https://orcid.org/0000-0001-5727-2427", "https://isni.org/isni/0000000492299539", "https://ror.org/04aj4c18"]
+                  "description": "Uniquely identifies an individual or legal entity, according to various schemes.",
+                  "examples": [
+                    "https://orcid.org/0000-0001-5727-2427",
+                    "https://isni.org/isni/0000000492299539",
+                    "https://ror.org/04aj4c18"
+                  ]
                 },
                 "nameIdentifierScheme": {
                   "type": "string",
@@ -239,33 +259,45 @@
                   "type": "string",
                   "minLength": 1,
                   "description": "Name of the organizational or institutional affiliation of the creator. In the case of an organizational creator, e.g., a research group, this will often be the name of the institution to which that organization belongs.",
-                  "examples": ["German National Library of Science and Technology", "DataCite"]
+                  "examples": [
+                    "German National Library of Science and Technology",
+                    "DataCite"
+                  ]
                 },
                 "affiliationIdentifier": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "Uniquely identifies the organizational affiliation of the creator.",
-                  "examples": ["https://ror.org/04aj4c181", "https://isni.org/isni/0000000492299539"]
-                },
-                "affiliationIdentifierScheme": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "The name of the name identifier scheme. If affiliationIdentifier is used, affiliationIdentifierScheme is mandatory.",
-                  "examples": ["ISNI", "ROR"]
-                },
-                "schemeURI": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "The URI of the name identifier scheme.",
-                  "examples": [
-                    "https://isni.org",
-                    "https://ror.org"
+                  "$comment": "Created an object for the identifier here to better handle requirements",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "affiliationIdentifierValue": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Uniquely identifies the organizational affiliation of the creator.",
+                      "examples": [
+                        "https://ror.org/04aj4c181",
+                        "https://isni.org/isni/0000000492299539"
+                      ]
+                    },
+                    "affiliationIdentifierScheme": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "The name of the name identifier scheme. If affiliationIdentifier is used, affiliationIdentifierScheme is mandatory.",
+                      "examples": ["ISNI", "ROR"]
+                    },
+                    "schemeURI": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "The URI of the name identifier scheme.",
+                      "examples": ["https://isni.org", "https://ror.org"]
+                    }
+                  },
+                  "required": [
+                    "affiliationIdentifierValue",
+                    "affiliationIdentifierScheme"
                   ]
                 }
               },
-              "required": [
-                "affiliationName"
-              ]
+              "required": ["affiliationName"]
             },
             "minItems": 1,
             "uniqueItems": true
@@ -276,12 +308,12 @@
       "uniqueItems": true
     },
     "publicationYear": {
-      "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to suit datasets", 
+      "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to suit datasets",
       "$ref": "#/definitions/publicationYear",
       "description": "The year when the data was or will be made publicly available. In the case of dynamic data where there may be multiple releases in one year, include the 'date', 'dateType', and 'dateInformation' property and sub-properties to provide more information about the publication or release date details."
     },
     "date": {
-      "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to suit datasets", 
+      "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to suit datasets",
       "type": "array",
       "description": "Different dates relevant to the dataset",
       "items": {
@@ -396,7 +428,7 @@
       "description": "Indicates the level of de-identification applied to the dataset",
       "properties": {
         "deIdentType": {
-          "$comment": "The 'NotKnown' option from ECRIN has been removed here. The options have been Pascal Cased to align with the overall controlled values.", 
+          "$comment": "The 'NotKnown' option from ECRIN has been removed here. The options have been Pascal Cased to align with the overall controlled values.",
           "type": "string",
           "description": "Provides an indication of the level of deidentification of the dataset. Must be from the controlled list.",
           "oneOf": [
@@ -456,7 +488,7 @@
       "description": "Provide an indication of the level of explicit consent for secondary use of the data.",
       "properties": {
         "consentType": {
-          "$comment": "The 'NotKnown' option from ECRIN has been removed here. The options have been Pascal Cased to align with the overall controlled values.", 
+          "$comment": "The 'NotKnown' option from ECRIN has been removed here. The options have been Pascal Cased to align with the overall controlled values.",
           "type": "string",
           "description": "Must be from the controlled list",
           "oneOf": [
@@ -592,7 +624,7 @@
             "description": "The type of the relatedIdentifier. Must be from the controlled list of identifierType."
           },
           "relationType": {
-            "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to suit datasets", 
+            "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to suit datasets",
             "$ref": "#/definitions/relationType",
             "description": "The type of relationship between the dataset (A) and the related resource (B). Must be from the controlled list of relationType."
           },
@@ -628,7 +660,7 @@
     "subject": {
       "type": "array",
       "items": {
-        "$comment": "Examples have be adapted for clinical research datasets", 
+        "$comment": "Examples have be adapted for clinical research datasets",
         "type": "object",
         "additionalProperties": false,
         "description": "",
@@ -640,45 +672,54 @@
             "description": "The subject, keyword, classification code, or key phrase that describes the dataset",
             "examples": ["Diabetes mellitus"]
           },
-          "subjectScheme": {
-            "$comment": "Description is based on the DataCite Metadata Schema v4.5 but extended to provide more clarity.", 
-            "type": "string",
-            "minLength": 1,
-            "description": "The name of the subject scheme or classification code or authority if one is used (e.g., name of ontology)",
-            "examples": [
-              "Logical Observation Identifier Names and Codes (LOINC)"
-            ]
-          },
-          "schemeURI": {
-            "type": "string",
-            "minLength": 1,
-            "description": "The URI of the subject identifier scheme",
-            "examples": ["https://loinc.org/"]
-          },
-          "valueURI": {
-            "type": "string",
-            "minLength": 1,
-            "description": "The URI of the subject term",
-            "examples": ["https://loinc.org/45636-8"]
-          },
-          "classificationCode": {
-            "type": "string",
-            "minLength": 1,
-            "description": "The classification code used for the subject term in the subject scheme",
-            "examples": ["45636-8"]
+          "subjectIdentifier": {
+            "$comment": "Created an object for the identifier here to better handle requirements",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "classificationCode": {
+                "$comment": "Made required here as part of the identifier object",
+                "type": "string",
+                "minLength": 1,
+                "description": "The classification code used for the subject term in the subject scheme",
+                "examples": ["45636-8"]
+              },
+              "subjectScheme": {
+                "$comment": "Made required here as part of the identifier object. Description is based on the DataCite Metadata Schema v4.5 but extended to provide more clarity.",
+                "type": "string",
+                "minLength": 1,
+                "description": "The name of the subject scheme or classification code or authority if one is used (e.g., name of ontology)",
+                "examples": [
+                  "Logical Observation Identifier Names and Codes (LOINC)"
+                ]
+              },
+              "schemeURI": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The URI of the subject identifier scheme",
+                "examples": ["https://loinc.org/"]
+              },
+              "valueURI": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The URI of the subject term",
+                "examples": ["https://loinc.org/45636-8"]
+              }
+            },
+            "required": ["classificationCode", "subjectScheme"]
           }
         },
         "required": ["subjectValue"]
       },
       "uniqueItems": true
     },
-    "managingOrganisation": {
-      "$comment": "This key is from the ECRIN Metadata Schema for data objects v6.0 'F.1 Managing Organisation'",
+    "managingOrganization": {
+      "$comment": "This key is from the ECRIN Metadata Schema for data objects v6.0 'F.1 Managing Organization'",
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "name": {
-          "$comment": "Description has been modified for clarity", 
+          "$comment": "Description has been modified for clarity",
           "type": "string",
           "minLength": 1,
           "description": "The name of the organization managing the dataset, in particular that determines access to it"
@@ -686,13 +727,13 @@
         "rorId": {
           "type": "string",
           "minLength": 1,
-          "description": "The id of the organisation, if known, within the ROR (Research Organisation Registry) system. This is a URL linking to the ROR resource."
+          "description": "The id of the organization, if known, within the ROR (Research Organization Registry) system. This is a URL linking to the ROR resource."
         }
       },
       "required": ["name"]
     },
     "accessType": {
-      "$comment": "The 'NotKnownYet' option has been removed since it is not releveant here. The options have been Pascal Cased to align with the overall controlled values", 
+      "$comment": "The 'NotKnownYet' option has been removed since it is not relevant here. The options have been Pascal Cased to align with the overall controlled values",
       "type": "string",
       "description": "The type of access to the dataset. Must be from controlled list",
       "oneOf": [
@@ -760,7 +801,7 @@
           "description": "A url of a web page that provides details of the access available, possibly including the practical details required or a form to use to apply for access"
         },
         "urlLastChecked": {
-          "$coment": "Format changed to match DataCite date format",
+          "$comment": "Format changed to match DataCite date format",
           "type": "string",
           "format": "date-time",
           "description": "If a check has been carried out, the date the url last responded with a 200 (success) message, as a string "
@@ -769,7 +810,7 @@
       "required": ["description"]
     },
     "rights": {
-      "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to for more clarity. It is not mandatory in the DataCite schema but is mandatory here.", 
+      "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to for more clarity. It is not mandatory in the DataCite schema but is mandatory here.",
       "type": "array",
       "description": "The license associated with the dataset. The property may be repeated to record complex rights characteristics.",
       "items": {
@@ -790,22 +831,32 @@
             "examples": ["https://creativecommons.org/licenses/by/4.0/"]
           },
           "rightsIdentifier": {
-            "type": "string",
-            "minLength": 1,
-            "description": "A short, standardized version of the license name. A list of identifiers for commonly-used licenses may be found here: (https://spdx.org/licenses/)",
-            "examples": ["CC-BY-4.0"]
-          },
-          "rightsIdentifierScheme": {
-            "type": "string",
-            "minLength": 1,
-            "description": "The name of the scheme",
-            "examples": ["SPDX"]
-          },
-          "schemeURI": {
-            "type": "string",
-            "minLength": 1,
-            "description": "The URI of the rightsIdentifierScheme",
-            "examples": ["https://spdx.org/licenses/"]
+            "$comment": "Created an object for the identifier here to better handle requirements",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "rightsIdentifierValue": {
+                "$comment": "Made required here as part of the object",
+                "type": "string",
+                "minLength": 1,
+                "description": "A short, standardized version of the license name. A list of identifiers for commonly-used licenses may be found here: (https://spdx.org/licenses/)",
+                "examples": ["CC-BY-4.0"]
+              },
+              "rightsIdentifierScheme": {
+                "$comment": "Made required here as part of the object",
+                "type": "string",
+                "minLength": 1,
+                "description": "The name of the scheme",
+                "examples": ["SPDX"]
+              },
+              "schemeURI": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The URI of the rightsIdentifierScheme",
+                "examples": ["https://spdx.org/licenses/"]
+              }
+            },
+            "required": ["rightsIdentifierValue", "rightsIdentifierScheme"]
           }
         },
         "required": ["rightsName"]
@@ -813,7 +864,7 @@
       "uniqueItems": true
     },
     "publisher": {
-      "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to suit the JSON structure", 
+      "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to suit the JSON structure",
       "description": "Information about the entity that holds, archives, publishes prints, distributes, releases, issues, or produces the dataset.",
       "type": "object",
       "additionalProperties": false,
@@ -826,22 +877,32 @@
           "examples": ["FAIRhub"]
         },
         "publisherIdentifier": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Uniquely identifies the publisher, according to various schemes",
-          "examples": ["https://ror.org/04z8jg394"]
-        },
-        "publisherIdentifierScheme": {
-          "type": "string",
-          "minLength": 1,
-          "description": "The name of the publisher identifier scheme. If publisherIdentifier is used, publisherIdentifierScheme is mandatory",
-          "examples": ["ROR"]
-        },
-        "schemeURI": {
-          "type": "string",
-          "minLength": 1,
-          "description": "The URI of the publisher identifier scheme",
-          "examples": ["https://ror.org/"]
+          "$comment": "Created an object for the identifier here to better handle requirements",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "publisherIdentifierValue": {
+              "$comment": "Made required here as part of the object",
+              "type": "string",
+              "minLength": 1,
+              "description": "Uniquely identifies the publisher, according to various schemes",
+              "examples": ["https://ror.org/04z8jg394"]
+            },
+            "publisherIdentifierScheme": {
+              "$comment": "Made required here as part of the object",
+              "type": "string",
+              "minLength": 1,
+              "description": "The name of the publisher identifier scheme. If publisherIdentifier is used, publisherIdentifierScheme is mandatory",
+              "examples": ["ROR"]
+            },
+            "schemeURI": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The URI of the publisher identifier scheme",
+              "examples": ["https://ror.org/"]
+            }
+          },
+          "required": ["publisherIdentifierValue", "publisherIdentifierScheme"]
         }
       },
       "required": ["publisherName"]
@@ -859,7 +920,7 @@
       "uniqueItems": true
     },
     "fundingReference": {
-      "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to suit datasets. Examples have been adapted to suits clinical research datasets.", 
+      "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to suit datasets. Examples have been adapted to suits clinical research datasets.",
       "type": "array",
       "description": "Information about financial support (funding) for the dataset",
       "items": {
@@ -871,9 +932,7 @@
             "type": "string",
             "minLength": 1,
             "description": "Name of the funding provider.",
-            "examples": [
-              "National Institutes of Health (NIH)"
-            ]
+            "examples": ["National Institutes of Health (NIH)"]
           },
           "funderIdentifier": {
             "type": "object",
@@ -896,9 +955,7 @@
                 "type": "string",
                 "minLength": 1,
                 "description": "The URI of the funder identifier scheme",
-                "examples": [
-                  "https://ror.org"
-                ]
+                "examples": ["https://ror.org"]
               }
             },
             "required": ["funderIdentifierValue", "funderIdentifierType"]
@@ -937,12 +994,12 @@
       "uniqueItems": true
     },
     "format": {
-      "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to suit datasets", 
+      "$comment": "Description is based on the DataCite Metadata Schema v4.5 but modified to suit datasets",
       "type": "array",
-      "description": "Technical format of the data files in the dataset. Use file extension or MIME type where possible, e.g., PDF, XML, MPG or application/pdf, text/xml, video/mpeg.", 
+      "description": "Technical format of the data files in the dataset. Use file extension or MIME type where possible, e.g., PDF, XML, MPG or application/pdf, text/xml, video/mpeg.",
       "items": {
         "type": "string"
-        },
+      },
       "uniqueItems": true
     }
   },
@@ -963,7 +1020,7 @@
   ],
   "definitions": {
     "identifierType": {
-      "$comment": "The options and their description are exactly from DataCite Metadata Schema v4.5 extended with the 'Other' option from the 'object_identifiers' in the ECRIN Metadata Sschema v6.0 for data object",
+      "$comment": "The options and their description are exactly from DataCite Metadata Schema v4.5 extended with the 'Other' option from the 'object_identifiers' in the ECRIN Metadata Schema v6.0 for data object",
       "type": "string",
       "oneOf": [
         {
@@ -1190,112 +1247,112 @@
           "const": "Other",
           "description": "Any person or institution making a significant contribution to the development and/or maintenance of the resource, but whose contribution is not adequately described by any of the other values for contributorType"
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "StudyLead",
           "description": "The individual who, if not the sponsor themselves, leads and co-ordinates the scientific and clinical activity within a clinical study, including co-ordinating the work of principal investigators at clinical sites. May be known as the Co-ordinating Investigator, the Study Chair, Study Director or similar terms."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "CTSitePrincipalInvestigator",
           "description": "The individual responsible for the safe conduct of a clinical trial at a particular clinical site."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "ClinicalStudyManager",
           "description": "An individual responsible for the operational management of a clinical study. Similar to a Project Manager but a study manager is heavily involved in the management of data and data collection."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "TrialSponsor",
           "description": "The organisation or individual that has the formal, legal role of a clinical trial sponsor, and is legally responsible for all aspects of a clinical trial."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "SponsorContact",
           "description": "An individual representing the sponsor and acting as an initial contact point."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "PublicContact",
           "description": "An individual designated as dealing with non-scientific queries from the public or press."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "RecruitmentContact",
           "description": "An individual designated as providing periodic updates on recruitment information or status, at all sites, usually for monitoring purposes."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "StudyFunder",
           "description": "An organisation providing some or all of the additional funds required for the study."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "FunderContact",
           "description": "An individual representing the funder and acting as an initial contact point."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "IndependentMonitoringCommitteeMember",
           "description": "A member of a safety monitoring committee for a clinical trial, independent of the researchers and research activity."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "MedicinalProductSupplier",
           "description": "Organisation that provides one or more of the medicines investigated in a clinical study."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "MedicalDeviceSupplier",
           "description": "Organisation that provides one or more of the medical devices in a clinical study."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "LogisticsSupportOrganisation",
           "description": "Organisation that provides logistical input, e.g. provides a drug distribution service."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "ScientificSupportOrganisation",
           "description": "Organisation that provides scientific support, e.g. a national or international research network."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "CentralLaboratory",
           "description": "Organisation that provides a central specialist laboratory testing facility.."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "CentralImagingFacility",
           "description": "Organisation that provides a central specialist imaging or scanning facility."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "ClinicalOrganisation",
           "description": "Organisation, usually a primary or secondary health care organisation, that manages one or more of the sites where a clinical study takes place."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "ClinicalSite",
           "description": "Organisation or location, usually in a primary or secondary health care organisation, that is one of the sites where a clinical study takes place."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "CollaboratingOrganisation",
           "description": "May be listed as a secondary sponsor, an organisation other than the lead sponsor involved in supporting a study."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "SponsorInvestigator",
           "description": "An individual with the role of sponsor as well as being the co-ordinating investigator for the study."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "ResultsContact",
           "description": "The individual, occasionally organisation, to be contacted for further information on the study results."
         },
-        { 
+        {
           "$comment": "From ECRIN",
           "const": "ResearchGroupMember",
           "description": "From PubMed, an 'investigator' is an individual (e.g., collaborator or investigator) who is not an author of a paper but is listed as a member of a collective/corporate group that is an author of the paper."
