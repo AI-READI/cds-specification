@@ -180,24 +180,32 @@
             },
             "leadSponsorIdentifier": {
               "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-              "type": "string",
-              "description": "Uniquely identifies sponsor, according to various schemes.",
-              "minLength": 1,
-              "examples": ["https://ror.org/04aj4c18"]
-            },
-            "leadSponsorIdentifierScheme": {
-              "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-              "type": "string",
-              "minLength": 1,
-              "description": "The name of the identifier scheme.",
-              "examples": ["ROR"]
-            },
-            "schemeURI": {
-              "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-              "type": "string",
-              "minLength": 1,
-              "description": "The URI of the name identifier scheme.",
-              "examples": ["https://ror.org"]
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "leadSponsorIdentifierValue": {
+                  "type": "string",
+                  "description": "Uniquely identifies sponsor, according to various schemes.",
+                  "minLength": 1,
+                  "examples": ["https://ror.org/04aj4c18"]
+                },
+                "leadSponsorIdentifierScheme": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "The name of the identifier scheme.",
+                  "examples": ["ROR"]
+                },
+                "schemeURI": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "The URI of the name identifier scheme.",
+                  "examples": ["https://ror.org"]
+                }
+              },
+              "required": [
+                "leadSponsorIdentifierValue",
+                "leadSponsorIdentifierScheme"
+              ]
             }
           },
           "required": ["leadSponsorName"]
@@ -271,7 +279,10 @@
                     "examples": ["https://orcid.org"]
                   }
                 },
-                "required": ["responsiblePartyInvestigatorIdentifierValue"]
+                "required": [
+                  "responsiblePartyInvestigatorIdentifierValue",
+                  "responsiblePartyInvestigatorIdentifierScheme"
+                ]
               },
               "uniqueItems": true
             },
@@ -290,24 +301,32 @@
                 },
                 "responsiblePartyInvestigatorAffiliationIdentifier": {
                   "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-                  "type": "string",
-                  "description": "Uniquely identifies affiliation, according to various schemes.",
-                  "minLength": 1,
-                  "examples": ["https://ror.org/04aj4c18"]
-                },
-                "responsiblePartyInvestigatorAffiliationIdentifierScheme": {
-                  "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "The name of the identifier scheme.",
-                  "examples": ["ROR"]
-                },
-                "schemeURI": {
-                  "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify sponsor and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "The URI of the name identifier scheme.",
-                  "examples": ["https://ror.org"]
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "responsiblePartyInvestigatorAffiliationIdentifierValue": {
+                      "type": "string",
+                      "description": "Uniquely identifies affiliation, according to various schemes.",
+                      "minLength": 1,
+                      "examples": ["https://ror.org/04aj4c18"]
+                    },
+                    "responsiblePartyInvestigatorAffiliationIdentifierScheme": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "The name of the identifier scheme.",
+                      "examples": ["ROR"]
+                    },
+                    "schemeURI": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "The URI of the name identifier scheme.",
+                      "examples": ["https://ror.org"]
+                    }
+                  },
+                  "required": [
+                    "responsiblePartyInvestigatorAffiliationIdentifierValue",
+                    "responsiblePartyInvestigatorAffiliationIdentifierScheme"
+                  ]
                 }
               },
               "required": ["responsiblePartyInvestigatorAffiliationName"]
@@ -344,24 +363,32 @@
               },
               "collaboratorNameIdentifier": {
                 "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify collaborator and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-                "type": "string",
-                "description": "Uniquely identifies the organization, according to various schemes.",
-                "minLength": 1,
-                "examples": ["https://ror.org/04aj4c18"]
-              },
-              "collaboratorNameIdentifierScheme": {
-                "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify collaborator and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-                "type": "string",
-                "minLength": 1,
-                "description": "The name of the identifier scheme.",
-                "examples": ["ROR"]
-              },
-              "schemeURI": {
-                "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify collaborator and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-                "type": "string",
-                "minLength": 1,
-                "description": "The URI of the name identifier scheme.",
-                "examples": ["https://ror.org"]
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "collaboratorNameIdentifierValue": {
+                    "type": "string",
+                    "description": "Uniquely identifies the collaborating organization, according to various schemes.",
+                    "minLength": 1,
+                    "examples": ["https://ror.org/04aj4c18"]
+                  },
+                  "collaboratorNameIdentifierScheme": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The name of the identifier scheme.",
+                    "examples": ["ROR"]
+                  },
+                  "schemeURI": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The URI of the name identifier scheme.",
+                    "examples": ["https://ror.org"]
+                  }
+                },
+                "required": [
+                  "collaboratorNameIdentifierValue",
+                  "collaboratorNameIdentifierScheme"
+                ]
               }
             },
             "required": ["collaboratorName"]
@@ -440,31 +467,38 @@
                 "minLength": 1,
                 "examples": ["Diabetes mellitus"]
               },
-              "conditionScheme": {
-                "type": "string",
-                "minLength": 1,
-                "description": "The name of the scheme or classification code or authority if one is used (e.g., name of ontology) for the condition name",
-                "examples": [
-                  "Logical Observation Identifier Names and Codes (LOINC)"
-                ]
-              },
-              "schemeURI": {
-                "type": "string",
-                "minLength": 1,
-                "description": "The URI of the condition identifier scheme",
-                "examples": ["https://loinc.org/"]
-              },
-              "conditionURI": {
-                "type": "string",
-                "minLength": 1,
-                "description": "The URI of the condition name in the scheme",
-                "examples": ["https://loinc.org/45636-8"]
-              },
-              "conditionClassificationCode": {
-                "type": "string",
-                "minLength": 1,
-                "description": "The classification code used for the condition name in the scheme",
-                "examples": ["45636-8"]
+              "conditionIdentifier": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "conditionScheme": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The name of the scheme or classification code or authority if one is used (e.g., name of ontology) for the condition name",
+                    "examples": [
+                      "Logical Observation Identifier Names and Codes (LOINC)"
+                    ]
+                  },
+                  "schemeURI": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The URI of the condition identifier scheme",
+                    "examples": ["https://loinc.org/"]
+                  },
+                  "conditionURI": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The URI of the condition name in the scheme",
+                    "examples": ["https://loinc.org/45636-8"]
+                  },
+                  "conditionClassificationCode": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The classification code used for the condition name in the scheme",
+                    "examples": ["45636-8"]
+                  }
+                },
+                "required": []
               }
             },
             "required": ["conditionName"]
@@ -1186,9 +1220,7 @@
         "minimumAge",
         "maximumAge",
         "healthyVolunteers",
-        "eligibilityCriteria",
-        "studyPopulation",
-        "samplingMethod"
+        "eligibilityCriteria"
       ]
     },
     "contactsLocationsModule": {
@@ -1246,7 +1278,10 @@
                       "examples": ["https://orcid.org"]
                     }
                   },
-                  "required": ["centralContactIdentifierValue"]
+                  "required": [
+                    "centralContactIdentifierValue",
+                    "centralContactIdentifierScheme"
+                  ]
                 },
                 "uniqueItems": true
               },
@@ -1261,24 +1296,32 @@
                   },
                   "centralContactAffiliationIdentifier": {
                     "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify central contact affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-                    "type": "string",
-                    "description": "Uniquely identifies central contact affiliation, according to various schemes.",
-                    "minLength": 1,
-                    "examples": ["https://ror.org/04aj4c18"]
-                  },
-                  "centralContactAffiliationIdentifierScheme": {
-                    "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify central contact affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-                    "type": "string",
-                    "minLength": 1,
-                    "description": "The name of the identifier scheme.",
-                    "examples": ["ROR"]
-                  },
-                  "schemeURI": {
-                    "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify central contact affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-                    "type": "string",
-                    "minLength": 1,
-                    "description": "The URI of the name identifier scheme.",
-                    "examples": ["https://ror.org"]
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "centralContactAffiliationIdentifierValue": {
+                        "type": "string",
+                        "description": "Uniquely identifies central contact affiliation, according to various schemes.",
+                        "minLength": 1,
+                        "examples": ["https://ror.org/04aj4c18"]
+                      },
+                      "centralContactAffiliationIdentifierScheme": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "The name of the identifier scheme.",
+                        "examples": ["ROR"]
+                      },
+                      "schemeURI": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "The URI of the name identifier scheme.",
+                        "examples": ["https://ror.org"]
+                      }
+                    },
+                    "required": [
+                      "centralContactAffiliationIdentifierValue",
+                      "centralContactAffiliationIdentifierScheme"
+                    ]
                   }
                 },
                 "required": ["centralContactAffiliationName"]
@@ -1356,7 +1399,10 @@
                       "examples": ["https://orcid.org"]
                     }
                   },
-                  "required": ["overallOfficialIdentifierValue"]
+                  "required": [
+                    "overallOfficialIdentifierValue",
+                    "overallOfficialIdentifierScheme"
+                  ]
                 },
                 "uniqueItems": true
               },
@@ -1371,24 +1417,32 @@
                   },
                   "overallOfficialAffiliationIdentifier": {
                     "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify official affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-                    "type": "string",
-                    "description": "Uniquely identifies official affiliation, according to various schemes.",
-                    "minLength": 1,
-                    "examples": ["https://ror.org/04aj4c18"]
-                  },
-                  "overallOfficialAffiliationIdentifierScheme": {
-                    "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify official affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-                    "type": "string",
-                    "minLength": 1,
-                    "description": "The name of the identifier scheme.",
-                    "examples": ["ROR"]
-                  },
-                  "schemeURI": {
-                    "$comment": "Key added based on the dataset_description.json schema https://schema.aireadi.org/files/dataset_description.json (which is based on DataCite) to uniquely identify official affiliation and make schema more FAIR. Description and examples are based on the dataset_description schema but modified to suit here.",
-                    "type": "string",
-                    "minLength": 1,
-                    "description": "The URI of the name identifier scheme.",
-                    "examples": ["https://ror.org"]
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "overallOfficialAffiliationIdentifierValue": {
+                        "type": "string",
+                        "description": "Uniquely identifies official affiliation, according to various schemes.",
+                        "minLength": 1,
+                        "examples": ["https://ror.org/04aj4c18"]
+                      },
+                      "overallOfficialAffiliationIdentifierScheme": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "The name of the identifier scheme.",
+                        "examples": ["ROR"]
+                      },
+                      "schemeURI": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "The URI of the name identifier scheme.",
+                        "examples": ["https://ror.org"]
+                      }
+                    },
+                    "required": [
+                      "overallOfficialAffiliationIdentifierValue",
+                      "overallOfficialAffiliationIdentifierScheme"
+                    ]
                   }
                 },
                 "required": ["overallOfficialAffiliationName"]
@@ -1472,7 +1526,10 @@
                     "examples": ["https://ror.org"]
                   }
                 },
-                "required": ["locationIdentifierValue"]
+                "required": [
+                  "locationIdentifierValue",
+                  "locationIdentifierScheme"
+                ]
               },
               "locationContactList": {
                 "type": "array",
@@ -1519,7 +1576,10 @@
                             "examples": ["https://orcid.org"]
                           }
                         },
-                        "required": ["centralContactIdentifierValue"]
+                        "required": [
+                          "centralContactIdentifierValue",
+                          "locationContactIdentifierScheme"
+                        ]
                       },
                       "uniqueItems": true
                     },
@@ -1545,7 +1605,8 @@
                     }
                   },
                   "required": [
-                    "locationContactName",
+                    "locationContactFirstName",
+                    "locationContactLastName",
                     "locationContactRole",
                     "locationContactPhone",
                     "locationContactEMail"
