@@ -28,7 +28,7 @@ There is no mandatory requirements for the content of this metadata file, it is 
 
 - **Identifier**: In this section, indicate the DOI or any other globally unique and persistent identifier of the current version of the dataset.
 
-- **Latest version number**: In this section, indicate the current version number of the published dataset.
+- **Version number**: In this section, indicate the current version number of the published dataset (suggested format is major_release.minor_release).
 
 - **Publication date**: In this section, indicate the date when the current version of the dataset was published (i.e., made available outside of the project members openly or through a restricted access). It is suggested to follow the [ISO 8601 date format](https://www.iso.org/iso-8601-date-and-time-format.html) (YYYY-MM-DD).
 
