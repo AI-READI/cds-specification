@@ -96,7 +96,21 @@
                 "minLength": 1
               }
             },
-            "required": ["secondaryId", "secondaryIdType"]
+            "required": ["secondaryId", "secondaryIdType"],
+            "if": {
+              "properties": {
+                "secondaryIdType": {
+                  "enum": [
+                    "Other Grant/Funding Number",
+                    "Registry Identifier",
+                    "Other Identifier"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "required": ["secondaryIdDomain"]
+            }
           },
           "minItems": 1,
           "uniqueItems": true
