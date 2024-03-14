@@ -6,15 +6,22 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "datasetStructure": {
+    "directoryList": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/directoryItem",
         "description": "Description of the directories"
       }
+    },
+    "metadataFileList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/metadataFileItem",
+        "description": "Description of the directories"
+      }
     }
   },
-  "required": ["datasetStructure"],
+  "required": ["directoryList", "metadataFileList"],
   "definitions": {
     "directoryItem": {
       "type": "object",
@@ -29,7 +36,7 @@
           "type": "string",
           "oneOf": [
             {
-              "const": "data type",
+              "const": "dataType",
               "description": "For a data type folder"
             },
             {
@@ -47,6 +54,39 @@
           "minLength": 1,
           "description": "A description of the content of the directory",
           "examples": ["retinal_oct"]
+        },
+        "relatedIdentifier": {
+          "type": "array",
+          "description": "Identifiers of resources to this directory, for instance to a documentation about the content of this directory and possibly its sub-directories. These must be globally unique identifiers.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "relatedIdentifierValue": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Identifier of the related resource. Must be globally unique."
+              },
+              "relatedIdentifierType": {
+                "$ref": "#/definitions/identifierType",
+                "description": "The type of the relatedIdentifier. Must be from the controlled list of identifierType."
+              },
+              "relationType": {
+                "$ref": "#/definitions/relationType",
+                "description": "The type of relationship between the dataset (A) and the related resource (B). Must be from the controlled list of relationType."
+              },
+              "resourceTypeGeneral": {
+                "$ref": "#/definitions/resourceItemType",
+                "description": "The general type of the related resource. Must be from the controlled list of resourceItemType."
+              }
+            },
+            "required": [
+              "relatedIdentifierValue",
+              "relatedIdentifierType",
+              "relationType"
+            ]
+          },
+          "uniqueItems": true
         },
         "relatedTerm": {
           "type": "array",
@@ -180,15 +220,164 @@
           },
           "uniqueItems": true
         },
-        "subDirectory": {
+        "directoryList": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/directoryItem",
             "description": "Description of the sub-directories within this directory"
           }
+        },
+        "metadataFileList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/metadataFileItem",
+            "description": "Description of the metadata files within this directory"
+          }
         }
       },
-      "required": ["directoryName", "directoryType"]
+      "required": ["directoryName", "directoryType"],
+      "if": {
+        "properties": {
+          "directoryType": {
+            "const": "dataType"
+          }
+        }
+      },
+      "then": {
+        "required": ["directoryDescription"]
+      }
+    },
+    "metadataFileItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "metadataFileName": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The name of the directory"
+        },
+        "metadataFileDescription": {
+          "type": "string",
+          "minLength": 1,
+          "description": "A description of the content of the directory",
+          "examples": ["retinal_oct"]
+        },
+        "relatedIdentifier": {
+          "type": "array",
+          "description": "Identifiers of resources related to the metadata file, for instance to a documentation about the metadata file. These must be globally unique identifiers.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "relatedIdentifierValue": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Identifier of the related resource. Must be globally unique."
+              },
+              "relatedIdentifierType": {
+                "$ref": "#/definitions/identifierType",
+                "description": "The type of the relatedIdentifier. Must be from the controlled list of identifierType."
+              },
+              "relationType": {
+                "$ref": "#/definitions/relationType",
+                "description": "The type of relationship between the metadata file (A) and the related resource (B). Must be from the controlled list of relationType."
+              },
+              "resourceTypeGeneral": {
+                "$ref": "#/definitions/resourceItemType",
+                "description": "The general type of the related resource. Must be from the controlled list of resourceItemType."
+              }
+            },
+            "required": [
+              "relatedIdentifierValue",
+              "relatedIdentifierType",
+              "relationType"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "relatedStandard": {
+          "type": "array",
+          "description": "Standard followed to structure the metadata, choose file format, etc.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "standardName": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The name of the standard"
+              },
+              "standardDescription": {
+                "type": "string",
+                "minLength": 1,
+                "description": "A description of the standard",
+                "examples": ["retinal_oct"]
+              },
+              "standardUse": {
+                "type": "string",
+                "minLength": 1,
+                "description": "A description of how the standard is used for this metadata file"
+              },
+              "standardIdentifier": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "description": "Identifier(s) of the standard (e.g., identifier from https://fairsharing.org/)",
+                  "additionalProperties": false,
+                  "properties": {
+                    "identifierValue": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Unique string that identifies the standard."
+                    },
+                    "identifierType": {
+                      "$ref": "#/definitions/identifierType",
+                      "description": "The type of identifier used to identify the standard. Must be from the controlled list of identifierType."
+                    }
+                  },
+                  "required": ["identifierValue", "identifierType"]
+                },
+                "uniqueItems": true
+              },
+              "standardRelatedIdentifier": {
+                "type": "array",
+                "description": "Identifiers of resources related to the standard such as manuscript describing the standard or documentation. These must be globally unique identifiers.",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "relatedIdentifierValue": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Identifier of the related resource. Must be globally unique."
+                    },
+                    "relatedIdentifierType": {
+                      "$ref": "#/definitions/identifierType",
+                      "description": "The type of the relatedIdentifier. Must be from the controlled list of identifierType."
+                    },
+                    "relationType": {
+                      "$ref": "#/definitions/relationType",
+                      "description": "The type of relationship between the standard (A) and the related resource (B). Must be from the controlled list of relationType."
+                    },
+                    "resourceTypeGeneral": {
+                      "$ref": "#/definitions/resourceItemType",
+                      "description": "The general type of the related resource. Must be from the controlled list of resourceItemType."
+                    }
+                  },
+                  "required": [
+                    "relatedIdentifierValue",
+                    "relatedIdentifierType",
+                    "relationType"
+                  ]
+                },
+                "uniqueItems": true
+              }
+            }
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": ["metadataFileName", "metadataFileDescription"]
     },
     "identifierType": {
       "type": "string",

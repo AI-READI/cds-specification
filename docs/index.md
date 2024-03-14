@@ -7,7 +7,7 @@ titleTemplate: Making FAIR data practices more accessible
 hero:
   name: CDS Documentation
   text: ''
-  tagline: Full documentation of the Clinical Dataset Structure (CDS), a standard for consistently structuring clinical research data and metadata at the root level of a dataset such that is it interoperable and reusable.
+  tagline: Documentation of the Clinical Dataset Structure (CDS), a standard for consistently structuring clinical research datasets to comply with the Interoperable and Reusable aspects of making data FAIR.
   image:
     src: https://github.com/AI-READI/AI-READI-logo/blob/main/logo/png/option2.png?raw=true
     alt: Vitest
@@ -25,5 +25,5 @@ features:
     details: The CDS is designed so you can include rich metadata following standard schemas and vocabularies, in both human and machine friendly formats.
   - icon: 🤖
     title: Be AI-ready
-    details: The CDS is designed to help make your dataset AI-ready and compliant with the FAIR (Findable, Accessible, Interoperable, Reusable) Principles
+    details: The CDS is designed to help make your dataset AI-ready and, in particular, compliant with the FAIR (Findable, Accessible, Interoperable, Reusable) Principles
 ---
