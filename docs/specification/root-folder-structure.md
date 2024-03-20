@@ -1,10 +1,10 @@
 ---
 lang: en-US
-title: Folder structure
+title: Root-level folder structure
 description: Description of the CDS folder structure
 ---
 
-# Folder structure
+# Root-level folder structure
 
 ## About
 

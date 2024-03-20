@@ -25,5 +25,5 @@ features:
     details: The CDS is designed so you can include rich metadata following standard schemas and vocabularies, in both human and machine friendly formats.
   - icon: 🤖
     title: Be AI-ready
-    details: The CDS is designed to help make your dataset AI-ready and, in particular, compliant with the FAIR (Findable, Accessible, Interoperable, Reusable) Principles
+    details: The CDS is designed to help make your dataset AI-ready and, in particular, compliant with the Interoperable and Reusable aspects of the FAIR (Findable, Accessible, Interoperable, Reusable) Principles
 ---

@@ -1,10 +1,10 @@
 ---
 lang: en-US
-title: datatype_dictionary.yaml
+title: dataset_structure_description.json
 description: Specifications for the datatype_dictionary.yaml metadata file
 ---
 
-# datatype_dictionary.yaml
+# dataset_structure_description.json
 
 ## About
 
