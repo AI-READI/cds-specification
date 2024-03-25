@@ -6,6 +6,11 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "schema": {
+      "description": "Link to the schema to be included so that users of the resulting JSON file can find the related schema easily",
+      "type": "string",
+      "const": "https://github.com/AI-READI/cds-specification/blob/main/docs/public/schemas/study_description.schema.json"
+    },
     "identificationModule": {
       "$comment": "Maps to Data Elements in https://prsinfo.clinicaltrials.gov/definitions.html#identification",
       "type": "object",

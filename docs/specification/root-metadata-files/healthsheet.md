@@ -22,4 +22,4 @@ This metadata file must be named `healthsheet` and must be in the markdown forma
 
 ### Content
 
-The content of this metadata file must be exactly as specified in the paper ["Healthsheet: Development of a Transparency Artifact for Health Datasets"](https://doi.org/10.1145/3531146.3533239) that introduced the concept for this healthsheet. The template provided [here](../../implementing-cds/templates.md) specifies the required structure and content.
+The content of this metadata file must be exactly as specified in the paper ["Healthsheet: Development of a Transparency Artifact for Health Datasets"](https://doi.org/10.1145/3531146.3533239) that introduced the concept for this healthsheet.

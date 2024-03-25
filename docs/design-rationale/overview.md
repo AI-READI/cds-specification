@@ -5,6 +5,5 @@ description: Overview of the design rationales behind the CDS
 ---
 
 # Overview
-  
-Coming soon...
 
+Coming soon...

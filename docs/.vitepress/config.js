@@ -4,7 +4,7 @@ import { withMermaid } from 'vitepress-plugin-mermaid';
 export default withMermaid(
   defineConfig({
     lang: 'en-US',
-    title: 'CDS Documentation',
+    title: 'CDS Specification',
     description: 'Documentation for CDS-Specification',
     titleTemplate: 'AI-READI',
     port: 3000,
@@ -103,10 +103,6 @@ export default withMermaid(
           text: 'The CDS Specification',
           link: '/specification/general-principles.md',
         },
-        {
-          text: 'Resources',
-          link: '/resources/changelog.md',
-        },
       ],
 
       sidebar: {
@@ -120,7 +116,7 @@ export default withMermaid(
 
       footer: {
         message: 'Released under the MIT License.',
-        copyright: 'Copyright © 2023-present | AI-READI',
+        copyright: 'Copyright © 2024-present | AI-READI',
       },
     },
   }),
@@ -153,45 +149,49 @@ function sidebarGuide() {
           link: '/specification/general-principles.md',
         },
         {
-          text: 'Folder structure',
-          link: '/specification/folder-structure.md',
+          text: 'Root-level directory structure',
+          link: '/specification/root-directory-structure.md',
         },
         {
-          text: 'Metadata files',
+          text: 'Datatype directory structure',
+          link: '/specification/datatype-directory-structure.md',
+        },
+        {
+          text: 'Root-level metadata files',
           collapsible: true,
           collapsed: true,
           items: [
             {
               text: 'README.md',
-              link: '/specification/metadata-files/readme.md',
+              link: '/specification/root-metadata-files/readme.md',
             },
             {
               text: 'LICENSE.txt',
-              link: '/specification/metadata-files/license.md',
+              link: '/specification/root-metadata-files/license.md',
             },
             {
               text: 'healthsheet.md',
-              link: '/specification/metadata-files/healthsheet.md',
-            },
-            {
-              text: 'study_description.json',
-              link: '/specification/metadata-files/study-description.md',
-            },
-            {
-              text: 'dataset_description.json',
-              link: '/specification/metadata-files/dataset-description.md',
-            },
-            {
-              text: 'datatype_dictionary.yaml',
-              link: '/specification/metadata-files/datatype-dictionary.md',
-            },
-            {
-              text: 'participants.tsv and .json',
-              link: '/specification/metadata-files/participants.md',
+              link: '/specification/root-metadata-files/healthsheet.md',
             },
             {
               text: 'CHANGELOG.md',
-              link: '/specification/metadata-files/changelog.md',
+              link: '/specification/root-metadata-files/changelog.md',
+            },
+            {
+              text: 'study_description.json',
+              link: '/specification/root-metadata-files/study-description.md',
+            },
+            {
+              text: 'dataset_description.json',
+              link: '/specification/root-metadata-files/dataset-description.md',
+            },
+            {
+              text: 'dataset_structure_description.json',
+              link: '/specification/root-metadata-files/dataset-structure-description.md',
+            },
+            {
+              text: 'participants.tsv and .json',
+              link: '/specification/root-metadata-files/participants.md',
             },
           ],
         },
@@ -220,61 +220,7 @@ function sidebarGuide() {
     {
       text: 'Design Rationale',
       collapsible: true,
-      items: [
-        { text: 'Overview', link: '/design-rationale/overview.md' },
-        {
-          text: 'General principles',
-          link: '/design-rationale/general-principles.md',
-        },
-        {
-          text: 'Folder naming',
-          link: '/design-rationale/folder-naming.md',
-        },
-        {
-          text: 'Metadata files',
-          link: '/design-rationale/metadata-files.md',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            {
-              text: 'Overview',
-              link: '/design-rationale/metadata-files/overview.md',
-            },
-            {
-              text: 'README.md',
-              link: '/design-rationale/metadata-files/readme.md',
-            },
-            {
-              text: 'LICENSE.txt',
-              link: '/design-rationale/metadata-files/license.md',
-            },
-            {
-              text: 'healthsheet.md',
-              link: '/design-rationale/metadata-files/healthsheet.md',
-            },
-            {
-              text: 'study_description.json',
-              link: '/design-rationale/metadata-files/study-description.md',
-            },
-            {
-              text: 'dataset_description.json',
-              link: '/design-rationale/metadata-files/dataset-description.md',
-            },
-            {
-              text: 'datatype_dictionary.yaml',
-              link: '/design-rationale/metadata-files/datatype-dictionary.md',
-            },
-            {
-              text: 'participants.tsv and .json',
-              link: '/design-rationale/metadata-files/participants.md',
-            },
-            {
-              text: 'CHANGELOG.md',
-              link: '/design-rationale/metadata-files/changelog.md',
-            },
-          ],
-        },
-      ],
+      items: [{ text: 'Overview', link: '/design-rationale/overview.md' }],
     },
 
     {
