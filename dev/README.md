@@ -2,58 +2,52 @@
 
 ## :bangbang: Prerequisites
 
-This project uses `yarn` as the package manager. If you do not have `yarn` installed, you can install it with the following command:
+You will need the following installed on your system:
 
-```bash
-npm install -g yarn
-```
-
-If you already have a conda environment on your machine, you can install the dependencies with:
-
-```bash
-conda install -c conda-forge yarn nodejs
-```
+- Python 3.11+
+- [Pip](https://pip.pypa.io/en/stable/)
 
 ## :running: Run Locally
 
-Clone the project
+Don't forget to start the database before running the api. See [Database](#database) for more information.
 
-```bash
-git clone https://github.com/AI-READI/cds-specification.git
-```
+1. Create a local virtual environment and activate it:
 
-Install the dependencies
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
 
-```bash
-yarn install
-```
+   If you are using Anaconda, you can create a virtual environment with:
 
-Start the server
+   ```bash
+   conda create -n cds-docs-dev-env python=3.11
+   conda activate cds-docs-dev-env
+   ```
 
-```bash
-yarn dev
-```
+2. Install the dependencies for this package.
 
-## :building_construction: Build Locally
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Use this to build a local production version of the site. User `docs:serve` to preview the local build.
+3. Open the terminal and run the following command:
 
-```bash
-yarn docs:build
-```
+    ```bash
+    mkdocs serve
+    ```
 
 ## :arrow_forward: Submitting a PR
 
 If you are an external contributor, please make a fork of the repository and submit a PR from your fork. If you are a member of the AI-READI Consortium, you can submit a PR from a branch in this repository.
 
 1. Create a new branch from the `main` branch.
-2. Make your changes. You can test your changes locally by running `yarn dev`. Make sure to check the console for any errors.
-3. Test your changes on a local build by running `yarn build` and `yarn serve`. If this works, you can submit yout changes.
-4. Push your changes to the remote branch.
-5. Create a PR to merge your branch into `main`.
+2. Make your changes. You can test your changes locally by running `mkdocs serve`. Make sure to check the console for any errors.
+3. Push your changes to the remote branch.
+4. Create a PR to merge your branch into `main`.
 
 You can tag `@bvhpatel` or `@megasanjay` in the PR on GitHub for a review. If your changes are approved, they will be merged into `main` and deployed to the live site.
 
 ## :triangular_flag_on_post: Deployment
 
-You will not need to do anything to the hosted site. Continuous Delivery has been setup with Vercel. All you need to do is push your commit and wait for it to deploy.
+You will not need to do anything to the hosted site. Continuous Delivery has been setup with ReadTheDocs. All you need to do is push your commit and wait for it to deploy.

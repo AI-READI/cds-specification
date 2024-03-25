@@ -51,8 +51,8 @@ The Clinical Dataset Structure (CDS) is a simple and intuitive standard for the 
 
 ## Contributing
 
-<a href="https://github.com/AI-READI/cds-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=AI-READI/cds-template" />
+<a href="https://github.com/AI-READI/cds-specification/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AI-READI/cds-specification" />
 </a>
 
 ### Providing feedback/suggestions
@@ -65,13 +65,8 @@ Instructions for making changes to the CDS documentation, submitting a PR, and p
 
 ## License
 
-This work is licensed under a
-[Creative Commons Attribution 4.0 International License][cc-by]. See [LICENSE](LICENSE.txt) for more information.
-
-[cc-by]: http://creativecommons.org/licenses/by/4.0/
-[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
-
-[![CC BY 4.0][cc-by-image]][cc-by]
+This work is licensed under
+[MIT](https://opensource.org/licenses/mit). See [LICENSE](https://github.com/AI-READI/pyfairdatatools/blob/main/LICENSE) for more information.
 
 ## How to cite
 
@@ -98,57 +93,3 @@ This project is funded by the NIH under award number 1OT2OD032644. The content i
 </a>
 
 </div>
-
-# cds-specification
-
-## Getting started
-
-### Prerequisites/Dependencies
-
-You will need the following installed on your system:
-
-- Python 3.11+
-- [Pip](https://pip.pypa.io/en/stable/)
-
-### Setup
-
-If you would like to update the api, please follow the instructions below.
-
-Don't forget to start the database before running the api. See [Database](#database) for more information.
-
-1. Create a local virtual environment and activate it:
-
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate
-   ```
-
-   If you are using Anaconda, you can create a virtual environment with:
-
-   ```bash
-   conda create -n cds-docs-dev-env python=3.11
-   conda activate cds-docs-dev-env
-   ```
-
-2. Install the dependencies for this package.
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## Running
-
-Open the terminal and run the following command:
-
-```bash
-mkdocs serve
-```
-
-## License
-
-This work is licensed under
-[MIT](https://opensource.org/licenses/mit). See [LICENSE](https://github.com/AI-READI/pyfairdatatools/blob/main/LICENSE) for more information.
-
-<a href="https://aireadi.org" >
-  <img src="https://github.com/AI-READI/AI-READI-logo/blob/main/logo/png/option2.png" height="30" alt='AI-READI logo' />
-</a>
