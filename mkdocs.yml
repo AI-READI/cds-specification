@@ -1,4 +1,6 @@
-site_name: My Docs
+site_name: CDS Specification
+
+dev_addr: 127.0.0.1:3000
 
 theme:
   name: material
@@ -53,3 +55,31 @@ plugins:
   - git-authors
   - git-revision-date-localized:
       enable_creation_date: true
+
+nav:
+  - Introduction to the CDS: index.md
+  - About this documentation: about.md
+  - How to reference the CDS: referencing.md
+  - CDS Specification: 
+    - General principles: specification/general-principles.md
+    - Root-level directory structure: specification/root-directory-structure.md
+    - Datatype directory structure: specification/datatype-directory-structure.md
+    - Root-level metadata files:
+      - README.md: specification/root-metadata-files/readme.md
+      - LICENSE.txt: specification/root-metadata-files/license.md
+      - healthsheet.md: specification/root-metadata-files/healthsheet.md
+      - CHANGELOG.md: specification/root-metadata-files/changelog.md
+      - study_description.json: specification/root-metadata-files/study-description.md
+      - dataset_description.json: specification/root-metadata-files/dataset-description.md
+      - dataset_structure_description.json: specification/root-metadata-files/dataset-structure-description.md
+      - participants.tsv and .json: specification/root-metadata-files/participants.md
+  - Implementing the CDS:
+    - Step-by-Step Guide: implementing-cds/step-by-step-guide.md
+    - Templates: implementing-cds/templates.md
+    - Examples: implementing-cds/examples.md
+  - Design Rationale:
+    - Overview: design-rationale/overview.md
+  - Resources:
+    - Changelog: resources/changelog.md
+    - Governance: resources/governance.md
+    - Feedback: resources/contributing.md

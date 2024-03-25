@@ -4,7 +4,6 @@ title: General principles
 description: Description of the general principles of the CDS
 ---
 
-# General principles
 
 ## Definitions
 
