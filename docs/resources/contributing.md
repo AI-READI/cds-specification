@@ -8,7 +8,7 @@ description: Referencing the CDS
 
 ## Providing feedback/suggestions
 
-Have feedback, suggestions, or questions related to the CDS? Submit them by opening a [GitHub issue](https://github.com/AI-READI/CDS-specification/issues). If you want to suggest changes to this docs, you can also submit a PR by following the instructions in the [developer instructions](#developer-instructions).
+Have feedback, suggestions, or questions related to the CDS? Submit them by opening a [GitHub issue](https://github.com/AI-READI/CDS-specification/issues). If you want to suggest changes to this docs, you can also submit a PR by following the instructions in the developer instructions below.
 
 ## Developer instructions
 

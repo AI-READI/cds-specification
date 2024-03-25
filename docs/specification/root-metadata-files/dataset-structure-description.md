@@ -1,14 +1,14 @@
 ---
 lang: en-US
 title: dataset_structure_description.json
-description: Specifications for the datatype_dictionary.yaml metadata file
+description: Specifications for the dataset_structure_description.json metadata file
 ---
 
 # dataset_structure_description.json
 
 ## About
 
-The datatype_dictionary.yaml is intended to document the datatypes present in the dataset and specify the standards followed to structure and document each datatype. This metadata file is intended to balance both human and machine readability.
+The dataset_structure_description.json is intended to document the structure of the dataset by specifying what each folder contains and what is. This metadata file is intended to prioritize machine readability.
 
 ## Specifications
 
@@ -18,8 +18,8 @@ This metadata is mandatory for all datasets.
 
 ### Name and format
 
-This metadata file must be named `datatype_dictionary` and must be in the YAML format. The full name with extension must thus be `datatype_dictionary.yaml`.
+This metadata file must be named `dataset_structure_description` and must be in the JSON format. The full name with extension must thus be `dataset_structure_description.json`.
 
 ### Content
 
-This metadata file must be structured as per the linkML schema provided [here](https://github.com/AI-READI/datatype-dictionary/blob/main/datatypeinfo.yaml).
+This metadata file must be structured as per the JSON schema provided [here](/schemas/dataset_structure_description.schema.json).

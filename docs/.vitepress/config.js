@@ -149,12 +149,12 @@ function sidebarGuide() {
           link: '/specification/general-principles.md',
         },
         {
-          text: 'Root-level folder structure',
-          link: '/specification/root-folder-structure.md',
+          text: 'Root-level directory structure',
+          link: '/specification/root-directory-structure.md',
         },
         {
-          text: 'Datatype folder',
-          link: '/specification/datatype-folder-structure.md',
+          text: 'Datatype directory structure',
+          link: '/specification/datatype-directory-structure.md',
         },
         {
           text: 'Root-level metadata files',

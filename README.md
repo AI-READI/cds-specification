@@ -46,7 +46,7 @@ The Clinical Dataset Structure (CDS) is a simple and intuitive standard for the 
 
 <div align="center">
     <img src="docs/public/images/docs/CDS-example.png" alt="CDS example" width="400" height="auto" />
-    <p><i> Illustration of a dataset with two data types (electrocardiogram and optical coherence tomography) structured following the CDS. </i></p>
+    <p><i> Illustration of a dataset with two datatypes (electrocardiogram and optical coherence tomography) structured following the CDS. </i></p>
 </div>
 
 ## Contributing

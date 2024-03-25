@@ -6,6 +6,11 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "schema": {
+      "description": "Link to the schema to be included so that users of the resulting JSON file can find the related schema easily",
+      "type": "string",
+      "const": "https://github.com/AI-READI/cds-specification/blob/main/docs/public/schemas/dataset_structure_description.schema.json"
+    },
     "directoryList": {
       "type": "array",
       "items": {
@@ -37,15 +42,15 @@
           "oneOf": [
             {
               "const": "dataType",
-              "description": "For a data type folder"
+              "description": "For a datatype directory"
             },
             {
               "const": "modality",
-              "description": "For a modality folder"
+              "description": "For a modality directory"
             },
             {
               "const": "device",
-              "description": "For a device folder"
+              "description": "For a device directory"
             }
           ]
         },
