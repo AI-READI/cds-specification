@@ -4,8 +4,6 @@ title: README.md
 description: Specifications for the README.md metadata file
 ---
 
-# README.md
-
 ## About
 
 The README.md file is a metadata file that contains a detailed description of the dataset in a human-friendly format. You can think about it as a detailed abstract for your dataset, i.e. the first thing that a human user of the data will read.
@@ -46,6 +44,6 @@ There is no mandatory requirements for the content of this metadata file. It is 
 
 - **How to cite**: In this section, provide instructions on how to cite the dataset if reused. Using the [American Psychological Association (APA) style](https://apastyle.apa.org/) is suggested.
 
-- **Contact**: In this section, provide contact information of someone who can be reached out with questions regarding the dataset. You can also refer to the [study_description.json](study-description.json) and [dataset_description.json](dataset-description.json) metadata files for information about contact person/entity, authors, and contributors of the dataset.
+- **Contact**: In this section, provide contact information of someone who can be reached out with questions regarding the dataset. You can also refer to the [study_description.json](study-description.md) and [dataset_description.json](dataset-description.md) metadata files for information about contact person/entity, authors, and contributors of the dataset.
 
 - **Acknowledgement**: In this section, provide acknowledgement to the funding source and other with identifiers and/or links as applicable.

@@ -4,8 +4,6 @@ title: LICENSE.txt
 description: Specifications for the LICENSE.txt metadata file
 ---
 
-# LICENSE.txt
-
 ## About
 
 The LICENSE.txt is a metadata file that contains the terms under which the dataset is shared. This file is intended to provide a human readable overview of requirements and conditions for reusing the data.

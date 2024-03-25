@@ -4,8 +4,6 @@ title: Datatype directory structure
 description: Description of the CDS datatype directory structure
 ---
 
-# Datatype directory structure
-
 ## About
 
 The CDS specifies to maintain one folder per datatype at the root level of a dataset. This page provides specification about how data must be organized within each datatype folder.
@@ -40,4 +38,4 @@ The following naming convention must be followed for all folders: Only a-z chara
 
 ### Documenting folder structure
 
-The structure under each datatypefodler must be documented in the [dataset_structure_description.json](root-metadata-files/dataset-structure-description) metadata file.
+The structure under each datatypefodler must be documented in the [dataset_structure_description.json](root-metadata-files/dataset-structure-description.md) metadata file.

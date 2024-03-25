@@ -4,7 +4,6 @@ title: General principles
 description: Description of the general principles of the CDS
 ---
 
-
 ## Definitions
 
 - The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC2119](https://www.ietf.org/rfc/rfc2119.txt).
@@ -21,7 +20,7 @@ The CDS specifies the following:
 
 1. No data file must be present at the root level.
 2. The data files must be organized into one directory per datatype at the root level as per the specification provided [here](root-directory-structure.md).
-3. Within each datatype-specific directory, data and metadata files must be organized according to an existing standard for that datatype, if available, or following the CDS-suggested structure, as explained [here](datatype-directory-structure.md).
+3. Within each datatype-specific directory, data and metadata files must be organized according to an existing standard for that datatype, if available, or following the CDS-suggested structure, as explained [here](root-metadata-files/datatype-directory-structure.md).
 4. The following metadata files must be included at the root level:
 
    - [README.md](root-metadata-files/readme.md)
@@ -31,7 +30,7 @@ The CDS specifies the following:
    - [study_description.json](root-metadata-files/study-description.md)
    - [dataset_description.json](root-metadata-files/dataset-description.md)
    - [participants.tsv and participants.json](root-metadata-files/participants.md)
-   - [datatype_structure_dictionary.json](root-metadata-files/datatype-dictionary.md)
+   - [datatype_structure_dictionary.json](root-metadata-files/datatype-directory-structure.md)
 
 5. No empty directories must be included anywhere in the dataset.
 

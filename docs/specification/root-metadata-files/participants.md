@@ -1,10 +1,8 @@
 ---
 lang: en-US
-title: participants
+title: participants.tsv and participants.json
 description: Specifications for the participants.tsv and participants.json metadata file
 ---
-
-# participants.tsv and participants.json
 
 ## About
 

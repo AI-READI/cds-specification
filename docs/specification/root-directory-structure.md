@@ -4,8 +4,6 @@ title: Root-level directory structure
 description: Description of the CDS root-level directory structure
 ---
 
-# Root-level directory structure
-
 ## About
 
 The CDS specifies to maintain one directory per datatype at the root level of a dataset. This page provides specification for deciding what constitutes a datatype and how to name each directory.
