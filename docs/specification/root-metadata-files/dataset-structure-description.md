@@ -20,4 +20,4 @@ This metadata file must be named `dataset_structure_description` and must be in 
 
 ### Content
 
-This metadata file must be structured as per the JSON schema provided [here](/schemas/dataset_structure_description.schema.json).
+This metadata file must be structured as per the JSON schema provided [here](../../schemas/dataset_structure_description.schema.json).

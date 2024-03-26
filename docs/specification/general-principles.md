@@ -36,7 +36,7 @@ The CDS specifies the following:
 
 <div align="center">
   <figure>
-    <img src="/images/docs/CDS-example.png" alt="cds-example" width="600"/>
+    <img src="../images/docs/CDS-example.png" alt="cds-example" width="600"/>
     <figcaption> Illustration of the root level of a dataset structured following the CDS. </figcaption>
   </figure>
 </div>
