@@ -21,4 +21,4 @@ This metadata file must be named `study_description` and must be in the JSON for
 
 ### Content
 
-This metadata file must be structured as per the JSON schema provided [here](/schemas/study_description.schema.json).
+This metadata file must be structured as per the JSON schema provided [here](../../schemas/study_description.schema.json).
