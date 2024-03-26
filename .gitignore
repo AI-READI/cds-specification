@@ -9,3 +9,4 @@ node_modules
 yarn-error.log
 docs/.vitepress/cache
 docs/.vitepress/dist/
+site
