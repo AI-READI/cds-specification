@@ -42,5 +42,5 @@ The `participants.json` is intended to document the meaning and allowable values
 - A `description` sub-key must be included for each key to describe what the corresponding column represents
 - A `data_type` sub-key must be included to indicate what type of data is associated with that column (e.g., `string`, `integer`, etc.)
 - If there are a limited number of possible values for a given column, a sub-key called `levels` must be included to list and define the different possible values
-- If a key value is expressed in a given unit, a sub-key named `units` must be included to specify the unit
+- If a key value is expressed in a given unit, a sub-key named `unit` must be included to specify the unit
 - Other sub-keys can be included as deemed necessary for understanding the content of the corresponding column.
