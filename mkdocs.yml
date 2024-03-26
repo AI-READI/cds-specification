@@ -55,9 +55,6 @@ plugins:
   - git-authors
   - git-revision-date-localized:
       enable_creation_date: true
-  # - mkdocs-simple-hooks:
-  #   hooks:
-  #     on_post_build: "docs.hooks:copy_schema_files"
 
 nav:
   - Introduction to the CDS: index.md
