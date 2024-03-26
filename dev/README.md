@@ -33,21 +33,21 @@ Don't forget to start the database before running the api. See [Database](#datab
 
 3. Open the terminal and run the following command:
 
-    ```bash
-    mkdocs serve
-    ```
+   ```bash
+   mkdocs serve
+   ```
 
-## :arrow_forward: Submitting a PR
+## Versioning
 
-If you are an external contributor, please make a fork of the repository and submit a PR from your fork. If you are a member of the AI-READI Consortium, you can submit a PR from a branch in this repository.
+Read the Docs uses branch/tag based versioning for the hosted documentation.
 
-1. Create a new branch from the `main` branch.
-2. Make your changes. You can test your changes locally by running `mkdocs serve`. Make sure to check the console for any errors.
-3. Push your changes to the remote branch.
-4. Create a PR to merge your branch into `main`.
+- If a change needs to be made in a specific version, the change should be made in the branch for that version.
+- If the changes should persist across all versions, you may also need to make the change in the `main` branch as well. This will allow for futute versions to be built with the changes.
 
-You can tag `@bvhpatel` or `@megasanjay` in the PR on GitHub for a review. If your changes are approved, they will be merged into `main` and deployed to the live site.
+To create a new version, you will need to create a new branch with the version number. For example, if you are creating version `v0.6.0`, you will need to create a branch called `v0.6.0`.
+
+To show this new version on the hosted site, go to the `Read the Docs` dashboard > `Versions` and activate the new version.
 
 ## :triangular_flag_on_post: Deployment
 
-You will not need to do anything to the hosted site. Continuous Delivery has been setup with ReadTheDocs. All you need to do is push your commit and wait for it to deploy.
+You will not need to do anything to the hosted site. Continuous Delivery has been setup with Read the Docs. All you need to do is push your commit and wait for it to deploy.
