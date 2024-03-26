@@ -1659,6 +1659,7 @@
     }
   },
   "required": [
+    "schema",
     "identificationModule",
     "statusModule",
     "sponsorCollaboratorsModule",
