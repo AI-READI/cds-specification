@@ -24,5 +24,3 @@ The CDS is developed as part of the [AI-READI project](https://aireadi.org/) fun
 ## Acknowledgment
 
 This project is funded by the NIH under award number 1OT2OD032644. The content is solely the responsibility of the authors and does not necessarily represent the official views of the NIH.
-
---> v0.1.0
