@@ -35,10 +35,10 @@ The content of the `participants.tsv` file must be as follows:
 
 The `participants.json` is intended to document the meaning and allowable values of each column in the the `participants.tsv` file. Its content must be as follows:
 
-- There must be one key for each column label in the `participants.tsv` file except for `participant_id` and the labels corresponding to the root-level datatype directories
+- There must be one key for each column label in the `participants.tsv` file except for the labels corresponding to the root-level datatype directories
 - All sub-keys must follow the same naming convention as the column labels in the `participants.tsv` file
 - A `description` sub-key must be included for each key to describe what the corresponding column represents
 - A `data_type` sub-key must be included to indicate what type of data is associated with that column (e.g., `string`, `integer`, etc.)
 - If there are a limited number of possible values for a given column, a sub-key called `levels` must be included to list and define the different possible values
-- If a key value is expressed in a given unit, a sub-key named `units` must be included to specify the unit
+- If a key value is expressed in a given unit, a sub-key named `unit` must be included to specify the unit
 - Other sub-keys can be included as deemed necessary for understanding the content of the corresponding column.

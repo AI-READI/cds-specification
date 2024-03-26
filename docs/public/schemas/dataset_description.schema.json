@@ -1034,10 +1034,18 @@
         "type": "string"
       },
       "uniqueItems": true,
-      "examples": ["PDF", "XML", "MPG", "application/pdf", "text/xml", "video/mpeg"]
+      "examples": [
+        "PDF",
+        "XML",
+        "MPG",
+        "application/pdf",
+        "text/xml",
+        "video/mpeg"
+      ]
     }
   },
   "required": [
+    "schema",
     "identifier",
     "title",
     "version",
