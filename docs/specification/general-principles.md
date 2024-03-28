@@ -1,7 +1,9 @@
----
+## <!-- prettier-ignore -->
+
 lang: en-US
 title: General principles
 description: Description of the general principles of the CDS
+
 ---
 
 ## Definitions
@@ -18,21 +20,21 @@ description: Description of the general principles of the CDS
 
 The CDS specifies the following:
 
-1. No data file must be present at the root level.
-2. The data files must be organized into one directory per datatype at the root level as per the specification provided [here](root-directory-structure.md).
-3. Within each datatype-specific directory, data and metadata files must be organized according to an existing standard for that datatype, if available, or following the CDS-suggested structure, as explained [here](root-metadata-files/datatype-directory-structure.md).
-4. The following metadata files must be included at the root level:
+1.  No data file must be present at the root level.
+2.  The data files must be organized into one directory per datatype at the root level as per the specification provided [here](root-directory-structure.md).
+3.  Within each datatype-specific directory, data and metadata files must be organized according to an existing standard for that datatype, if available, or following the CDS-suggested structure, as explained [here](root-metadata-files/datatype-directory-structure.md).
+4.  The following metadata files must be included at the root level:
 
-   - [README.md](root-metadata-files/readme.md)
-   - [LICENSE.txt](root-metadata-files/license.md)
-   - [CHANGELOG.md](root-metadata-files/changelog.md)
-   - [healthsheet.md](root-metadata-files/healthsheet.md)
-   - [study_description.json](root-metadata-files/study-description.md)
-   - [dataset_description.json](root-metadata-files/dataset-description.md)
-   - [participants.tsv and participants.json](root-metadata-files/participants.md)
-   - [datatype_structure_dictionary.json](root-metadata-files/datatype-directory-structure.md)
+    - [README.md](root-metadata-files/readme.md)
+    - [LICENSE.txt](root-metadata-files/license.md)
+    - [CHANGELOG.md](root-metadata-files/changelog.md)
+    - [healthsheet.md](root-metadata-files/healthsheet.md)
+    - [study_description.json](root-metadata-files/study-description.md)
+    - [dataset_description.json](root-metadata-files/dataset-description.md)
+    - [participants.tsv and participants.json](root-metadata-files/participants.md)
+    - [datatype_structure_dictionary.json](root-metadata-files/datatype-directory-structure.md)
 
-5. No empty directories must be included anywhere in the dataset.
+5.  No empty directories must be included anywhere in the dataset.
 
 <div align="center">
   <figure>
