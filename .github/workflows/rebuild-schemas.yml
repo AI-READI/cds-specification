@@ -1,0 +1,23 @@
+name: Rebuild schemas
+
+on:
+  workflow_dispatch:
+
+  push:
+    paths:
+      - "docs/schemas/**"
+
+jobs:
+  run-linters:
+    name: Rebuild schemas website
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+
+      - name: Deploy website
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: ${{ secrets.DEPLOY_URL }}
+          method: POST
