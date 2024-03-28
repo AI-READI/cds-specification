@@ -6,7 +6,7 @@ description: Description of the CDS datatype directory structure
 
 ## About
 
-The CDS specifies to maintain one folder per datatype at the root level of a dataset. This page provides specification about how data must be organized within each datatype folder.
+The CDS specifies to maintain one directory per datatype at the root level of a dataset. This page provides specification about how data must be organized within each datatype directory.
 
 ## Specifications
 
@@ -24,18 +24,18 @@ If there is no existing community-agreed standard for structure data from a data
 
 ### manifest.tsv metadata
 
-The manifest.tsv metadata file is intended to document all the data files within a datatype folder. It should follow this specification:
+The manifest.tsv metadata file is intended to document all the data files within a datatype directory. It should follow this specification:
 
-- A column called "filename" must be included where the paths of the data files, relative to the datatype folder, need to be listed.
+- A column called "filename" must be included where the paths of the data files, relative to the datatype directory, need to be listed.
 - Additional column should be included as necessary to properly document relevant information about each datatype.
 - The following naming convention must be followed for all colunm names: Only a-z characters (lowercase English alphabet) and 0-9 (numerical characters) are allowed with the exception of underscores that must be used to separate words (no white space allowed).
 
-### Folder naming
+### Directory naming
 
-Since there is no standard for modality and device names, we recommend naming each modality and device directory such that it best reflects its content. The participant folders should be named exactly as the ID used for that participant in the study.
+Since there is no standard for modality and device names, we recommend naming each modality and device directory such that it best reflects its content. The participant directories should be named exactly as the ID used for that participant in the study.
 
-The following naming convention must be followed for all folders: Only a-z characters (lowercase English alphabet) and 0-9 (numerical characters) are allowed with the exception of underscores that must be used to separate words (no white space allowed).
+The following naming convention must be followed for all directories: Only a-z characters (lowercase English alphabet) and 0-9 (numerical characters) are allowed with the exception of underscores that must be used to separate words (no white space allowed).
 
-### Documenting folder structure
+### Documenting directory structure
 
 The structure under each datatypefodler must be documented in the [dataset_structure_description.json](root-metadata-files/dataset-structure-description.md) metadata file.
