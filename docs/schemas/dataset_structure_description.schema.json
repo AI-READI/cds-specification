@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.aireadi.org/files/v0.1.0/dataset_structure_description.json",
+  "$id": "https://schema.aireadi.org/v0.1.0/dataset_structure_description.json",
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "Dataset Structure Description",
   "description": "This is the schema for the dataset_structure_description.json metadata file from the Clinical Dataset Structure (CDS). Some of the elements are defined following the dataset_description.json file of the CDS.",
@@ -9,7 +9,7 @@
     "schema": {
       "description": "Link to the schema to be included so that users of the resulting JSON file can find the related schema easily",
       "type": "string",
-      "const": "https://schema.aireadi.org/files/v0.1.0/dataset_structure_description.json"
+      "const": "https://schema.aireadi.org/v0.1.0/dataset_structure_description.json"
     },
     "directoryList": {
       "type": "array",
