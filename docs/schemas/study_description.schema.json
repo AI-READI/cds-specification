@@ -9,7 +9,7 @@
     "schema": {
       "description": "Link to the schema to be included so that users of the resulting JSON file can find the related schema easily",
       "type": "string",
-      "const": "https://schema.aireadi.org/files/v0.1.0/study_description.json"
+      "const": "https://schema.aireadi.org/v0.1.0/study_description.json"
     },
     "identificationModule": {
       "$comment": "Maps to Data Elements in https://prsinfo.clinicaltrials.gov/definitions.html#identification",
