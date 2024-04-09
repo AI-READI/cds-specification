@@ -62,7 +62,7 @@
         },
         "relatedIdentifier": {
           "type": "array",
-          "description": "Identifiers of resources to this directory, for instance to a documentation about the content of this directory and possibly its sub-directories. These must be globally unique identifiers.",
+          "description": "Identifiers of resources related to this directory, for instance to a documentation about the content of this directory and possibly its sub-directories. These must be globally unique identifiers.",
           "items": {
             "type": "object",
             "additionalProperties": false,
@@ -83,6 +83,11 @@
               "resourceTypeGeneral": {
                 "$ref": "#/definitions/resourceItemType",
                 "description": "The general type of the related resource. Must be from the controlled list of resourceItemType."
+              },
+              "relatedIdentifierDescription": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Description of the related resource."
               }
             },
             "required": [
