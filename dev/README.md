@@ -9,8 +9,6 @@ You will need the following installed on your system:
 
 ## :running: Run Locally
 
-Don't forget to start the database before running the api. See [Database](#database) for more information.
-
 1. Create a local virtual environment and activate it:
 
    ```bash
