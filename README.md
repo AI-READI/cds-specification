@@ -11,7 +11,7 @@ Documentation of the CDS, a standardized high-level data and metadata structure 
 </p>
 
   <h4>
-    <a href="https://cds-specification.vercel.app/">cds-specification.vercel.app</a>
+    <a href="https://cds-specification.readthedocs.io/en/v0.1.0/">cds-specification.readthedocs.io</a>
   </h4>
   
 <br />
@@ -89,7 +89,7 @@ This project is funded by the NIH under award number 1OT2OD032644. The content i
 <div align="center">
 
 <a href="https://aireadi.org">
-  <img src="https://github.com/AI-READI/AI-READI-logo/raw/main/logo/png/option2.png" height="200" />
+  <img src="https://github.com/AI-READI/AI-READI-logo/raw/main/logo/png/option2.png" height="200" alt='ai-readi logo' />
 </a>
 
 </div>
