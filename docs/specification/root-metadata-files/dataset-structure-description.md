@@ -6,7 +6,7 @@ description: Specifications for the dataset_structure_description.json metadata 
 
 ## About
 
-The dataset_structure_description.json is intended to document the structure of the dataset by specifying what each folder contains and what is. This metadata file is intended to prioritize machine readability.
+The dataset_structure_description.json is intended to document the structure of the dataset by specifying what each directory contains and what is. This metadata file is intended to prioritize machine readability.
 
 ## Specifications
 
@@ -20,4 +20,4 @@ This metadata file must be named `dataset_structure_description` and must be in 
 
 ### Content
 
-This metadata file must be structured as per the JSON schema provided [here](/schemas/dataset_structure_description.schema.json).
+This metadata file must be structured as per the JSON schema provided [here](../../schemas/dataset_structure_description.schema.json).
