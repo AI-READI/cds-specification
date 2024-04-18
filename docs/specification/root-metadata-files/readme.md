@@ -30,7 +30,7 @@ There is no mandatory requirements for the content of this metadata file. It is 
 
 - **Publication date**: In this section, indicate the date when the current version of the dataset was published (i.e., made available outside of the project members openly or through a restricted access). It is suggested to follow the [ISO 8601 date format](https://www.iso.org/iso-8601-date-and-time-format.html) (YYYY-MM-DD).
 
-- **License**: In this section, mention the name of the data reuse license (refer to the [LICENSE.txt](license.txt) file in your dataset for additional details).
+- **License**: In this section, mention the name of the data reuse license (refer to the LICENSE.txt file in your dataset for additional details).
 
 - **Dataset access/restrictions**: In this section, explain how the dataset can be accessed and any conditions/restrictions for accessing it.
 

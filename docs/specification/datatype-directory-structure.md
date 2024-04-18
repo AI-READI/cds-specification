@@ -38,4 +38,4 @@ The following naming convention must be followed for all directories: Only a-z c
 
 ### Documenting directory structure
 
-The structure under each datatypefodler must be documented in the [dataset_structure_description.json](root-metadata-files/dataset-structure-description.md) metadata file.
+The structure under each datatype folder must be documented in the [dataset_structure_description.json](root-metadata-files/dataset-structure-description.md) metadata file.

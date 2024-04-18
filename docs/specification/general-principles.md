@@ -22,7 +22,7 @@ The CDS specifies the following:
 
 1.  No data file must be present at the root level.
 2.  The data files must be organized into one directory per datatype at the root level as per the specification provided [here](root-directory-structure.md).
-3.  Within each datatype-specific directory, data and metadata files must be organized according to an existing standard for that datatype, if available, or following the CDS-suggested structure, as explained [here](root-metadata-files/datatype-directory-structure.md).
+3.  Within each datatype-specific directory, data and metadata files must be organized according to an existing standard for that datatype, if available, or following the CDS-suggested structure, as explained [here](datatype-directory-structure.md).
 4.  The following metadata files must be included at the root level:
 
     - [README.md](root-metadata-files/readme.md)
@@ -32,7 +32,7 @@ The CDS specifies the following:
     - [study_description.json](root-metadata-files/study-description.md)
     - [dataset_description.json](root-metadata-files/dataset-description.md)
     - [participants.tsv and participants.json](root-metadata-files/participants.md)
-    - [datatype_structure_dictionary.json](root-metadata-files/datatype-directory-structure.md)
+    - [dataset_structure_description.json](root-metadata-files/dataset-structure-description.md)
 
 5.  No empty directories must be included anywhere in the dataset.
 
