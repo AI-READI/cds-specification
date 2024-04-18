@@ -20,4 +20,4 @@ Since there is no standard for datatype names, we recommend naming each datatype
 
 ### Documenting directory structure
 
-The name of each datatype directory, what datatype it contains, etc. must be documented in the [dataset_structure_description.json](root-metadata-files/dataset-structure-description) metadata file.
+The name of each datatype directory, what datatype it contains, etc. must be documented in the [dataset_structure_description.json](root-metadata-files/dataset-structure-description.md) metadata file.
