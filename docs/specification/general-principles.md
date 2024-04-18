@@ -1,7 +1,9 @@
----
+## <!-- prettier-ignore -->
+
 lang: en-US
 title: General principles
 description: Description of the general principles of the CDS
+
 ---
 
 ## Definitions
@@ -33,7 +35,7 @@ The CDS specifies the following:
     - [dataset_structure_description.json](root-metadata-files/dataset-structure-description.md)
 
 5.  No empty directories must be included anywhere in the dataset.
-s
+
 <div align="center">
   <figure>
     <img src="../../images/CDS-example.png" alt="cds-example" width="600"/>
