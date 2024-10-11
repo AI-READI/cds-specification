@@ -56,7 +56,6 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
   - print-site
-  - with-pdf
 
 nav:
   - Introduction to the CDS: index.md
