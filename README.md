@@ -1,3 +1,6 @@
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+
 <div align="center">
 
 <img src="https://freesvg.org/img/1653682897science-svgrepo-com.png" alt="logo" width="200" height="auto" />
@@ -65,15 +68,17 @@ Instructions for making changes to the CDS documentation, submitting a PR, and p
 
 ## License
 
-This work is licensed under
-[MIT](https://opensource.org/licenses/mit). See [LICENSE](https://github.com/AI-READI/pyfairdatatools/blob/main/LICENSE) for more information.
+The material in this repository is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by]. 
+
+[![CC BY 4.0][cc-by-image]][cc-by]. 
 
 ## How to cite
 
 If you are using the CDS or any of the associated effort, please cite:
 
 ```bash
-    Coming soon
+B. Patel, S. Soundarajan, A. Gasimova, N. Gim, J. Shaffer, A. Lee (2024). Clinical Data Structure (CDS). Zenodo. https://doi.org/10.5281/zenodo.10867040
 ```
 
 ## Acknowledgements
