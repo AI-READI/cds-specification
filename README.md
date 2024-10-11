@@ -69,9 +69,9 @@ Instructions for making changes to the CDS documentation, submitting a PR, and p
 ## License
 
 The material in this repository is licensed under a
-[Creative Commons Attribution 4.0 International License][cc-by]. 
+[Creative Commons Attribution 4.0 International License][cc-by].
 
-[![CC BY 4.0][cc-by-image]][cc-by]. 
+[![CC BY 4.0][cc-by-image]][cc-by].
 
 ## How to cite
 
