@@ -32,6 +32,8 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+      "size": "integer",
+      "numberOfFiles": "integer",
         "directoryName": {
           "type": "string",
           "minLength": 1,
