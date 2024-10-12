@@ -9,20 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `size` key added in the dataset_structure_description schema to specify the total size of a directory in bytes 
+- `size` key added in the dataset_structure_description schema to specify the total size of a directory in bytes
 - `numberOfFiles` key added in the dataset_structure_description schema to specify the total number of files of a directory
-
 
 ## v0.1.0 - 2024-04-18
 
 ### Added
 
 - First version of the CDS specification
-
-
-
-
-
-
-
-
