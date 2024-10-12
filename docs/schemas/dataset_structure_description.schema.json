@@ -32,8 +32,15 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "size": { "type": "number" },
-        "numberOfFiles": { "type": "number" },
+        "size": {
+          "type":"integer",
+          "description": "Total size of the directory in bytes"
+
+        },
+        "numberOfFiles": {
+          "type":"integer",
+          "description": "Total number of files in the directory"
+},
         "directoryName": {
           "type": "string",
           "minLength": 1,
