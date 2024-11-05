@@ -78,7 +78,7 @@ The material in this repository is licensed under a
 If you are using the CDS or any of the associated effort, please cite:
 
 ```bash
-B. Patel, S. Soundarajan, A. Gasimova, N. Gim, J. Shaffer, A. Lee (2024). Clinical Data Structure (CDS). Zenodo. https://doi.org/10.5281/zenodo.10867040
+B. Patel, S. Soundarajan, A. Gasimova, N. Gim, J. Shaffer, A. Lee (2024). Clinical Data Structure (CDS). Zenodo. https://doi.org/10.5281/zenodo.10867039
 ```
 
 ## Acknowledgements
