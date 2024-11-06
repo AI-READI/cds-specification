@@ -8,5 +8,5 @@ If you use the CDS or any elements related to it, please reference the following
 
 ```html
 B. Patel, S. Soundarajan, A. Gasimova, N. Gim, J. Shaffer, A. Lee (2024).
-Clinical Data Structure (CDS). Zenodo. https://doi.org/10.5281/zenodo.10867040
+Clinical Data Structure (CDS). Zenodo. https://doi.org/10.5281/zenodo.14043020
 ```
