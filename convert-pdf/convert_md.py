@@ -5,13 +5,16 @@ import subprocess
 HERE = Path(__file__).absolute()
 
 def _flatten_values(lst):
-    """Flatten a list of dicts of lists to a list of values."""
+    """Flatten a list of dictionaries to preserve file order from mkdocs.yml."""
+    ordered_files = []
     for obj in lst:
-        for val in obj.values():
-            if isinstance(val, str):
-                yield val
-            else:
-                yield from _flatten_values(val)
+        if isinstance(obj, dict):
+            for val in obj.values():
+                if isinstance(val, str):
+                    ordered_files.append(val)
+                else:
+                    ordered_files.extend(_flatten_values(val))
+    return ordered_files
 
 
 logfile ="cds-docs.log"
@@ -19,6 +22,9 @@ filename ="cds-docs.pdf"
 # Prepare the command options
 cmd = [
     "pandoc",
+    f"--shift-heading-level-by={1}",
+    "--include-before-body=./cover.tex",
+    "--include-in-header=./header.tex",
     f"--log={logfile}",
     f"--output={filename}",
 ]
