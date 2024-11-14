@@ -5,16 +5,13 @@ import subprocess
 HERE = Path(__file__).absolute()
 
 def _flatten_values(lst):
-    """Flatten a list of dictionaries to preserve file order from mkdocs.yml."""
-    ordered_files = []
+    """Flatten a list of dicts of lists to a list of values."""
     for obj in lst:
-        if isinstance(obj, dict):
-            for val in obj.values():
-                if isinstance(val, str):
-                    ordered_files.append(val)
-                else:
-                    ordered_files.extend(_flatten_values(val))
-    return ordered_files
+        for val in obj.values():
+            if isinstance(val, str):
+                yield val
+            else:
+                yield from _flatten_values(val)
 
 
 logfile ="cds-docs.log"
@@ -22,11 +19,12 @@ filename ="cds-docs.pdf"
 # Prepare the command options
 cmd = [
     "pandoc",
-    f"--shift-heading-level-by={1}",
-    "--include-before-body=./cover.tex",
-    "--include-in-header=./header.tex",
+    # "--include-before-body=../../convert-pdf/cover.tex",
+    # "--include-in-header=../../convert-pdf/header.tex",
     f"--log={logfile}",
     f"--output={filename}",
+    "--resource-path=../docs/images",
+    "--variable=title: CDS Specification"
 ]
 
 build_root = HERE.parent.parent
