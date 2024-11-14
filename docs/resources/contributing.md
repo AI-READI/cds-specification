@@ -1,6 +1,6 @@
 ---
 lang: en-US
-title: Contributing/Feedback
+title: Feedback
 description: Referencing the CDS
 ---
 
