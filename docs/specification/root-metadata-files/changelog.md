@@ -3,7 +3,7 @@ lang: en-US
 title: CHANGELOG.md
 description: Specifications for the CHANGELOG.md metadata file
 ---
-
+# CHANGELOG.md
 ## About
 
 The CHANGELOG.md is a metadata file that contains information about the changes between different versions of the dataset that are released. This file is intended to provide a human and machine-readable overview of different dataset versions that are released, their release date,

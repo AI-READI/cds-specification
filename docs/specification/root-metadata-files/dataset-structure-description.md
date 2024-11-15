@@ -3,7 +3,7 @@ lang: en-US
 title: dataset_structure_description.json
 description: Specifications for the dataset_structure_description.json metadata file
 ---
-
+# dataset_structure_description.json
 ## About
 
 The dataset_structure_description.json is intended to document the structure of the dataset by specifying what each directory contains and what is. This metadata file is intended to prioritize machine readability.
