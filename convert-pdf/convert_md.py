@@ -24,9 +24,11 @@ cmd = [
     f"--log={logfile}",
     f"--output={filename}",
     "--resource-path=../docs/images",
+    "--lua-filter=base_link.lua",
     "--variable=title: CDS Specification",
-    "-V", "urlcolor=blue",  # Set URL link color to blue
+    "-V", "urlcolor=blue",
     "-V", "linkcolor=blue",
+    # "--toc"
 ]
 
 build_root = HERE.parent.parent
