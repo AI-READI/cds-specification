@@ -5,6 +5,7 @@ description: Specifications for the study_description.json metadata file
 ---
 
 # study_description.json
+
 ## About
 
 The study_description.json is a metadata file that contains provenance metadata, contextual metadata,

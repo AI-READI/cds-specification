@@ -5,6 +5,7 @@ description: Specifications for the dataset_description.json metadata file
 ---
 
 # dataset_description.json
+
 ## About
 
 The dataset_description.json is a metadata file that contains provenance metadata, contextual metadata, as well as additional metadata necessary for reuse of the dataset. This metadata file is intended to prioritize machine readability.

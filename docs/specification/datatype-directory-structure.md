@@ -5,6 +5,7 @@ description: Description of the CDS datatype directory structure
 ---
 
 # Datatype directory structure
+
 ## About
 
 The CDS specifies to maintain one directory per datatype at the root level of a dataset. This page provides specification about how data must be organized within each datatype directory.
