@@ -48,7 +48,3 @@ The CDS specifies the following:
     <figcaption> Illustration of the root level of a dataset structured following the CDS. </figcaption>
   </figure>
 </div>
-
-
-
-
