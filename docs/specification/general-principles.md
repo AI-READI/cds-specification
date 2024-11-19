@@ -36,10 +36,12 @@ The CDS specifies the following:
 
 5.  No empty directories must be included anywhere in the dataset.
 
+<!-- For pandoc -->
 <div align="center" style="display: none">
 ![cds-example](../images/CDS-example.png)
 </div>
 
+<!-- for mkdocs -->
 <div align="center">
   <figure>
     <img src="../../images/CDS-example.png" alt="cds-example" width="600"/>
