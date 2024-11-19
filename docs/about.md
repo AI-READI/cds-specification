@@ -4,6 +4,8 @@ title: About this documentation
 description: How to use the documentation site
 ---
 
+# About this documentation
+
 ## Structure
 
 This documentation is conveniently organized so you can easily find what you are looking for:

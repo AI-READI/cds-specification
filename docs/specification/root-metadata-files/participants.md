@@ -4,6 +4,8 @@ title: participants.tsv and participants.json
 description: Specifications for the participants.tsv and participants.json metadata file
 ---
 
+# participants.tsv and participants.json
+
 ## About
 
 The participants.json and participants.tsv files are metadata files that contain information about the participants in the study.

@@ -4,6 +4,8 @@ title: README.md
 description: Specifications for the README.md metadata file
 ---
 
+# README.md
+
 ## About
 
 The README.md file is a metadata file that contains a detailed description of the dataset in a human-friendly format. You can think about it as a detailed abstract for your dataset, i.e. the first thing that a human user of the data will read.
@@ -36,7 +38,7 @@ There is no mandatory requirements for the content of this metadata file. It is 
 
 - **Overview of the study**: In this section, provide a high-level description of the study associated with the dataset. Include for instance identifiers of the study, a brief overview of the study protocol, external links (website, manuscripts, protocols, etc.) to find out more about the study, etc.
 
-- **Description of the dataset**: In this section, provide a detailed description of the dataset. Include the number of study participants (refer to the [participants.tsv file](participants.md) in your dataset for additional information), the datatypes collected, data deidentification approaches if any, the overall number of files and total size of the dataset, etc.
+- **Description of the dataset**: In this section, provide a detailed description of the dataset. Include the number of study participants (refer to the [participants.tsv](participants.md) file in your dataset for additional information), the datatypes collected, data deidentification approaches if any, the overall number of files and total size of the dataset, etc.
 
 - **Data standards followed**: In this section, indicate the standards followed to structure the dataset, format the data files, etc. Make sure to include identifiers of the standards when available and/or link to the associated documentation.
 

@@ -28,6 +28,8 @@ theme:
     - search.share
     - navigation.footer
     - content.action.edit
+extra_css:
+  - stylesheets/style.css
 
 extra:
   consent:

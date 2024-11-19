@@ -4,6 +4,8 @@ title: Introduction to the CDS
 description: Introduction to the Clinical Dataset Structure (CDS)
 ---
 
+# Introduction to the CDS
+
 ## Overview
 
 The Clinical Dataset Structure (CDS) is a simple and intuitive way to organize and describe clinical research datasets such that they are readily interoperable and easily reusable by humans and machines. The CDS is especially designed to optimize AI-readiness of datasets.
