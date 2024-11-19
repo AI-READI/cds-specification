@@ -32,6 +32,7 @@ cmd = [
     # Set Link colors
     "-V", "urlcolor=blue",
     "-V", "linkcolor=blue",
+    "--from=markdown-implicit_figures",
 ]
 
 build_root = HERE.parent.parent

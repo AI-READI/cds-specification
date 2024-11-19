@@ -36,6 +36,17 @@ The CDS specifies the following:
 
 5.  No empty directories must be included anywhere in the dataset.
 
-![](../images/CDS-example.png)
+<div align="center" style="display: none">
+![cds-example](../images/CDS-example.png)
+</div>
 
-<p style="text-align:center;"><em>Illustration of the root level of a dataset structured following the CDS.</em></p>
+<div align="center">
+  <figure>
+    <img src="../../images/CDS-example.png" alt="cds-example" width="600"/>
+    <figcaption> Illustration of the root level of a dataset structured following the CDS. </figcaption>
+  </figure>
+</div>
+
+
+
+
