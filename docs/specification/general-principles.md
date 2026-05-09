@@ -24,7 +24,6 @@ The CDS specifies the following:
 2.  The data files must be organized into one directory per datatype at the root level as per the specification provided [here](root-directory-structure.md).
 3.  Within each datatype-specific directory, data and metadata files must be organized according to an existing standard for that datatype, if available, or following the CDS-suggested structure, as explained [here](datatype-directory-structure.md).
 4.  The following metadata files must be included at the root level:
-
     - [README.md](root-metadata-files/readme.md)
     - [LICENSE.txt](root-metadata-files/license.md)
     - [CHANGELOG.md](root-metadata-files/changelog.md)
