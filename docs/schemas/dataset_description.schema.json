@@ -479,12 +479,33 @@
         }
       },
       "required": [
-        "deIdentType",
-        "deIdentDirect",
-        "deIdentHIPAA",
-        "deIdentDates",
-        "deIdentNonarr",
-        "deIdentKAnon"
+        "deIdentType"
+      ],
+      "allOf": [
+        {
+          "$comment": "The de-identification measures describe how de-identification was carried out, so they are required only when it was.",
+          "if": {
+            "properties": {
+              "deIdentType": {
+                "not": {
+                  "const": "NoDeIdentification"
+                }
+              }
+            },
+            "required": [
+              "deIdentType"
+            ]
+          },
+          "then": {
+            "required": [
+              "deIdentDirect",
+              "deIdentHIPAA",
+              "deIdentDates",
+              "deIdentNonarr",
+              "deIdentKAnon"
+            ]
+          }
+        }
       ]
     },
     "datasetConsent": {
@@ -551,12 +572,36 @@
         }
       },
       "required": [
-        "consentType",
-        "consentNoncommercial",
-        "consentGeogRestrict",
-        "consentResearchType",
-        "consentGeneticOnly",
-        "consentNoMethods"
+        "consentType"
+      ],
+      "allOf": [
+        {
+          "$comment": "The consent modifiers restrict a consent that exists and permits something, so they are required only for consent types that can carry restrictions.",
+          "if": {
+            "properties": {
+              "consentType": {
+                "enum": [
+                  "GeneralResearchUse",
+                  "HealthMedicalBiomedicalResearch",
+                  "DiseaseSpecificResearch",
+                  "ConsentSpecifiedNotElsewhereCategorised"
+                ]
+              }
+            },
+            "required": [
+              "consentType"
+            ]
+          },
+          "then": {
+            "required": [
+              "consentNoncommercial",
+              "consentGeogRestrict",
+              "consentResearchType",
+              "consentGeneticOnly",
+              "consentNoMethods"
+            ]
+          }
+        }
       ]
     },
     "description": {
@@ -1048,17 +1093,9 @@
     "schema",
     "identifier",
     "title",
-    "version",
-    "creator",
-    "publicationYear",
-    "resourceType",
     "datasetDeIdentLevel",
     "datasetConsent",
-    "managingOrganization",
-    "accessType",
-    "accessDetails",
-    "rights",
-    "publisher"
+    "rights"
   ],
   "definitions": {
     "identifierType": {
